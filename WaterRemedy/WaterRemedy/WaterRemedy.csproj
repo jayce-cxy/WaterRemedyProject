@@ -9,7 +9,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{A2AA00D7-D85D-4C27-B696-DC07E8ABD9A7}</ProjectGuid>
+    <ProjectGuid>{4A58AF2D-F939-40B4-AADD-42014CE59F9F}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -19,7 +19,7 @@
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
-    <IISExpressSSLPort>44394</IISExpressSSLPort>
+    <IISExpressSSLPort>44375</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -182,9 +182,9 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\aspnet-WaterRemedy-7b4ec491-b1c7-4083-abf2-71d52d4caeed.mdf" />
-    <Content Include="App_Data\aspnet-WaterRemedy-7b4ec491-b1c7-4083-abf2-71d52d4caeed_log.ldf">
-      <DependentUpon>aspnet-WaterRemedy-7b4ec491-b1c7-4083-abf2-71d52d4caeed.mdf</DependentUpon>
+    <Content Include="App_Data\aspnet-WaterRemedy-b1148417-c261-4de9-af7d-3b7bb1febdef.mdf" />
+    <Content Include="App_Data\aspnet-WaterRemedy-b1148417-c261-4de9-af7d-3b7bb1febdef_log.ldf">
+      <DependentUpon>aspnet-WaterRemedy-b1148417-c261-4de9-af7d-3b7bb1febdef.mdf</DependentUpon>
     </Content>
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -203,7 +203,6 @@
     <Content Include="Scripts\esm\popper-utils.min.js" />
     <Content Include="Scripts\esm\popper.js" />
     <Content Include="Scripts\esm\popper.min.js" />
-    <Content Include="Scripts\index.js.flow" />
     <Content Include="Scripts\esm\popper.min.js.map" />
     <Content Include="Scripts\esm\popper.js.map" />
     <Content Include="Scripts\esm\popper-utils.min.js.map" />
@@ -233,69 +232,6 @@
     <Content Include="Scripts\popper-utils.min.js" />
     <Content Include="Scripts\popper.js" />
     <Content Include="Scripts\popper.min.js" />
-    <Content Include="Scripts\src\index.js" />
-    <Content Include="Scripts\src\methods\defaults.js" />
-    <Content Include="Scripts\src\methods\destroy.js" />
-    <Content Include="Scripts\src\methods\disableEventListeners.js" />
-    <Content Include="Scripts\src\methods\enableEventListeners.js" />
-    <Content Include="Scripts\src\methods\placements.js" />
-    <Content Include="Scripts\src\methods\update.js" />
-    <Content Include="Scripts\src\modifiers\applyStyle.js" />
-    <Content Include="Scripts\src\modifiers\arrow.js" />
-    <Content Include="Scripts\src\modifiers\computeStyle.js" />
-    <Content Include="Scripts\src\modifiers\flip.js" />
-    <Content Include="Scripts\src\modifiers\hide.js" />
-    <Content Include="Scripts\src\modifiers\index.js" />
-    <Content Include="Scripts\src\modifiers\inner.js" />
-    <Content Include="Scripts\src\modifiers\keepTogether.js" />
-    <Content Include="Scripts\src\modifiers\offset.js" />
-    <Content Include="Scripts\src\modifiers\preventOverflow.js" />
-    <Content Include="Scripts\src\modifiers\shift.js" />
-    <Content Include="Scripts\src\utils\clockwise.js" />
-    <Content Include="Scripts\src\utils\computeAutoPlacement.js" />
-    <Content Include="Scripts\src\utils\debounce.js" />
-    <Content Include="Scripts\src\utils\find.js" />
-    <Content Include="Scripts\src\utils\findCommonOffsetParent.js" />
-    <Content Include="Scripts\src\utils\findIndex.js" />
-    <Content Include="Scripts\src\utils\getBordersSize.js" />
-    <Content Include="Scripts\src\utils\getBoundaries.js" />
-    <Content Include="Scripts\src\utils\getBoundingClientRect.js" />
-    <Content Include="Scripts\src\utils\getClientRect.js" />
-    <Content Include="Scripts\src\utils\getFixedPositionOffsetParent.js" />
-    <Content Include="Scripts\src\utils\getOffsetParent.js" />
-    <Content Include="Scripts\src\utils\getOffsetRect.js" />
-    <Content Include="Scripts\src\utils\getOffsetRectRelativeToArbitraryNode.js" />
-    <Content Include="Scripts\src\utils\getOppositePlacement.js" />
-    <Content Include="Scripts\src\utils\getOppositeVariation.js" />
-    <Content Include="Scripts\src\utils\getOuterSizes.js" />
-    <Content Include="Scripts\src\utils\getParentNode.js" />
-    <Content Include="Scripts\src\utils\getPopperOffsets.js" />
-    <Content Include="Scripts\src\utils\getReferenceNode.js" />
-    <Content Include="Scripts\src\utils\getReferenceOffsets.js" />
-    <Content Include="Scripts\src\utils\getRoot.js" />
-    <Content Include="Scripts\src\utils\getRoundedOffsets.js" />
-    <Content Include="Scripts\src\utils\getScroll.js" />
-    <Content Include="Scripts\src\utils\getScrollParent.js" />
-    <Content Include="Scripts\src\utils\getStyleComputedProperty.js" />
-    <Content Include="Scripts\src\utils\getSupportedPropertyName.js" />
-    <Content Include="Scripts\src\utils\getViewportOffsetRectRelativeToArtbitraryNode.js" />
-    <Content Include="Scripts\src\utils\getWindow.js" />
-    <Content Include="Scripts\src\utils\getWindowSizes.js" />
-    <Content Include="Scripts\src\utils\includeScroll.js" />
-    <Content Include="Scripts\src\utils\index.js" />
-    <Content Include="Scripts\src\utils\isBrowser.js" />
-    <Content Include="Scripts\src\utils\isFixed.js" />
-    <Content Include="Scripts\src\utils\isFunction.js" />
-    <Content Include="Scripts\src\utils\isIE.js" />
-    <Content Include="Scripts\src\utils\isModifierEnabled.js" />
-    <Content Include="Scripts\src\utils\isModifierRequired.js" />
-    <Content Include="Scripts\src\utils\isNumeric.js" />
-    <Content Include="Scripts\src\utils\isOffsetContainer.js" />
-    <Content Include="Scripts\src\utils\removeEventListeners.js" />
-    <Content Include="Scripts\src\utils\runModifiers.js" />
-    <Content Include="Scripts\src\utils\setAttributes.js" />
-    <Content Include="Scripts\src\utils\setStyles.js" />
-    <Content Include="Scripts\src\utils\setupEventListeners.js" />
     <Content Include="Scripts\umd\popper-utils.js" />
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
@@ -336,7 +272,6 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Scripts\umd\popper.min.js.map" />
     <Content Include="Scripts\umd\popper.js.map" />
-    <Content Include="Scripts\umd\popper.js.flow" />
     <Content Include="Scripts\umd\popper-utils.min.js.map" />
     <Content Include="Scripts\umd\popper-utils.js.map" />
     <Content Include="Scripts\README.md" />
@@ -373,9 +308,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>53337</DevelopmentServerPort>
+          <DevelopmentServerPort>49977</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>https://localhost:44394/</IISUrl>
+          <IISUrl>https://localhost:44375/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
