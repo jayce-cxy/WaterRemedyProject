@@ -1,44 +1,151 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
+    <title>Water Remedy</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="~/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="~/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="~/css/googlefonts.css" rel="stylesheet" />
+    <link href="~/css/googleFont2.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link href="~/css/clean-blog.min.css" rel="stylesheet">
+    
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
         <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+            <a>@Html.ActionLink("Water Remedy", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        @Html.ActionLink("Home", "Index", "Home", new { @class = "nav-link" })
+                    </li>
+                    <li class="nav-item">
+                        @Html.ActionLink("About", "About", "Home", new { @class = "nav-link" })
+                    </li>
+                    <li class="nav-item">
+                        @Html.ActionLink("Contact", "Contact", "Home", new { @class = "nav-link" })
+                    </li>
+
                 </ul>
-                @Html.Partial("_LoginPartial")
             </div>
         </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
+    </nav>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+    <!-- Page Header -->
+    <header class="masthead" id="header_img">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    <div class="site-heading">
+                        <h1>Water Remedy</h1>
+                        <span class="subheading">Protect our water stream</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div @*class="container"*@>
+        @RenderBody()
+    </div>
+        <hr />
+        <!-- Footer -->
+        <footer id="colour">
+            <div class="page-footer font-small teal pt-4">
+
+                <!-- Footer Text -->
+                <div class="container-fluid text-center text-md-left">
+
+                    <!-- Grid row -->
+                    <div class="row">
+
+                        <!-- Grid column -->
+                        <div class="col-md-6 mt-md-0 mt-3" style="text-align: center;">
+
+                            <!-- Content -->
+                            <h5 class="text-uppercase font-weight-bold">Our Team</h5>
+                            <img src="~/pic/Logo-V2.jpg" style="width:20%" id="img_position">
+
+                        </div>
+                        <!-- Grid column -->
+
+                        <hr class="clearfix w-100 d-md-none pb-3">
+
+                        <!-- Grid column -->
+                        <div class="col-md-6 mb-md-0 mb-3" style="text-align: center;">
+
+                            <!-- Content -->
+                            <h5 class="text-uppercase font-weight-bold">Declaration</h5>
+                            <p>
+                                We have limited power to make essntial changes to people's action. Nevertheless, we still would like to rise
+                                people's awareness and confidence to participate in protecting water catchment from daily activities.
+                            </p>
+
+                        </div>
+                        <!-- Grid column -->
+
+                    </div>
+                    <!-- Grid row -->
+
+                </div>
+                <!-- Footer Text -->
+                <!-- Copyright -->
+                <div class="footer-copyright text-center py-3">
+                    © 2020 Copyright:
+                    Water Remedy
+                </div>
+                <!-- Copyright -->
+
+            </div>
+        </footer>
+        <!-- Footer -->
+    @*</div>*@
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="~/vendor/jquery/jquery.min.js"></script>
+    <script src="~/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="~/js/clean-blog.min.js"></script>
+
+    <style>
+        #header_img {
+            background-image: url("../pic/Water-stream.jpg");
+        }
+        #colour {
+            background-color:#D0E5F0;
+        }
+    </style>
+
+    <script>
+        $(window).scroll(function() {
+		$('.fadedfx').each(function(){
+		var imagePos = $(this).offset().top;
+
+		var topOfWindow = $(window).scrollTop();
+			if (imagePos < topOfWindow+500) {
+				$(this).addClass("fadeIn");
+			}
+		});
+	});
+    </script>
+
     @RenderSection("scripts", required: false)
 </body>
 </html>
