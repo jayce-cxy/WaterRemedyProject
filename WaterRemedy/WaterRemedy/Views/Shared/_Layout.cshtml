@@ -73,57 +73,57 @@
     <div @*class="container"*@>
         @RenderBody()
     </div>
-        <hr />
-        <!-- Footer -->
-        <footer id="colour">
-            <div class="page-footer font-small teal pt-4">
+    <hr />
+    <!-- Footer -->
+    <footer id="colour">
+        <div class="page-footer font-small teal pt-4">
 
-                <!-- Footer Text -->
-                <div class="container-fluid text-center text-md-left">
+            <!-- Footer Text -->
+            <div class="container-fluid text-center text-md-left">
 
-                    <!-- Grid row -->
-                    <div class="row">
+                <!-- Grid row -->
+                <div class="row">
 
-                        <!-- Grid column -->
-                        <div class="col-md-6 mt-md-0 mt-3" style="text-align: center;">
+                    <!-- Grid column -->
+                    <div class="col-md-6 mt-md-0 mt-3" style="text-align: center;">
 
-                            <!-- Content -->
-                            <h5 class="text-uppercase font-weight-bold">Our Team</h5>
-                            <img src="~/pic/Logo-V2.jpg" style="width:20%" id="img_position">
-
-                        </div>
-                        <!-- Grid column -->
-
-                        <hr class="clearfix w-100 d-md-none pb-3">
-
-                        <!-- Grid column -->
-                        <div class="col-md-6 mb-md-0 mb-3" style="text-align: center;">
-
-                            <!-- Content -->
-                            <h5 class="text-uppercase font-weight-bold">Declaration</h5>
-                            <p>
-                                We have limited power to make essntial changes to people's action. Nevertheless, we still would like to rise
-                                people's awareness and confidence to participate in protecting water catchment from daily activities.
-                            </p>
-
-                        </div>
-                        <!-- Grid column -->
+                        <!-- Content -->
+                        <h5 class="text-uppercase font-weight-bold">Our Team</h5>
+                        <img src="~/pic/Logo-V2.jpg" style="width:20%" id="img_position">
 
                     </div>
-                    <!-- Grid row -->
+                    <!-- Grid column -->
+
+                    <hr class="clearfix w-100 d-md-none pb-3">
+
+                    <!-- Grid column -->
+                    <div class="col-md-6 mb-md-0 mb-3" style="text-align: center;">
+
+                        <!-- Content -->
+                        <h5 class="text-uppercase font-weight-bold">Declaration</h5>
+                        <p>
+                            We have limited power to make essntial changes to people's action. Nevertheless, we still would like to rise
+                            people's awareness and confidence to participate in protecting water catchment from daily activities.
+                        </p>
+
+                    </div>
+                    <!-- Grid column -->
 
                 </div>
-                <!-- Footer Text -->
-                <!-- Copyright -->
-                <div class="footer-copyright text-center py-3">
-                    © 2020 Copyright:
-                    Water Remedy
-                </div>
-                <!-- Copyright -->
+                <!-- Grid row -->
 
             </div>
-        </footer>
-        <!-- Footer -->
+            <!-- Footer Text -->
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3">
+                © 2020 Copyright:
+                Water Remedy
+            </div>
+            <!-- Copyright -->
+
+        </div>
+    </footer>
+    <!-- Footer -->
     @*</div>*@
 
     <!-- Bootstrap core JavaScript -->
@@ -133,13 +133,12 @@
     <!-- Custom scripts for this template -->
     <script src="~/js/clean-blog.min.js"></script>
 
-    
+
 
     <script>
         $(window).scroll(function() {
 		$('.fadedfx').each(function(){
 		var imagePos = $(this).offset().top;
-
 		var topOfWindow = $(window).scrollTop();
 			if (imagePos < topOfWindow+500) {
 				$(this).addClass("fadeIn");
