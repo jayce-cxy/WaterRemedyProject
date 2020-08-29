@@ -1,0 +1,112 @@
+﻿
+@{
+    ViewBag.Title = "PercentageOfUsage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <h2>AusWaterUsage</h2>
+
+    <div class="dropdown">
+        <a class="btn btn-secondary dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Choose the year
+        </a>
+
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <a class="dropdown-item" onclick="drawGraph('2015')">2015</a>
+            <a class="dropdown-item" onclick="drawGraph('2016')">2016</a>
+            <a class="dropdown-item" onclick="drawGraph('2017')">2017</a>
+            <a class="dropdown-item" onclick="drawGraph('2018')">2018</a>
+            <a class="dropdown-item" onclick="drawGraph('2019')">2019</a>
+        </div>
+    </div>
+
+
+    <div id="bar" class="row" style="width: inherit; height: 400px"></div>
+    <script>
+        var myBar = echarts.init(document.getElementById("bar"));
+
+        function drawGraph(year) {
+            var option = {
+                color: ['#3398DB'],
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: {
+                        type: 'shadow'
+                    }
+                },
+                grid: {
+                    left: '3%',
+                    right: '4%',
+                    bottom: '3%',
+                    containLabel: true
+                },
+                xAxis: [
+                    {
+                        type: 'category',
+                        data: [],
+                        axisTick: {
+                            alignWithLabel: true
+                        }
+                    }
+                ],
+                yAxis: [
+                    {
+                        type: 'value'
+                    }
+                ],
+                series: [
+                    {
+                        name: '直接访问',
+                        type: 'bar',
+                        barWidth: '60%',
+                        data: []
+                    }
+                ]
+            };
+
+            $.get('/Home/GetVicWaterUsagePc', function (data) {
+                if (!data.isSuccess) {
+                    console.log(data.Message);
+                    return;
+                }
+                if (data.Data.length === 0) { return; }
+
+                var years = [];
+
+                data.Data.forEach((item) => {
+                    var year = item['Year'];
+                    years.push(year);
+                });
+
+                var keys = [];
+                for (var k in data.Data[0]) {
+                    if (k === 'Year') continue;
+                    keys.push(k);
+                }
+
+
+                var dataByYear = data.Data.filter((x) => x.Year == year)[0];
+
+                var resultList = [];
+
+                for (var k in dataByYear) {
+                    if (k === 'Year') continue;
+                    var item = { value: dataByYear[k], name: k };
+                    resultList.push(item);
+                }
+
+                var finalList = [];
+                for (var i in resultList) {
+                    finalList.push(resultList[i].value);
+                }
+
+                option.series[0].data = finalList;
+                option.xAxis[0].data = keys;
+
+                myBar.setOption(option);
+            });
+        }
+
+        drawGraph(2015);
+    </script>
+</div>

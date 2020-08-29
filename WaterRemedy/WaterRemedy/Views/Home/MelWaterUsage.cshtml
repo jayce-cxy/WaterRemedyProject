@@ -1,0 +1,121 @@
+﻿
+@{
+    ViewBag.Title = "MelWaterUsage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <div class="container">
+        <h2>AusWaterUsage</h2>
+
+        <div class="dropdown">
+            <a class="btn btn-secondary dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Choose the year
+            </a>
+
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" onclick="drawGraph('2015')">2015</a>
+                <a class="dropdown-item" onclick="drawGraph('2016')">2016</a>
+                <a class="dropdown-item" onclick="drawGraph('2017')">2017</a>
+                <a class="dropdown-item" onclick="drawGraph('2018')">2018</a>
+            </div>
+        </div>
+
+
+        <div id="bar" class="row" style="width: inherit; height: 400px"></div>
+        <script>
+        var myBar = echarts.init(document.getElementById("bar"));
+
+        function drawGraph(year) {
+            var option = {
+                backgroundColor: '#F2F6EC',
+
+                title: {
+                    text: 'Melbourne Water Usage',
+                    left: 'center',
+                    top: 20,
+                    textStyle: {
+                        color: '#3B261F'
+                    }
+                },
+
+                tooltip: {
+                    trigger: 'item',
+                    formatter: '{a} <br/>{b}: {c} ({d}%)'
+                },
+
+                legend: {
+                    orient: 'vertical',
+                    left: 10,
+                    data: []
+                },
+
+                series: [
+                    {
+                        name: null,
+                        type: 'pie',
+                        radius: ['50%', '70%'],
+                        avoidLabelOverlap: false,
+                        label: {
+                            show: false,
+                            position: 'center'
+                        },
+                        emphasis: {
+                            label: {
+                                show: true,
+                                fontSize: '30',
+                                fontWeight: 'bold'
+                            }
+                        },
+                        labelLine: {
+                            show: false
+                        },
+                        data: []
+                    }
+                ]
+            };
+
+            $.get('/Home/GetVicWaterUsage', function (data) {
+                if (!data.isSuccess) {
+                    console.log(data.Message);
+                    return;
+                }
+                if (data.Data.length === 0) { return; }
+
+                var years = [];
+
+                data.Data.forEach((item) => {
+                    var year = item['Year'];
+                    years.push(year);
+                });
+
+                var keys = [];
+                for (var k in data.Data[0]) {
+                    if (k === 'Year') continue;
+                    keys.push(k);
+                }
+
+
+                var dataByYear = data.Data.filter((x) => x.Year == year)[0];
+
+
+
+
+                var resultList = [];
+
+                for (var k in dataByYear) {
+                    if (k === 'Year') continue;
+                    var item = { value: dataByYear[k], name: k };
+                    resultList.push(item);
+                }
+
+                option.series[0].data = resultList;
+                option.series[0].name = year;
+                option.legend.data = keys;
+
+                myBar.setOption(option);
+            });
+        }
+
+        drawGraph(2015);
+        </script>
+

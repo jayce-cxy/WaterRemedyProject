@@ -152,6 +152,7 @@
       <DependentUpon>waterremedyModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility\Utility.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\waterremedy_db.mdf" />
@@ -162,6 +163,8 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="css\bootstrap-select.css" />
+    <Content Include="css\bootstrap-select.min.css" />
     <Content Include="css\clean-blog.css" />
     <Content Include="css\clean-blog.min.css" />
     <Content Include="favicon.ico" />
@@ -173,10 +176,16 @@
     <Content Include="img\home-bg.jpg" />
     <Content Include="img\post-bg.jpg" />
     <Content Include="img\post-sample-image.jpg" />
+    <Content Include="js\bootstrap-select.js" />
+    <Content Include="js\bootstrap-select.min.js" />
     <Content Include="js\clean-blog.js" />
     <Content Include="js\clean-blog.min.js" />
     <Content Include="js\contact_me.js" />
+    <Content Include="js\echarts.all.js" />
+    <Content Include="js\echarts.min.js" />
     <Content Include="js\jqBootstrapValidation.js" />
+    <Content Include="js\jquery.rwdImageMaps.js" />
+    <Content Include="js\jquery.rwdImageMaps.min.js" />
     <Content Include="Models\waterremedyModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>waterremedyModel.Context.cs</LastGenOutput>
@@ -191,11 +200,15 @@
     <Content Include="pic\Catchment1.jpg" />
     <Content Include="pic\catchment2.jpg" />
     <Content Include="pic\catchment3.jpg" />
+    <Content Include="pic\greenwater.png" />
+    <Content Include="pic\homelayout5.jpg" />
     <Content Include="pic\Logo-V2.jpg" />
     <Content Include="pic\news_MelbourneWaterAward_DandenongCreek_02.jpg" />
+    <Content Include="pic\titleicon.png" />
     <Content Include="pic\Water-stream.jpg" />
     <Content Include="pic\Water-stream1.jpg" />
     <Content Include="pic\Water-strem2.jpg" />
+    <Content Include="pic\watericon.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <EntityDeploy Include="Models\waterremedyModel.edmx">
@@ -205,6 +218,11 @@
     <Content Include="Models\waterremedyModel.edmx.diagram">
       <DependentUpon>waterremedyModel.edmx</DependentUpon>
     </Content>
+    <Content Include="App_Data\Aus_Water_Usage.csv" />
+    <Content Include="App_Data\Melbourne_water_chemical.csv" />
+    <Content Include="App_Data\Victoria_Water_usage.csv" />
+    <Content Include="App_Data\Aus_Water_Usage_pc.csv" />
+    <Content Include="App_Data\Melbourne_water_chemicals.csv" />
     <None Include="Properties\PublishProfiles\WaterRemedy - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -291,6 +309,11 @@
     <Content Include="Views\Users\Details.cshtml" />
     <Content Include="Views\Users\Edit.cshtml" />
     <Content Include="Views\Users\Index.cshtml" />
+    <Content Include="Views\Home\homePage.cshtml" />
+    <Content Include="Views\Home\chemicalView.cshtml" />
+    <Content Include="Views\Home\AusWaterUsage.cshtml" />
+    <Content Include="Views\Home\PercentageOfUsage.cshtml" />
+    <Content Include="Views\Home\MelWaterUsage.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

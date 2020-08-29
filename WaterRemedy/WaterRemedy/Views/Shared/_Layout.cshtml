@@ -7,7 +7,7 @@
     <meta name="author" content="">
 
     <title>Water Remedy</title>
-
+    <link rel="icon" href="~/pic/greenwater.png" type="image/x-icon">
     <!-- Bootstrap core CSS -->
     <link href="~/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -15,7 +15,8 @@
     <link href="~/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="~/css/googlefonts.css" rel="stylesheet" />
     <link href="~/css/googleFont2.css" rel="stylesheet" />
-
+    <script src="~/vendor/jquery/jquery.js"></script>
+    <script src="~/js/echarts.min.js"></script>
     <!-- Custom styles for this template -->
     <link href="~/css/clean-blog.min.css" rel="stylesheet">
     <style>
@@ -135,22 +136,30 @@
     <!-- Bootstrap core JavaScript -->
     <script src="~/vendor/jquery/jquery.min.js"></script>
     <script src="~/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+    <script src="~/js/jquery.rwdImageMaps.js"></script>
+    <script src="~/js/jquery.rwdImageMaps.min.js"></script>
     <!-- Custom scripts for this template -->
     <script src="~/js/clean-blog.min.js"></script>
 
-
+    <script>
+        $(window).scroll(function () {
+            $('.fadedfx').each(function () {
+                var imagePos = $(this).offset().top;
+                var topOfWindow = $(window).scrollTop();
+                if (imagePos < topOfWindow + 500) {
+                    $(this).addClass("fadeIn");
+                }
+            });
+        });
+    </script>
 
     <script>
-        $(window).scroll(function() {
-		$('.fadedfx').each(function(){
-		var imagePos = $(this).offset().top;
-		var topOfWindow = $(window).scrollTop();
-			if (imagePos < topOfWindow+500) {
-				$(this).addClass("fadeIn");
-			}
-		});
-	});
+        $.get('/Home/GetVicWaterUsagePc', function (data) {
+            if (data.isSuccess) {
+                console.log(data.Message);
+                console.log(data.Data);
+            }
+        });
     </script>
 
     @RenderSection("scripts", required: false)

@@ -1,0 +1,148 @@
+﻿
+@{
+    ViewBag.Title = "GetWaterChemical";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <div class="container">
+        <div class="row">
+            <div class="dropdown">
+                <a class="btn btn-secondary dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Total
+                </a>
+
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" onclick="drawFigure('Harmful')">Harmful</a>
+                    <a class="dropdown-item" onclick="drawFigure('Acid salt')">Acid Salt</a>
+                    <a class="dropdown-item" onclick="drawFigure('macroelement')">Macro Element</a>
+                </div>
+            </div>
+        </div>
+
+        @*<select id="legends" name="weatherType" class="form-control selectpicker" multiple="multiple" title="choice legend"></select>*@
+
+        <div id="bar" class="row" style="width: inherit; height: 400px"></div>
+        <script>
+            var myBar = echarts.init(document.getElementById("bar"));
+
+            function drawFigure(type) {
+                var options = {
+                    title: {
+                        text: 'Water Chemical'
+                    },
+
+                    tooltip: {
+                        trigger: 'axis',
+                        axisPointer: {
+                            type: 'shadow'
+                        }
+                    },
+
+                    legend: {
+                        left: 'right',
+                        top: 'bottom',
+                        orient: 'vertical',
+                        data: []
+                    },
+
+                    grid: {
+                        left: '3%',
+                        right: '4%',
+                        bottom: '3%',
+                        containLabel: true
+                    },
+
+                    xAxis: {
+                        type: 'value'
+                    },
+
+                    yAxis: {
+                        type: 'category',
+                        data: []
+                    },
+
+                    series: []
+                };
+
+                // get data
+                $.get('/Home/GetWaterChemical', function (data) {
+                    if (!data.isSuccess) {
+                        console.log(data.Message);
+                        return;
+                    }
+                    if (data.Data.length === 0) { return; }
+
+                    // yAxis
+                    var locations = [];
+
+                    Object.keys(data.Data[0]).forEach((key) => {
+                        if (key === 'Parameter/ source') return;
+                        locations.push(key);
+                    })
+
+                    options.yAxis.data = locations;
+
+                    // legend
+                    var legends = [];
+
+                    data.Data.forEach((item) => {
+                        var legend = item['Parameter/ source'];
+                        if (type) {
+                            if (legend.indexOf(type) >= 0) legends.push(legend);
+                        } else {
+                            legends.push(legend);
+                        }
+                    });
+
+                    //options.legend.data = legends;
+
+                    // series
+                    var series = [];
+
+                    data.Data.forEach((item) => {
+                        var legend = item['Parameter/ source'];
+                        if (legends.indexOf(legend) < 0) return;
+
+                        var serie = {
+                            name: null,
+                            type: 'bar',
+                            stack: '总量',
+                            label: {
+                                show: false,
+                                position: 'insideRight'
+                            },
+                            data: []
+                        };
+
+                        serie.name = legend;
+
+                        locations.forEach((x) => {
+                            serie.data.push(item[x]);
+                        });
+
+                        series.push(serie);
+                    });
+
+                    options.series = series;
+
+                    myBar.setOption(options, { notMerge: true });
+                });
+                //$('#legends').multiselect({
+                //    onchange: function (option, checked, selected) {
+                //        var name = $(option).text();
+                //        myBar.dispatchAction({
+                //            type: 'legendToggleSelect',
+                //            name: name
+                //        });
+                //    }
+                //});
+            }
+
+            drawFigure();
+        </script>
+        <style>
+            #bar {
+                margin-top: 60px;
+            }
+        </style>
+    </div>
