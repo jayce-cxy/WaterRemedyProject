@@ -1,0 +1,143 @@
+﻿
+@{
+    ViewBag.Title = "Instruction";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <div>
+        <h3 style="text-align:center; margin-bottom:30px;">Your rainwater collection guide</h3>
+    </div>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active" style="background-image: url('/pic/step1.png')">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="display-4">Step 1</h2>
+                    <p class="lead">Enter your home address on Google Map’s search bar.</p>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('/pic/step2.png')">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="display-4">Step 2</h2>
+                    <p class="lead">
+                        Zoom in to find the flat image of your home.
+                        The red location sign in the graph is the sign of your searched location (home).
+                        The small rectangle with darker color (outlined in black in the graph) is the roof of your home.
+                        The rest is the neighborhood or the yard.
+                    </p>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('/pic/step3.png')">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="display-4">Step 3</h2>
+                    <p class="lead">Right click on your home. Then a list of choices will appear.   Choose “Measure distance” which is at the bottom of the shown list.</p>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('/pic/step4.png')">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="display-4">Step 4</h2>
+                    <p class="lead">4.	Start with one of the rectangle’s corners, move the starting or end point of the measure line so that covers one of the edges of the rectangle.</p>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('/pic/step5.png')">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="display-4">Step 5</h2>
+                    <p class="lead">Repeat step 4 to the other corners until all the edges are covered and the lines forms a closed shape.</p>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('/pic/step6.png')">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="display-4">Step 6</h2>
+                    <p class="lead">6.	After you finished step 5, you can immediately get the area of your roof. Please record the area information.</p>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('/pic/step7.png')">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="display-4">Step 7</h2>
+                    <p class="lead">7.	To obtain your local rainfall data, you can go to the website http://www.bom.gov.au/climate/data/. Switch to “Select Using Text” as circled out in red like shown below.</p>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('/pic/step8.png')">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="display-4">Step 8</h2>
+                    <p class="lead">8.	Enter your area of home in the search bar right below “2. Select a weather station in the area of interest”, and make sure you also select your matching town and nearest Bureau stations.</p>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('/pic/step9.png')">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="display-4">Step 9</h2>
+                    <p class="lead">9.	After you make selection of your nearest Bureau station, the station number will automatically appear in the searching bar below “3. Get the data”. Now, click on the button “Get Data” on the right of the station number.</p>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('/pic/step10.png')">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="display-4">Step 10</h2>
+                    <p class="lead">10.	The outcome will show the rainfall in mm recorded.</p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <div class="row">
+        <div class="col-xl-4 col-lg-4 col-md-4">
+            <label for="exampleForm2">House area</label>
+            <input type="text" id="area" class="form-control">
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4">
+            <label for="exampleForm2">Current rainfall</label>
+            <input type="text" id="rainfall" class="form-control" value="80">
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4">
+            <label for="exampleForm2">Water storage</label>
+            <input type="text" id="result" class="form-control" readonly>
+        </div>
+        <div>
+            <button type="button" class="btn btn-primary" style="margin-top:50px; margin-left:20px" onclick="calculate();">calculate</button>
+        </div>
+    </div>
+
+</div>
+<style>
+    .carousel-item {
+        height: 70vh;
+        min-height: 350px;
+        background: no-repeat center center scroll;
+        background-size: cover;
+    }
+
+    .display-4 {
+        color: black;
+    }
+
+    .lead {
+        color: black;
+    }
+    #header_img {
+            background-image: url("../pic/WaterStreamss.jpg");
+        }
+</style>
+<script>
+    function calculate() {
+        var area = document.getElementById("area").value;
+        var rainfall = document.getElementById("rainfall").value;
+        var result = null;
+        if (area == "" || rainfall == "") {
+            alert("Please fill in the content correctly");
+        } else {
+            result = Number(area) * Number(rainfall);
+        }
+        document.getElementById("result").value = result;
+    }
+
+</script>

@@ -24,8 +24,6 @@
 
         </div>
 
-        @*<select id="legends" name="weatherType" class="form-control selectpicker" multiple="multiple" title="choice legend"></select>*@
-
 
         <div id="bar" class="row" style="width: inherit; height: 400px"></div>
         <div style="margin-bottom:90px;">
@@ -74,7 +72,6 @@
                     series: []
                 };
 
-                // get data
                 $.get('/Home/GetWaterChemical', function (data) {
                     if (!data.isSuccess) {
                         console.log(data.Message);
@@ -82,7 +79,6 @@
                     }
                     if (data.Data.length === 0) { return; }
 
-                    // yAxis
                     var locations = [];
 
                     Object.keys(data.Data[0]).forEach((key) => {
@@ -92,7 +88,6 @@
 
                     options.yAxis.data = locations;
 
-                    // legend
                     var legends = [];
 
                     data.Data.forEach((item) => {
@@ -106,7 +101,6 @@
 
                     //options.legend.data = legends;
 
-                    // series
                     var series = [];
 
                     data.Data.forEach((item) => {
@@ -147,5 +141,8 @@
         #button {
             float: right;
             margin-top: 10px;
+        }
+        #header_img {
+            background-image: url("../pic/Water-strem2.jpg");
         }
     </style>

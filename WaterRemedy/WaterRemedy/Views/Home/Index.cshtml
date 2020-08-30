@@ -2,101 +2,226 @@
     ViewBag.Title = "Home Page";
 }
 
-<!-- Main Content -->
-<!-- Card deck -->
 
+    <div class="container">
+        <div class="row mb-5">
 
-<div class="container">
-    <div class="card-deck">
-
-        <!-- Card -->
-        <div class="card mb-4">
-
-            <!--Card image-->
-            <div class="view overlay">
-                <img class="card-img-top" src="~/pic/Catchment1.jpg"
-                     alt="Card image cap">
-                @*<a href="#!">
-                        <div class="mask rgba-white-slight"></div>
-                    </a>*@
+            <div class="col-md-5 ml-auto mb-5 order-md-2" data-aos="fade-up" data-aos-delay="100">
+                <img src="~/pic/Catchment1.jpg" alt="Image" class="img-fluid rounded">
             </div>
 
-            <!--Card content-->
-            <div class="card-body">
+            <div class="col-md-6 order-md-1" data-aos="fade-up">
+                <div id="accordion">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    are our waterways healthy?
+                                </button>
+                            </h5>
+                        </div>
 
-                <!--Title-->
-                <h4 class="card-title">Card title</h4>
-                <!--Text-->
-                <p class="card-text">
-                    Some quick example text to build on the card title and make up the bulk of the card's
-                    content.
-                </p>
-                <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                <button type="button" class="btn btn-light-blue btn-md">Read more</button>
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                            <div class="card-body">
+                                Melbourne’s waterways quality differs greatly. The natural areas and upstream areas are healthier and have good water quality then compared to city side and developing suburbs due to result of urban development.
+                                one good is news is that compared the other major cities, Melbourne’s water ways are good overall. With the population growth every new driveway and pavement increases the amount of rainwater that runs into rivers and creeks with litter and pollutants.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    What and how are Water quality tested?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                            <div class="card-body">
+                                Water quality is an important condition that supports both environmental and social values.
+                                Melbourne water gets sampled at 100 different locations (monitoring sites) to assess any changes over time, testing for a range of indicators like water temperature, dissolved oxygen, salinity (salt levels), pH level (acidity or alkalinity),nutrients (forms of nitrogen and phosphorus),faecal contamination (E. coli), metals (arsenic, cadmium, chromium, copper, lead, nickel and zinc)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Assessment of water ways:
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                            <div class="card-body">
+                                One of the main ways we assess waterway health is by looking at the key values they support, which reflect their environmental, social, cultural and economic importance. The key values are fish, platypus, frogs, birds, macroinvertebrates, vegetation, amenity, community connection (with each other and nature), and recreation. Rating goes for these key factors from ‘very low’ to ‘very high’ across a system of waterways.
+                                which balances out differences in waterway characteristics that allow some to better support key values than others.
+                                This means the health of your local waterway may not always change, even if the overall system improves.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingFour">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Yarra River's environmental health at risk due to litter, pollution, pests and urban development:
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                            <div class="card-body">
+                                The Yarra River's environmental health is being put at risk due to litter, pollution and invasive species, with nearly 180 tonnes of rubbish being collected from the river system over a four-year period. Victoria’s Commissioner for Environmental Sustainability rated the river's health as "poor". The report notifies the below key points: 1)Litter-cleaning programs removed 179 tonnes of litter from the river between 2014 and 2017
+                                2)The report recommends planning controls be extended further north-east along the Yarra River 3)It also calls for the creation of a chief biodiversity scientist to oversee monitoring of the river's health
+                                <p>
+                                    it also stated that over a four-year period between 2014 and 2017, a waste and litter program collected 179 tonnes of litter, including 1.29 million cigarette butts from the river and its mouth at Port Phillip Bay,
+                                    between 2013 and 2017, the Environment Protection Agency (EPA) received 338 water pollution reports. Meanwhile, the outlook for frogs and fish was deteriorating in inner-city Melbourne and urban parts of the river system, but platypuses were assessed as being in a "fair" and "stable" state by the report. The report also mentioned “"It may be necessary to supplement these natural hollows, using alternative approaches for providing den sites while natural hollows develop over coming decades,"
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingFive">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    seven recommendations
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                            <div class="card-body">
+                                1)Victoria's biodiversity science and data capability are undermined by a lack of coordination and a strategic approach to investing in critical research 2)it also recommended the Government expand planning controls over the river to combat "inappropriate urban development" as Melbourne's population expands in the north-east of the city.
+                                3)The current river protection zone should be extended from Warrandyte to the boundary of the Yarra Ranges National Park. 4)Hollow-bearing trees were in "low numbers" at surveyed state forests where the Leadbeater's possum lives.
+                                5) the Government would consider the report's recommendations and that care for the river was a "shared responsibility" of all Victorians. 6)Smokers in particular need to make an effort to properly dispose of cigarette butts because whether they're dropped in the water, or on the street, they still end up in our rivers.
+                                7) cited revegetation, pollution control and pest control programs as some examples of Government investment to help improve the river system's health.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
 
             </div>
+
+
 
         </div>
-        <!-- Card -->
-        <!-- Card -->
-        <div class="card mb-4">
 
-            <!--Card image-->
-            <div class="view overlay">
-                <img class="card-img-top" src="~/pic/catchment2.jpg"
-                     alt="Card image cap">
-                @*<a href="#!">
-                        <div class="mask rgba-white-slight"></div>
-                    </a>*@
+        <div class="row align-items-center">
+            <div class="col-xl-6 col-lg-6 col-md-6">
+                <img src="~/pic/catchment2.jpg" alt="Image" class="img-fluid rounded">
             </div>
 
-            <!--Card content-->
-            <div class="card-body">
 
-                <!--Title-->
-                <h4 class="card-title">Card title</h4>
-                <!--Text-->
-                <p class="card-text">
-                    Some quick example text to build on the card title and make up the bulk of the card's
-                    content.
-                </p>
-                <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                <button type="button" class="btn btn-light-blue btn-md">Read more</button>
+            <div class="col-xl-6 col-lg-6 col-md-6">
+                <div id="accordion">
+                    <div class="card">
+                        <div class="card-header" id="headingSix">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                                    Population growth
+                                </button>
+                            </h5>
+                        </div>
+
+                        <div id="collapseSix" class="collapse show" aria-labelledby="headingSix" data-parent="#accordion">
+                            <div class="card-body">
+                                Melbourne is a great city and one of the fastest growing cities. everyone wants to live here and enjoy its serenity. Melbourne’s population has grown substantially from past 25 years. According to Victorian state government and Australian Bureau of statistics, Melbourne is fastest growing city in Australia and Victoria’s population is expected to almost double by 2051. Since 2001, Melbourne has added 1.5 million new residents. And also have declared that over the next 50 years, the population of Melbourne and surrounding suburbs can from 4.6 Million to 8 Million. 
+                                And over next few years it is anticipated to reach over 10 million. With current water levels and water sources it will be a tedious job to provide water to all the residents of Melbourne and surrounding areas.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingSeven">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                    Rising water usage
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
+                            <div class="card-body">
+                                even though lot of data shows the per capita use of water is decreasing over years with personal saving actions and more efficient home appliances. 
+                                however, increase in number of people means increased water supply, water storage and water resources.
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="card">
+                        <div class="card-header" id="headingEight">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                    Climate change
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion">
+                            <div class="card-body">
+                                Climate change causes increase in temperature levels and decrease in rainfall levels, which will potentially cause longer drier periods. If there is decline in rainwater levels, obviously water storage would decrease and cause water scarcity. These climate changes also increase the chance of bushfires. Bushfires are very directly involved with water storage and water quality. 
+                                The majority of water catchments and water reservoirs are surrounded by natural land. This natural bushland keeps water cleaner. but if bushfires occur, there can be change in the water quality due to the residues released by the bush fires, which not only makes water quality worse, rather makes it worse and unfit for human consumption.
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="card">
+                        <div class="card-header" id="headingNine">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                                    Why does it matter
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordion">
+                            <div class="card-body">
+                                Melbournians collectively consume 980 million litres of water per day. With Melbourne’s population growing and climate change making rainfall less reliable, these factors affect the fact that how much water can make it to storages from rainfall. We cannot rely on only rainwater. it is very high time to look into alternatives and also save and use water very efficiently. Everyone needs to be responsible and do their part. 
+                                It is said that an average person can use 155 litres of water per day, by using water efficiently and be a part of this beautiful efficient water usage campaign.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingTen">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                                    What can be done
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordion">
+                            <div class="card-body">
+                                1)	Recycling and reusing the water
+                                2)	Finding alternative sources of water
+                                3)	Efficient water usage
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
 
             </div>
-
         </div>
-        <!-- Card -->
-        <!-- Card -->
-        <div class="card mb-4">
-
-            <!--Card image-->
-            <div class="view overlay">
-                <img class="card-img-top" src="~/pic/catchment3.jpg"
-                     alt="Card image cap">
-                @*<a href="#!">
-                        <div class="mask rgba-white-slight"></div>
-                    </a>*@
-            </div>
-
-            <!--Card content-->
-            <div class="card-body">
-
-                <!--Title-->
-                <h4 class="card-title">Card title</h4>
-                <!--Text-->
-                <p class="card-text">
-                    Some quick example text to build on the card title and make up the bulk of the card's
-                    content.
-                </p>
-                <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                <button type="button" class="btn btn-light-blue btn-md">Read more</button>
-
-            </div>
-
-        </div>
-        <!-- Card -->
 
     </div>
-</div>
-<!-- Card deck -->
+
+<style>
+    .text-primary {
+        color: #f16821 !important;
+    }
+
+    h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
+        font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    }
+
+    p {
+        font-family: 'Inder', sans-serif;
+        line-height: 28px;
+        margin-bottom: 15px;
+        color: #666;
+    }
+
+    .img-fluid {
+        margin-top: 70px;
+    }
+</style>

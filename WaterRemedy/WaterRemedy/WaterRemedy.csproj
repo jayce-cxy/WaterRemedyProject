@@ -216,11 +216,22 @@
     <Content Include="pic\homelayout5.jpg" />
     <Content Include="pic\Logo-V2.jpg" />
     <Content Include="pic\news_MelbourneWaterAward_DandenongCreek_02.jpg" />
+    <Content Include="pic\step1.png" />
+    <Content Include="pic\step10.png" />
+    <Content Include="pic\step2.png" />
+    <Content Include="pic\step3.png" />
+    <Content Include="pic\step4.png" />
+    <Content Include="pic\step5.png" />
+    <Content Include="pic\step6.png" />
+    <Content Include="pic\step7.png" />
+    <Content Include="pic\step8.png" />
+    <Content Include="pic\step9.png" />
     <Content Include="pic\titleicon.png" />
     <Content Include="pic\Water-stream.jpg" />
     <Content Include="pic\Water-stream1.jpg" />
     <Content Include="pic\Water-strem2.jpg" />
     <Content Include="pic\watericon.png" />
+    <Content Include="pic\WaterStreamss.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <EntityDeploy Include="Models\waterremedyModel.edmx">
@@ -346,6 +357,7 @@
     <Content Include="Views\KitchenSets\Alternatives.cshtml" />
     <Content Include="Views\LaundrySets\Alternatives.cshtml" />
     <Content Include="Views\BathroomSets\Alternatives.cshtml" />
+    <Content Include="Views\Home\Instruction.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
