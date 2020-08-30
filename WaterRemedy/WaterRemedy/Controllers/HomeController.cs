@@ -63,7 +63,7 @@ namespace WaterRemedy.Controllers
             try
             {
                 var directoryInfo = new DirectoryInfo(StaticFilePath.LocalFilePath);
-                var fileInfo = directoryInfo.GetFiles().FirstOrDefault(x => x.Name.Equals("Melbourne_water_chemicals.csv"));
+                var fileInfo = directoryInfo.GetFiles().FirstOrDefault(x => x.Name.Equals("Melbourne_water_chemical.csv"));
                 if (fileInfo == null) return Content(JsonConvert.SerializeObject(new { isSuccess = false, Message = "No Data" }), "application/json");
 
                 var process = new ImportCSV($@"{fileInfo.DirectoryName}\", fileInfo.Name);

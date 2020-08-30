@@ -5,9 +5,9 @@
 }
 
 <div class="container">
-    <h2>AusWaterUsage</h2>
+    <h2>Austrelia Water Usage</h2>
 
-    <div class="dropdown">
+    <div class="dropdown" style="margin-bottom:50px; float:right">
         <a class="btn btn-secondary dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Choose the year
         </a>
@@ -31,7 +31,7 @@
                 backgroundColor: '#F2F6EC',
 
                 title: {
-                    text: 'Melbourne Water Usage',
+                    text: 'Australia Water Usage',
                     left: 'center',
                     top: 20,
                     textStyle: {
@@ -119,50 +119,4 @@
 
         drawGraph(2015);
     </script>
-
-    @*<script>
-                var data = [
-                    { "Parameter/ source": "Aluminium_acid_soluble(Acid salt)", "Cardinia": "0.045", "Greenvale": "0.075", "Silvan": "0.09", "Winneke": "0.049", "Tarago": "0.04", "Yan Yean": "0.06", "Sd_Upper": "1.6" },
-                { "Parameter/ source": "Chloroacetic acid (ug/l)(Acid salt)", "Cardinia": "3", "Greenvale": "3", "Silvan": "3", "Winneke": "3", "Tarago": "3", "Yan Yean": "3", "Sd_Upper": "0.15" },
-                { "Parameter/ source": "Dichloroacetic acid?(ug/l)(Acid salt)", "Cardinia": "6", "Greenvale": "5", "Silvan": "13", "Winneke": "8.5", "Tarago": "7.5", "Yan Yean": "9", "Sd_Upper": "0.1" },
-                { "Parameter/ source": "Trichloroacetic acid?(ug/l)(Acid salt)", "Cardinia": "20", "Greenvale": "7", "Silvan": "38", "Winneke": "19", "Tarago": "8.5", "Yan Yean": "19", "Sd_Upper": "0.25" },
-                { "Parameter/ source": "Nitrate(Acid salt)", "Cardinia": "0.12", "Greenvale": "0.148", "Silvan": "0.21", "Winneke": "0.39", "Tarago": "0.27", "Yan Yean": "0.385", "Sd_Upper": "20" },
-                    { "Parameter/ source": "Arsenic(Harmful)", "Cardinia": "0.001", "Greenvale": "0.001", "Silvan": "0.001", "Winneke": "0.002", "Tarago": "0", "Yan Yean": "0.002", "Sd_Upper": "0.05" },
-                    { "Parameter/ source": "Bromide(Harmful)", "Cardinia": "0.04", "Greenvale": "0.04", "Silvan": "0.04", "Winneke": "0.04", "Tarago": "0.04", "Yan Yean": "0.04", "Sd_Upper": "0.2" },
-                    { "Parameter/ source": "Cadmium(Harmful)", "Cardinia": "0", "Greenvale": "0", "Silvan": "0", "Winneke": "0", "Tarago": "0", "Yan Yean": "0", "Sd_Upper": "0.005" }, { "Parameter/ source": "Chromium(Harmful)", "Cardinia": "0.001", "Greenvale": "0.001", "Silvan": "0.001", "Winneke": "0.001", "Tarago": "0.001", "Yan Yean": "0.001", "Sd_Upper": "0.1" }, { "Parameter/ source": "Copper(Harmful)", "Cardinia": "0.01", "Greenvale": "0.072", "Silvan": "0.09", "Winneke": "0.001", "Tarago": "0.001", "Yan Yean": "0.01", "Sd_Upper": "0.6" }, { "Parameter/ source": "Lead(Harmful)", "Cardinia": "0.001", "Greenvale": "0.001", "Silvan": "0.001", "Winneke": "0.001", "Tarago": "0.001", "Yan Yean": "0.001", "Sd_Upper": "0.05" }, { "Parameter/ source": "Mercury(Harmful)", "Cardinia": "0", "Greenvale": "0", "Silvan": "0", "Winneke": "0", "Tarago": "0", "Yan Yean": "0", "Sd_Upper": "0.001" }, { "Parameter/ source": "Nickel(Harmful)", "Cardinia": "0.001", "Greenvale": "0.001", "Silvan": "0.001", "Winneke": "0.001", "Tarago": "0.001", "Yan Yean": "0.001", "Sd_Upper": "0.1" }, { "Parameter/ source": "Selenium(Harmful)", "Cardinia": "0.001", "Greenvale": "0.001", "Silvan": "0.001", "Winneke": "0.001", "Tarago": "0.001", "Yan Yean": "0.001", "Sd_Upper": "0.01" }, { "Parameter/ source": "Silica as SIO2(Harmful)", "Cardinia": "4.8", "Greenvale": "4.75", "Silvan": "6.45", "Winneke": "4.3", "Tarago": "5.15", "Yan Yean": "4.3", "Sd_Upper": "3.6" }, { "Parameter/ source": "Total trihalomethanes(Harmful)", "Cardinia": "0.014", "Greenvale": "0.013", "Silvan": "0.002", "Winneke": "0.021", "Tarago": "0.08", "Yan Yean": "0.021", "Sd_Upper": "0.25" }, { "Parameter/ source": "Total organic carbon(macroelement)", "Cardinia": "1.5", "Greenvale": "1.85", "Silvan": "2.35", "Winneke": "1.5", "Tarago": "2", "Yan Yean": "1.4", "Sd_Upper": "4.03" }, { "Parameter/ source": "Iron(macroelement)", "Cardinia": "0.085", "Greenvale": "0.08", "Silvan": "0.085", "Winneke": "0.02", "Tarago": "0.025", "Yan Yean": "0.02", "Sd_Upper": "0.13" }, { "Parameter/ source": "Calcium(macroelement)", "Cardinia": "5.25", "Greenvale": "4.5", "Silvan": "4", "Winneke": "6.7", "Tarago": "9", "Yan Yean": "6.2", "Sd_Upper": "0.45" }, { "Parameter/ source": "Manganese(macroelement)", "Cardinia": "0.095", "Greenvale": "0.001", "Silvan": "0.025", "Winneke": "0.004", "Tarago": "0.015", "Yan Yean": "0.004", "Sd_Upper": "0.002" }, { "Parameter/ source": "Fluoride(macroelement)", "Cardinia": "0.825", "Greenvale": "0", "Silvan": "0.835", "Winneke": "0.735", "Tarago": "0.85", "Yan Yean": "0.675", "Sd_Upper": "1" }, { "Parameter/ source": "Magnesium(macroelement)", "Cardinia": "1.3", "Greenvale": "1.45", "Silvan": "1.25", "Winneke": "2.4", "Tarago": "2.5", "Yan Yean": "2.35", "Sd_Upper": "2.9" }, { "Parameter/ source": "Potassium(macroelement)", "Cardinia": "0.65", "Greenvale": "0.72", "Silvan": "0.65", "Winneke": "1.35", "Tarago": "2.2", "Yan Yean": "1.35", "Sd_Upper": "1.12" }, { "Parameter/ source": "Sodium(macroelement)", "Cardinia": "4.5", "Greenvale": "5.25", "Silvan": "4.15", "Winneke": "10.6", "Tarago": "13", "Yan Yean": "10.65", "Sd_Upper": "20" }, { "Parameter/ source": "Total phosphorus(macroelement)", "Cardinia": "0.007", "Greenvale": "0.008", "Silvan": "0.008", "Winneke": "0.01", "Tarago": "0.015", "Yan Yean": "0.01", "Sd_Upper": "0.015" }, { "Parameter/ source": "Zinc(macroelement)", "Cardinia": "0.004", "Greenvale": "0.002", "Silvan": "0.004", "Winneke": "0.003", "Tarago": "0.002", "Yan Yean": "0.01", "Sd_Upper": "0.005" }, { "Parameter/ source": "Total alkalinity as CaCO3(other)", "Cardinia": "15", "Greenvale": "10.5", "Silvan": "9.5", "Winneke": "11.5", "Tarago": "20.5", "Yan Yean": "11.5", "Sd_Upper": "16.8" }, { "Parameter/ source": "Total dissolved solids(other)", "Cardinia": "38.5", "Greenvale": "35", "Silvan": "36", "Winneke": "78.5", "Tarago": "93.5", "Yan Yean": "78.5", "Sd_Upper": "62" }, { "Parameter/ source": "Boron(other)", "Cardinia": "0.08", "Greenvale": "0.01", "Silvan": "0.01", "Winneke": "0.01", "Tarago": "0.01", "Yan Yean": "0.01", "Sd_Upper": "1" }, { "Parameter/ source": "pH (units)", "Cardinia": "7.3", "Greenvale": "7.5", "Silvan": "7.3", "Winneke": "7.2", "Tarago": "7.15", "Yan Yean": "7.1", "Sd_Upper": "9.2" }, { "Parameter/ source": "Hardness(Physical Property)", "Cardinia": "19", "Greenvale": "17", "Silvan": "14", "Winneke": "17", "Tarago": "38.5", "Yan Yean": "27", "Sd_Upper": "23" }, { "Parameter/ source": "Colour (Pt/Co)(Physical Property)", "Cardinia": "2.5", "Greenvale": "4", "Silvan": "7", "Winneke": "0.7", "Tarago": "2.5", "Yan Yean": "2", "Sd_Upper": "2.3" }, { "Parameter/ source": "Turbidity (NTU)(Physical Property)", "Cardinia": "0.9", "Greenvale": "1", "Silvan": "0.7", "Winneke": "0.2", "Tarago": "0.3", "Yan Yean": "0.6", "Sd_Upper": "5" }, { "Parameter/ source": "Specific conductance (uS/cm)(Physical Property)", "Cardinia": "56", "Greenvale": "60", "Silvan": "52", "Winneke": "132", "Tarago": "163", "Yan Yean": "124", "Sd_Upper": "68" }];
-
-                // get all data which city is Cardinia
-                var data = [];
-                for (int i = 0; i < data.length(); i++) {
-                    var city = data[i](key === 'Cardinia');
-                    data.add(city);
-                }
-
-                // group all data by cities
-
-                class Result {
-                    constructor() {
-                        this.city = '';
-                        this.data = [];
-                    }
-                }
-
-                // resultList - new List<Result>();
-
-                var cities = data[0].getKeys.remove(key === 'parameter/ source');
-
-                for (var i = 0; i < cities.length; i++) {
-                    var city = cities[i];
-                    var dataArray = [];
-                    for (var j = 0; j < data.length; j++) {
-                        var specific = data[j](key === city);
-                        dataArray.add(specific);
-                    }
-                    Result result = new Result();
-                    result.city = city;
-                    result.data = dataArray;
-                    resultList.add(result);
-                }
-
-        </script>*@
 </div>

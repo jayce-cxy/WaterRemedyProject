@@ -26,5 +26,8 @@ namespace WaterRemedy.Models
         }
     
         public virtual DbSet<User> UserSet { get; set; }
+        public virtual DbSet<BathroomSet> BathroomSet { get; set; }
+        public virtual DbSet<KitchenSet> KitchenSet { get; set; }
+        public virtual DbSet<LaundrySet> LaundrySet { get; set; }
     }
 }

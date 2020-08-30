@@ -128,10 +128,22 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\BathroomSetsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\KitchenSetsController.cs" />
+    <Compile Include="Controllers\LaundrySetsController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BathroomSet.cs">
+      <DependentUpon>waterremedyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\KitchenSet.cs">
+      <DependentUpon>waterremedyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LaundrySet.cs">
+      <DependentUpon>waterremedyModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\User.cs">
       <DependentUpon>waterremedyModel.tt</DependentUpon>
@@ -222,7 +234,6 @@
     <Content Include="App_Data\Melbourne_water_chemical.csv" />
     <Content Include="App_Data\Victoria_Water_usage.csv" />
     <Content Include="App_Data\Aus_Water_Usage_pc.csv" />
-    <Content Include="App_Data\Melbourne_water_chemicals.csv" />
     <None Include="Properties\PublishProfiles\WaterRemedy - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -314,6 +325,27 @@
     <Content Include="Views\Home\AusWaterUsage.cshtml" />
     <Content Include="Views\Home\PercentageOfUsage.cshtml" />
     <Content Include="Views\Home\MelWaterUsage.cshtml" />
+    <Content Include="Views\KitchenSets\Create.cshtml" />
+    <Content Include="Views\KitchenSets\Delete.cshtml" />
+    <Content Include="Views\KitchenSets\Details.cshtml" />
+    <Content Include="Views\KitchenSets\Edit.cshtml" />
+    <Content Include="Views\KitchenSets\Index.cshtml" />
+    <Content Include="Views\BathroomSets\Create.cshtml" />
+    <Content Include="Views\BathroomSets\Delete.cshtml" />
+    <Content Include="Views\BathroomSets\Details.cshtml" />
+    <Content Include="Views\BathroomSets\Edit.cshtml" />
+    <Content Include="Views\BathroomSets\Index.cshtml" />
+    <Content Include="Views\LaundrySets\Create.cshtml" />
+    <Content Include="Views\LaundrySets\Delete.cshtml" />
+    <Content Include="Views\LaundrySets\Details.cshtml" />
+    <Content Include="Views\LaundrySets\Edit.cshtml" />
+    <Content Include="Views\LaundrySets\Index.cshtml" />
+    <Content Include="Views\KitchenSets\KitchenList.cshtml" />
+    <Content Include="Views\LaundrySets\LaundryList.cshtml" />
+    <Content Include="Views\BathroomSets\BathroomList.cshtml" />
+    <Content Include="Views\KitchenSets\Alternatives.cshtml" />
+    <Content Include="Views\LaundrySets\Alternatives.cshtml" />
+    <Content Include="Views\BathroomSets\Alternatives.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

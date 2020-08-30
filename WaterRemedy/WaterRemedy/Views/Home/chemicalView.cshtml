@@ -5,8 +5,11 @@
 }
 
     <div class="container">
+        <h2>
+            Melbourne Water Quality Chart Report
+        </h2>
         <div class="row">
-            <div class="dropdown">
+            <div class="dropdown" style="margin-bottom:50px; margin-left:950px">
                 <a class="btn btn-secondary dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Total
                 </a>
@@ -16,12 +19,19 @@
                     <a class="dropdown-item" onclick="drawFigure('Acid salt')">Acid Salt</a>
                     <a class="dropdown-item" onclick="drawFigure('macroelement')">Macro Element</a>
                 </div>
+                
             </div>
+
         </div>
 
         @*<select id="legends" name="weatherType" class="form-control selectpicker" multiple="multiple" title="choice legend"></select>*@
 
+
         <div id="bar" class="row" style="width: inherit; height: 400px"></div>
+        <div style="margin-bottom:90px;">
+            <button type="button" id="button" class="btn btn-outline-info waves-effect" onclick="location.href='/Home/MelWaterUsage'">Go For Water Usage</button>
+        </div>
+
         <script>
             var myBar = echarts.init(document.getElementById("bar"));
 
@@ -127,22 +137,15 @@
 
                     myBar.setOption(options, { notMerge: true });
                 });
-                //$('#legends').multiselect({
-                //    onchange: function (option, checked, selected) {
-                //        var name = $(option).text();
-                //        myBar.dispatchAction({
-                //            type: 'legendToggleSelect',
-                //            name: name
-                //        });
-                //    }
-                //});
             }
 
             drawFigure();
         </script>
-        <style>
-            #bar {
-                margin-top: 60px;
-            }
-        </style>
+        
     </div>
+    <style>
+        #button {
+            float: right;
+            margin-top: 10px;
+        }
+    </style>

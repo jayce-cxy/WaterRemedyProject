@@ -1,0 +1,35 @@
+Parameter/ source,Cardinia,Greenvale,Silvan,Winneke,Tarago,Yan Yean
+Aluminium_acid_soluble(Acid salt),0.045,0.075,0.09,0.049,0.04,0.06
+Chloroacetic acid (ug/l)(Acid salt),3,3,3,3,3,3
+Dichloroacetic acid?(ug/l)(Acid salt),6,5,13,8.5,7.5,9
+Trichloroacetic acid?(ug/l)(Acid salt),20,7,38,19,8.5,19
+Nitrate(Acid salt),0.12,0.148,0.21,0.39,0.27,0.385
+Arsenic(Harmful),0.001,0.001,0.001,0.002,0,0.002
+Bromide(Harmful),0.04,0.04,0.04,0.04,0.04,0.04
+Cadmium(Harmful),0,0,0,0,0,0
+Chromium(Harmful),0.001,0.001,0.001,0.001,0.001,0.001
+Copper(Harmful),0.01,0.072,0.09,0.001,0.001,0.01
+Lead(Harmful),0.001,0.001,0.001,0.001,0.001,0.001
+Mercury(Harmful),0,0,0,0,0,0
+Nickel(Harmful),0.001,0.001,0.001,0.001,0.001,0.001
+Selenium(Harmful),0.001,0.001,0.001,0.001,0.001,0.001
+Silica as SIO2(Harmful),4.8,4.75,6.45,4.3,5.15,4.3
+Total trihalomethanes(Harmful),0.014,0.013,0.002,0.021,0.08,0.021
+Total organic carbon(macroelement),1.5,1.85,2.35,1.5,2,1.4
+Iron(macroelement),0.085,0.08,0.085,0.02,0.025,0.02
+Calcium(macroelement),5.25,4.5,4,6.7,9,6.2
+Manganese(macroelement),0.095,0.001,0.025,0.004,0.015,0.004
+Fluoride(macroelement),0.825,0,0.835,0.735,0.85,0.675
+Magnesium(macroelement),1.3,1.45,1.25,2.4,2.5,2.35
+Potassium(macroelement),0.65,0.72,0.65,1.35,2.2,1.35
+Sodium(macroelement),4.5,5.25,4.15,10.6,13,10.65
+Total phosphorus(macroelement),0.007,0.008,0.008,0.01,0.015,0.01
+Zinc(macroelement),0.004,0.002,0.004,0.003,0.002,0.01
+Total alkalinity as CaCO3(other),15,10.5,9.5,11.5,20.5,11.5
+Total dissolved solids(other),38.5,35,36,78.5,93.5,78.5
+Boron(other),0.08,0.01,0.01,0.01,0.01,0.01
+pH (units),7.3,7.5,7.3,7.2,7.15,7.1
+Hardness(Physical Property),19,17,14,17,38.5,27
+Colour (Pt/Co)(Physical Property),2.5,4,7,0.7,2.5,2
+Turbidity (NTU)(Physical Property),0.9,1,0.7,0.2,0.3,0.6
+Specific conductance (uS/cm)(Physical Property),56,60,52,132,163,124
