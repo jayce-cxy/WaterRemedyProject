@@ -5,7 +5,17 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-
+<!-- bradcam_area_start -->
+<div class="bradcam_area breadcam_bg overlay" style="margin-bottom:50px; background-image:url(/pic/small-bg11.jpg)">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 id="styleForHeader">Kitchen</h3>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- bradcam_area_end -->
 
 <div class="container py-5">
 
@@ -14,7 +24,7 @@
         <div class="col-lg-7 mx-auto">
             <h1 class="display-4">Kitchen harmful ingredient</h1>
             <p class="lead mb-0">
-                Click below to learn about their alternatives
+                Make your best choice and replace these water-damaging items.
             </p>
 
         </div>
@@ -23,40 +33,126 @@
 
 
     <div class="row">
-        <div class="col-lg-8 mx-auto">
+        <ul class="nav nav-pills col-lg-12 col-md-12 col-sm-12" style="margin-left:1150px; margin-bottom:60px;">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Choose Alternatives</a>
+                <div class="dropdown-menu" style="">
+                    <a class="dropdown-item" id="choice1" onclick="onclick1()">Grease cleaner</a>
+                    <a class="dropdown-item" id="choice2" onclick="onclick2()">Clean with peel</a>
+                    <a class="dropdown-item" id="choice3" onclick="onclick3()">clean with flour</a>
+                </div>
+            </li>
+        </ul>
+        <div class="col-lg-8 col-md-8 col-xs-8 mx-auto">
 
             <!-- List group-->
             <ul class="list-group shadow">
 
-                @foreach (var item in Model)
-                {
-                    <!-- list group item-->
-                    <li class="list-group-item">
-                        <!-- Custom content-->
-                        <div class="media align-items-lg-center flex-column flex-lg-row p-3">
-                            <div class="media-body order-2 order-lg-1">
-                                <h5 class="mt-0 font-weight-bold mb-2">@Html.DisplayFor(modelItem => item.chemical_name)</h5>
-                                <p class="font-italic text-muted mb-0 small">@Html.DisplayFor(modelItem => item.harm)</p>
-                                <div class="d-flex align-items-center justify-content-between mt-1">
-                                    <h6 class="font-weight-bold my-2">@Html.DisplayFor(modelItem => item.source)</h6>
 
-                                </div>
-                            </div>@*<img src="https://res.cloudinary.com/mhmd/image/upload/v1556485076/shoes-1_gthops.jpg" alt="Generic placeholder image" width="200" class="ml-lg-5 order-1 order-lg-2">*@
+
+                <!-- list group item-->
+                <li class="list-group-item">
+                    <!-- Custom content-->
+                    <div class="media align-items-lg-center flex-column flex-lg-row p-3">
+                        <div class="media-body order-2 order-lg-1">
+                            <h5 class="mt-0 font-weight-bold mb-2">Sodium hypochlorite</h5>
+                            <p class="font-italic text-muted mb-0 small">Harm: Overuse may result in increase in Chlorinated acetic acid</p>
                         </div>
-                        <!-- End -->
-                    </li>
-                }
+                        <img src="~/pic/kit1.jpg" alt="Generic placeholder image" width="200" class="ml-lg-5 order-1 order-lg-2">
+                    </div>
+                    <!-- End -->
+                </li>
+                <!-- list group item-->
+                <li class="list-group-item">
+                    <!-- Custom content-->
+                    <div class="media align-items-lg-center flex-column flex-lg-row p-3">
+                        <div class="media-body order-2 order-lg-1">
+                            <h5 class="mt-0 font-weight-bold mb-2">Alkylate sulfonates</h5>
+                            <p class="font-italic text-muted mb-0 small">Harm: Toxic to Fish; aromatic chemicals can hardly be degraded</p>
+                        </div>
+                        <img src="~/pic/kit3.jpg" alt="Generic placeholder image" width="200" class="ml-lg-5 order-1 order-lg-2">
+                    </div>
+                    <!-- End -->
+                </li>
+                <!-- list group item-->
+                <li class="list-group-item">
+                    <!-- Custom content-->
+                    <div class="media align-items-lg-center flex-column flex-lg-row p-3">
+                        <div class="media-body order-2 order-lg-1">
+                            <h5 class="mt-0 font-weight-bold mb-2">Sodium linear alkylbenzene sulfonate</h5>
+                            <p class="font-italic text-muted mb-0 small">Harm: Kill microorganism and impact aquatic metabolic balance</p>
+                        </div>
+                        <img src="~/pic/Kit.jpg" alt="Generic placeholder image" width="200" class="ml-lg-5 order-1 order-lg-2">
+                    </div>
+                    <!-- End -->
+                </li>
+
 
 
             </ul>
             <!-- End -->
         </div>
+        <p id="part1" class="col-lg-4 col-md-4 col-xs-4">
+            Grease cleaner:<br />
+            Formula: appropriate amount of toothpaste, 2 spoons of white vinegar, 3 spoons of white wine, and water
+            <br />Vinegar has the effect of cleaning and sterilizing. The cleaning agent formed by combining these will naturally have a better cleaning effect. First prepare a pot of warm water, add toothpaste and vinegar to the water, and stir well.
+        </p>
+
+        <p id="part2" class="col-lg-4 col-md-4 col-xs-4">
+            Clean with peel:
+            <br />
+            Oranges, grapefruits, lemons and other acidic fruits have white fibers in the inner layer of the peel, which has a strong ability to absorb oil. <br />We can directly wet the peel with water and wipe the oily areas in the kitchen, and wipe the white side of the peel down to remove the oil.
+            <br />In addition, it can also be made into a cleaning agent. Add water to the peel and boil it in a pot. The yellow water that is boiled is a natural and powerful grease cleaner. After cooling down, use a rag to dip it and wipe the kitchen with grease. It is effective in removing oil and stains, and has a sterilizing effect.
+        </p>
+
+        <p id="part3" class="col-lg-4 col-md-4 col-xs-4">
+            Clean with flour:
+            <br />
+            First, mix an appropriate amount of flour and water to form a batter, and use a small brush to evenly brush the batter on the oily areas.
+            <br />Then wait until the batter is dry, then gently tear off the bottom batter. The oil stains are stuck on this layer due to the adsorption of the flour, and the grease stains are cleaned up at once.
+        </p>
     </div>
-    <button type="button" id="button" class="btn btn-outline-info waves-effect" onclick="location.href='/KitchenSets/Alternatives'">Alternative</button>
+    <button type="button" id="button" class="btn btn-outline-info waves-effect" onclick="location.href='/Home/homePage'">Back to Home Map</button>
 </div>
 <style>
     #button {
         float: right;
         margin-top: 0px;
+    }
+
+    #part2 {
+        display: none;
+    }
+
+    #part3 {
+        display: none;
+    }
+</style>
+<script>
+
+    var pa1 = document.getElementById("part1");
+    var pa2 = document.getElementById("part2");
+    var pa3 = document.getElementById("part3");
+
+    function onclick1() {
+        pa1.style.display = "flex";
+        pa2.style.display = "none";
+        pa3.style.display = "none";
+    }
+    function onclick2() {
+        pa1.style.display = "none";
+        pa2.style.display = "flex";
+        pa3.style.display = "none";
+    }
+    function onclick3() {
+        pa1.style.display = "none";
+        pa2.style.display = "none";
+        pa3.style.display = "flex";
+    }
+    $("#Heading").empty();
+</script>
+<style>
+    #header_img {
+        height: 200px;
     }
 </style>

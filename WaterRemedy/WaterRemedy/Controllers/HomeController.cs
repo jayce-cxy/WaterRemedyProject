@@ -140,5 +140,25 @@ namespace WaterRemedy.Controllers
         {
             return View();
         }
+
+        public ActionResult HomeMap()
+        {
+            return View();
+        }
+
+        public ActionResult StatisticsForWaterUsageAndChemicals()
+        {
+            return View();
+        }
+
+        public ActionResult WaterQualityAndPollution()
+        {
+            return View();
+        }
+
+        public ActionResult GrowthOfUsage()
+        {
+            return View();
+        }
     }
 }

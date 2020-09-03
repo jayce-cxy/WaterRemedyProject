@@ -5,52 +5,172 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<!-- bradcam_area_start -->
+<div class="bradcam_area breadcam_bg overlay" style="margin-bottom:50px; background-image:url(/pic/small-bg12.jpg)">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 id="styleForHeader">Bathroom</h3>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- bradcam_area_end -->
+
 <div class="container py-5">
 
     <div class="row text-center text-dark mb-5">
         <div class="col-lg-7 mx-auto">
             <h1 class="display-4">Bathroom harmful ingredient</h1>
             <p class="lead mb-0">
-                Click below to learn about their alternatives
+                Make your best choice and replace these water-damaging items.
             </p>
 
         </div>
     </div>
-    
+
 
 
     <div class="row" style="margin-bottom:30px">
+
+        <ul class="nav nav-pills" style="margin-left:1150px; margin-bottom:60px;">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Choose Alternatives</a>
+                <div class="dropdown-menu" style="">
+                    <a class="dropdown-item" id="choice1" onclick="onclick1()">Sewer dredging agent</a>
+                    <a class="dropdown-item" id="choice2" onclick="onclick2()">Closestool cleaner</a>
+                    <a class="dropdown-item" id="choice3" onclick="onclick3()">Beer and toothpaste</a>
+                    <a class="dropdown-item" id="choice4" onclick="onclick4()">Vinegar and baking soda</a>
+                </div>
+            </li>
+        </ul>
+
         <div class="col-lg-8 mx-auto">
 
             <ul class="list-group shadow">
 
-                @foreach (var item in Model)
-                {
-                    
-                    <li class="list-group-item">
-                        <div class="media align-items-lg-center flex-column flex-lg-row p-3">
-                            <div class="media-body order-2 order-lg-1">
-                                <h5 class="mt-0 font-weight-bold mb-2">@Html.DisplayFor(modelItem => item.chemical_name)</h5>
-                                <p class="font-italic text-muted mb-0 small">@Html.DisplayFor(modelItem => item.harm)</p>
-                                <div class="d-flex align-items-center justify-content-between mt-1">
-                                    <h6 class="font-weight-bold my-2">@Html.DisplayFor(modelItem => item.source)</h6>
 
-                                </div>
-                            </div>
+
+                <li class="list-group-item">
+                    <div class="media align-items-lg-center flex-column flex-lg-row p-3">
+                        <div class="media-body order-2 order-lg-1">
+                            <h5 class="mt-0 font-weight-bold mb-2">Sodium hypochlorite</h5>
+                            <p class="font-italic text-muted mb-0 small">Harm: Large amount of socium hydrochlorite will lead to increase in trichlorinated acetic acid increase in water</p>
                         </div>
-                    </li>
-                }
+                        <img src="~/pic/bath1.jpg" alt="Generic placeholder image" width="200" class="ml-lg-5 order-1 order-lg-2">
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="media align-items-lg-center flex-column flex-lg-row p-3">
+                        <div class="media-body order-2 order-lg-1">
+                            <h5 class="mt-0 font-weight-bold mb-2">Alkylate sulfonates</h5>
+                            <p class="font-italic text-muted mb-0 small">Harm: May produce aromatic derivatives, which is harmful to fish and water.</p>
+                        </div>
+                        <img src="~/pic/bath2.jpg" alt="Generic placeholder image" width="200" class="ml-lg-5 order-1 order-lg-2">
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="media align-items-lg-center flex-column flex-lg-row p-3">
+                        <div class="media-body order-2 order-lg-1">
+                            <h5 class="mt-0 font-weight-bold mb-2">Diethanolamine</h5>
+                            <p class="font-italic text-muted mb-0 small">Harm: Diethanolamine and its derivatives are toxic to both human and aquatic lives</p>
+                        </div>
+                        <img src="~/pic/Bath4.jpg" alt="Generic placeholder image" width="200" class="ml-lg-5 order-1 order-lg-2">
+                    </div>
+                </li>
 
 
             </ul>
         </div>
+
+        <p id="part1" class="col-lg-4 col-md-4 col-xs-4">
+            Sewer dredging agent:<br />
+            Formula: 1/2 cup of baking soda water (about 150ml), 1 cup of white vinegar (about 300ml), appropriate amount of water
+            <br />Pour half a cup of baking soda into the basin, and then pour a cup of white vinegar. You will see the white foam starting to emerge from the entire sink, which is the process by which the soda and vinegar come into play.
+        </p>
+
+        <p id="part2" class="col-lg-4 col-md-4 col-xs-4">
+            Closestool cleaner:
+            <br />
+            The acid in cola can dissolve stains. Pour the cola along the inner wall of the Closestool, soak it for a certain period of time and then rinse, the yellow scale on the Closestool is gone!
+        </p>
+
+        <p id="part3" class="col-lg-4 col-md-4 col-xs-4">
+            Beer and toothpaste:
+            <br />
+            First prepare a toothpaste, a can of beer, and a spray bottle of old detergent. Squeeze an appropriate amount of toothpaste into the spray bottle of the old detergent, and pour some beer.
+            <br />Stir it with a wooden stick. Then put the lid on and shake it up and down a few times to make the toothpaste and beer fully mixed together, so that a simple and environmentally friendly cleaner will be made successfully.
+        </p>
+
+        <p id="part4" class="col-lg-4 col-md-4 col-xs-4">
+            Vinegar and baking soda:
+            <br />
+            Pour baking soda into a spray bottle (the mouth of the bottle is too small, you can roll it into a funnel with paper and pour it along the paper wall). Then pour in white vinegar, tighten the cap and shake evenly to complete.
+        </p>
+
     </div>
-    <button type="button" id="button" class="btn btn-outline-info waves-effect" onclick="location.href='/BathroomSets/Alternatives'">Alternative</button>
+    <button type="button" id="button" class="btn btn-outline-info waves-effect" onclick="location.href='/Home/homePage'">Back to Home Map</button>
 </div>
 <style>
     #button {
-        float:right;
-        margin-top:0px;
+        float: right;
+        margin-top: 0px;
+    }
+
+    #part1 {
+        display: flex;
+    }
+
+    #part2 {
+        display: none;
+    }
+
+    #part3 {
+        display: none;
+    }
+
+    #part4 {
+        display: none;
     }
 </style>
+<style>
+    #header_img {
+        height: 200px;
+    }
+</style>
+
+<script>
+    $("#Heading").empty();
+    var pa1 = document.getElementById("part1");
+    var pa2 = document.getElementById("part2");
+    var pa3 = document.getElementById("part3");
+    var pa4 = document.getElementById("part4");
+
+    function onclick1() {
+        pa1.style.display = "flex";
+        pa2.style.display = "none";
+        pa3.style.display = "none";
+        pa4.style.display = "none";
+    }
+    function onclick2() {
+        pa1.style.display = "none";
+        pa2.style.display = "flex";
+        pa3.style.display = "none";
+        pa4.style.display = "none";
+    }
+    function onclick3() {
+        pa1.style.display = "none";
+        pa2.style.display = "none";
+        pa3.style.display = "flex";
+        pa4.style.display = "none";
+    }
+    function onclick4() {
+        pa1.style.display = "none";
+        pa2.style.display = "none";
+        pa3.style.display = "none";
+        pa4.style.display = "flex";
+    }
+
+</script>
+
 

@@ -2,15 +2,136 @@
     ViewBag.Title = "About";
 }
 
-<div class="container">
-    <h2>@ViewBag.Title.</h2>
-    <h3>@ViewBag.Message</h3>
 
-    <p>Use this area to provide additional information.</p>
 
-    <style>
-        #header_img {
-            background-image: url("../pic/Water-stream1.jpg");
-        }
-    </style>
+<!-- bradcam_area_start -->
+<div class="bradcam_area breadcam_bg overlay" style="margin-bottom:50px; background-image:url(/pic/small-bg.jpg)">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 id="styleForHeader">About</h3>
+            </div>
+        </div>
+    </div>
 </div>
+<!-- bradcam_area_end -->
+
+<div class="container" style="margin-bottom:50px">
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-md-12 mx-auto">
+                    <div class="align-items-center">
+                        <h2 style="text-align:center">
+                            <u>Beginnings</u>
+                        </h2>
+                        <div>
+                            <p>
+                                Household chemicals are harmful to water. Phosphates in detergents can lead to freshwater algal blooms that release toxins and deplete oxygen in waterways.
+                                And all detergents destroy the external mucus layers that protect the fish from bacteria and parasites; plus they can cause severe damage to the gills.
+
+                            </p>
+                        </div>
+                        <div>
+                            <p>
+                                In recent years, with population growth, the demand for water resources has also increased, but the amount of water storage has decreased in recent years.
+                            </p>
+                            <p>
+                                We have collected some data on these two factors click the button below to view the chart to learn more.
+                            </p>
+                        </div>
+                        <button type="button" class="btn btn-outline-info" style="margin-left:700px; margin-bottom:15px" onclick="window.location.href='/Home/StatisticsForWaterUsageAndChemicals'">Learn Morem</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</div>
+
+
+<section class="ftco-section ftco-intro" style="background-image: url(/pic/great-ocean-road.jpg);">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <span>Our Mission</span>
+                <h2>Information &amp; Guidance</h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="container" style="margin-top:20px">
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-md-12 mx-auto">
+                    <div class="align-items-center">
+                        <h2 style="text-align:center">
+                            <u>Our Missions</u>
+                        </h2>
+                        <div class="row" style="margin-top:30px">
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <img src="~/pic/chemical-pollution.jpg" style="margin-top:30px; width:100%; height:auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" />
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <h5>Waterways Healthy</h5>
+                                <p data-aos="fade-up" data-aos-delay="200">
+                                    Household chemical products, such as detergents, they mainly contain two types of ingredients, phosphate detergents and surfactant detergents.
+                                    Detergents that contain phosphates are highly caustic, and surfactant detergents are very toxic.
+                                </p>
+                                <p>
+                                    Do you want to know which products in your home contain these ingredients? Click the button below to learn more.
+                                </p>
+                                <button type="button" class="btn btn-outline-info" id="RM" onclick="window.location.href='/Home/homePage'"><u>Read More</u></button>
+                            </div>
+                        </div>
+
+                        <hr />
+
+                        <div class="row" style="margin-top:30px">
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <img src="~/pic/water-usage.jpg" style="margin-top:30px; width:100%; height:auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" />
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <h5>Rain Water From My Roof</h5>
+                                <p data-aos="fade-up" data-aos-delay="200">
+                                    <p>
+                                        Do you know that your roof can collect about 100,000L of rainwater!
+                                    </p>
+                                    Even though a lot of data shows the per capita use of water is decreasing over years with personal saving actions and more efficient home appliances. 
+                                    However, an increase in the number of people means increased water supply, water storage, and water resources.
+                                </p>
+                                <p>
+                                    Click the button below to learn more.
+                                </p>
+                                <button type="button" class="btn btn-outline-info" id="RM" onclick="window.location.href='/Home/Instruction'"><u>Read More</u></button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </article>
+</div>
+
+<style>
+    #header_img {
+        height: 200px;
+    }
+
+    #header_img {
+        background-image: url("../pic/Water-stream1.jpg");
+    }
+
+    #readmore {
+        display: none;
+    }
+</style>
+<script>
+    $("#Heading").empty();
+</script>

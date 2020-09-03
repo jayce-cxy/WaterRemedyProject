@@ -10,22 +10,19 @@
     <link rel="icon" href="~/pic/greenwater.png" type="image/x-icon">
     <link href="~/vendor/bootstrap/css/bootstrap.css" rel="stylesheet" />
     <link href="~/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
+    <link href="~/css/clean-blog.css" rel="stylesheet" />
+    <link href="~/css/clean-blog.min.css" rel="stylesheet" />
+    <link href="~/fonts/LayoutIconFonts/icofont.min.css" rel="stylesheet" />
+    <link href="~/css/aos.css" rel="stylesheet" />
     <link href="~/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="~/css/googlefonts.css" rel="stylesheet" />
-    <link href="~/css/googleFont2.css" rel="stylesheet" />
-    <script src="~/vendor/jquery/jquery.js"></script>
-    <script src="~/js/echarts.min.js"></script>
-    <link href="~/css/clean-blog.min.css" rel="stylesheet">
-    <style>
-        #header_img {
-            background-image: url("../pic/Water-stream.jpg");
-        }
+    <link href="~/css/clean-blog-copy.min.css" rel="stylesheet" />
+    <link href="~/css/animate.css" rel="stylesheet" />
+    <link href="~/css/mdb.css" rel="stylesheet" />
 
-        #colour {
-            background-color: #D0E5F0;
-        }
-    </style>
+    <script src="~/js/echarts.min.js"></script>
+    <script src="~/js/aos.js"></script>
+    <script src="~/vendor/jquery/jquery.js"></script>
+    <script src="~/js/mdb.js"></script>
 
 </head>
 <body>
@@ -39,42 +36,30 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="/Home/Index">Home</a>
+                        <a class="nav-link" href="/Home/About">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/Home/homePage">HomeMap</a>
+                        <a class="nav-link" href="/Home/homePage">Virtual Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/Home/chemicalView">Statistics</a>
+                        <a class="nav-link" href="/Home/Instruction">Roof Water</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/Home/Instruction">UsageInstruction</a>
-                    </li>
+                    @*<li class="nav-item">
+                            <a class="nav-link" href="/Home/Instruction">UsageInstruction</a>
+                        </li>*@
                 </ul>
             </div>
         </div>
     </nav>
 
-    <header class="masthead" id="header_img">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-md-10 mx-auto">
-                    <div class="site-heading">
-                        <h1>Water Remedy</h1>
-                        <span class="subheading">Protect our water stream</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+
 
     <div>
         @RenderBody()
     </div>
     <hr />
-    <footer id="colour">
-        <div class="page-footer font-small teal pt-4">
+    <footer id="colour" style="background-color:azure">
+        <div class="page-footer font-small pt-4">
 
             <div class="container-fluid text-center text-md-left">
 
@@ -126,6 +111,9 @@
                 }
             });
         });
+
+        AOS.init();
+
     </script>
 
     @RenderSection("scripts", required: false)

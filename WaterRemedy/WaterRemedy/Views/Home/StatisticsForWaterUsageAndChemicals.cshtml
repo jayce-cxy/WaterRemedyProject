@@ -1,0 +1,252 @@
+﻿
+@{
+    ViewBag.Title = "StatisticsForWaterUsageAndChemicals";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <div class="bradcam_area breadcam_bg overlay" style="margin-bottom:50px; background-image:url(/pic/small-bg5.jpg)">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3 id="styleForHeader">Trends</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 style="margin-left:100px">Statistics For Water Usage And Ingredient</h2>
+        <div class="row" style="margin-top:60px">
+            <div class="col-xl-9 col-lg-9 col-md-9">
+                <div id="bar" class="row" style="width: inherit; height: 400px"></div>
+
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3">
+                <p data-aos="fade-down-left" data-aos-delay="200">
+                    Chloroacetic, Dichloroacetic, Trichloroacetic, Nitrate, Phosphorus are the most harmful to water health in household detergents.
+                    We have used the standard usage level and the harmful content in general detergents to compare. Hope you can check the detergent ingredients you use after you see this graph.
+                </p>
+
+            </div>
+        </div>
+
+        <hr />
+
+        <div class="row" id="wrap">
+            <div class="col-xl-6 col-lg-6 col-md-6">
+                <div id="bar2" class="row" style="width: inherit; height: 400px"></div>
+                <p style="margin-left:200px">Figure 1</p>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6">
+                <div id="bar3" class="row" style="width: inherit; height: 400px"></div>
+                <p style="margin-left:200px">Figure 2</p>
+            </div>
+            @*<div class="col-xl-4 col-lg-4 col-md-4">
+                <div id="bar3" class="row" style="width: inherit; height: 400px"></div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4">
+                <div id="bar4" class="row" style="width: inherit; height: 400px"></div>
+            </div>*@
+
+
+
+            @*<div class="col-xl-3 col-lg-3 col-md-3">
+                <p>
+                    According to the statistics from Australian Bureau of Statistics, between 2015 and 2018, there is a continuous increase in Victoria's population. Meanwhile, the household water usage is
+                    synchronously with the growth of population in Melbourne. The population of Melbourne in 2019 is 5.19 million, grown by 0.19 million compared to 2018. Therefore, it is probable that the usage of household water in Victoria will also increase based on the existing trend.
+                </p>
+
+            </div>*@
+        </div>
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-6">
+                <div id="bar4" class="row" style="width: inherit; height: 400px"></div>
+                <p style="margin-left:200px">Figure 3</p>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6">
+                <h4 style="text-align:center">Situation</h4>
+                <p data-aos="fade-right" data-aos-delay="200">As shown in Figure 1, the average water consumption from 2015 to 2018 is increasing year by year. The most direct factor can be seen from Figure 2. 
+                The population of Australia has risen sharply in recent years, so the annual water consumption will continue to rise as the population increases.</p>
+                <p data-aos="fade-left" data-aos-delay="200">Nevertheless, it is not difficult to see from the trend in Figure 3 that the annual water output is declining. So we may face insufficient water supply in the next few years. In addition, some areas have water pollution problems, so it is very important to solve the problems of water pollution and water usage. 
+                Our website will provide corresponding solutions for this series of problems.</p>
+            </div>
+        </div>
+    </div>
+
+<script>
+    var myBar = echarts.init(document.getElementById("bar"));
+    option = {
+        title: {
+            text: 'Compare harmful chemiacl with standard limit'
+        },
+        tooltip: {
+            trigger: 'axis'
+        },
+        legend: {
+            data: ['Average content(mg/L)', 'Standard upper limit(mg/L)'],
+            orient: 'vertical',
+             y: 60,
+             x: 'right'
+
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        toolbox: {
+            feature: {
+                saveAsImage: {}
+            }
+        },
+        xAxis: {
+            type: 'category',
+            boundaryGap: false,
+            data: ['Chloroacetic', 'Dichloroacetic', 'Trichloroacetic', 'Nitrate', 'Phosphorus']
+        },
+        yAxis: {
+            type: 'value',
+            name: 'Contents(ml)',
+            //axisLabel: {
+            //    formatter: '{value} ml'
+            //}
+        },
+        series: [
+            {
+                name: 'Average content(mg/L)',
+                type: 'line',
+                stack: '总量',
+                data: [3, 8.167, 18.583, 0.254, 0.009]
+            },
+            {
+                name: 'Standard upper limit(mg/L)',
+                type: 'line',
+                stack: '总量',
+                data: [0.15, 0.1, 0.25, 20, 0.015]
+            }
+        ]
+    };
+
+    myBar.setOption(option);
+</script>
+
+<script>
+    var myBar = echarts.init(document.getElementById("bar2"));
+    option = {
+        title: {
+            text: '2015-2018 average of water consumption'
+        },
+        xAxis: {
+            type: 'category',
+            data: ['2015', '2016', '2017', '2018']
+        },
+        legend: {
+            data: ['Total Usage Average(GL)'],
+            orient: 'vertical',
+            y: 60,
+            x: 'right'
+
+        },
+        yAxis:
+        {
+            type: 'value',
+            name: 'WaterUsage(GL)',
+            min: 355,
+            max: 405,
+            interval: 5,
+            //axisLabel: {
+            //    formatter: '{value} GL'
+            //}
+        },
+        series: [{
+            name: 'Total Usage Average(GL)',
+            data: [371.982, 396.809, 387.865, 398.549],
+            type: 'line'
+        }]
+    };
+
+    myBar.setOption(option);
+    $("#Heading").empty();
+</script>
+<script>
+    var myBar = echarts.init(document.getElementById("bar3"));
+    option = {
+        title: {
+            text: 'Population Growth'
+        },
+        legend: {
+            data: ['Population(million)'],
+            orient: 'vertical',
+            y: 60,
+            x: 'right'
+
+        },
+        xAxis: {
+            type: 'category',
+            data: ['2015', '2016', '2017', '2018']
+        },
+        yAxis: {
+            type: 'value',
+            name: 'Population(million)',
+            min: 4.2,
+            max: 5.1,
+            interval: 0.1,
+            //axisLabel: {
+            //    formatter: '{value} million'
+            //}
+        },
+        series: [{
+            name:'Population(million)',
+            data: [4.53, 4.67, 4.82, 5],
+            type: 'line'
+        }]
+    };
+    myBar.setOption(option);
+</script>
+
+<script>
+    
+    var myBar = echarts.init(document.getElementById("bar4"));
+    option = {
+        title: {
+            text: '2015-2018 average of water storage'
+        },
+        legend: {
+            data: ['Storage(GL)'],
+            orient: 'vertical',
+            y: 60,
+            x: 'right'
+
+        },
+        xAxis: {
+            type: 'category',
+            data: ['2015', '2016', '2017', '2018']
+        },
+        yAxis: {
+            type: 'value',
+            name: 'Storage(GL)',
+            min: 56,
+            max: 74,
+            interval: 2,
+            //axisLabel: {
+            //    formatter: '{value} GL'
+            //}
+        },
+        series: [{
+            name: 'Storage(GL)',
+            data: [71.407, 65.354, 66.359, 62.172],
+            type: 'line'
+        }]
+    };
+    myBar.setOption(option);
+</script>
+
+
+
+<style>
+
+    #header_img {
+        height: 200px;
+    }
+</style>

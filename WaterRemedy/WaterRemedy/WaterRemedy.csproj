@@ -175,12 +175,19 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="css\animate.css" />
+    <Content Include="css\aos.css" />
     <Content Include="css\bootstrap-select.css" />
     <Content Include="css\bootstrap-select.min.css" />
     <Content Include="css\clean-blog.css" />
+    <Content Include="css\clean-blog-copy.min.css" />
     <Content Include="css\clean-blog.min.css" />
+    <Content Include="css\mdb.css" />
+    <Content Include="css\readmore.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\icofont.min.css" />
+    <Content Include="fonts\LayoutIconFonts\icofont.min.css" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="img\about-bg.jpg" />
@@ -188,6 +195,7 @@
     <Content Include="img\home-bg.jpg" />
     <Content Include="img\post-bg.jpg" />
     <Content Include="img\post-sample-image.jpg" />
+    <Content Include="js\aos.js" />
     <Content Include="js\bootstrap-select.js" />
     <Content Include="js\bootstrap-select.min.js" />
     <Content Include="js\clean-blog.js" />
@@ -198,6 +206,8 @@
     <Content Include="js\jqBootstrapValidation.js" />
     <Content Include="js\jquery.rwdImageMaps.js" />
     <Content Include="js\jquery.rwdImageMaps.min.js" />
+    <Content Include="js\mdb.js" />
+    <Content Include="js\showMore.min.js" />
     <Content Include="Models\waterremedyModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>waterremedyModel.Context.cs</LastGenOutput>
@@ -209,29 +219,53 @@
       <LastGenOutput>waterremedyModel.cs</LastGenOutput>
       <DependentUpon>waterremedyModel.edmx</DependentUpon>
     </Content>
+    <Content Include="pic\About.jpg" />
+    <Content Include="pic\About2.jpg" />
+    <Content Include="pic\bath1.jpg" />
+    <Content Include="pic\bath2.jpg" />
+    <Content Include="pic\Bath4.jpg" />
+    <Content Include="pic\Bathroom.jpg" />
     <Content Include="pic\Catchment1.jpg" />
     <Content Include="pic\catchment2.jpg" />
     <Content Include="pic\catchment3.jpg" />
+    <Content Include="pic\chemical-pollution.jpg" />
+    <Content Include="pic\footer.jpg" />
+    <Content Include="pic\great-ocean-road.jpg" />
     <Content Include="pic\greenwater.png" />
     <Content Include="pic\homelayout5.jpg" />
+    <Content Include="pic\Kit.jpg" />
+    <Content Include="pic\kit1.jpg" />
+    <Content Include="pic\kit3.jpg" />
+    <Content Include="pic\Kitchen.jpg" />
+    <Content Include="pic\lau1.jpg" />
+    <Content Include="pic\lau2.png" />
+    <Content Include="pic\lau4.jpg" />
+    <Content Include="pic\laundryroom.jpg" />
     <Content Include="pic\Logo-V2.jpg" />
+    <Content Include="pic\Map2.jpg" />
     <Content Include="pic\news_MelbourneWaterAward_DandenongCreek_02.jpg" />
-    <Content Include="pic\step1.png" />
-    <Content Include="pic\step10.png" />
-    <Content Include="pic\step2.png" />
-    <Content Include="pic\step3.png" />
-    <Content Include="pic\step4.png" />
-    <Content Include="pic\step5.png" />
-    <Content Include="pic\step6.png" />
-    <Content Include="pic\step7.png" />
-    <Content Include="pic\step8.png" />
-    <Content Include="pic\step9.png" />
+    <Content Include="pic\small-bg.jpg" />
+    <Content Include="pic\small-bg1.jpg" />
+    <Content Include="pic\small-bg10.jpg" />
+    <Content Include="pic\small-bg11.jpg" />
+    <Content Include="pic\small-bg12.jpg" />
+    <Content Include="pic\small-bg13.jpg" />
+    <Content Include="pic\small-bg2.jpg" />
+    <Content Include="pic\small-bg4.jpg" />
+    <Content Include="pic\small-bg5.jpg" />
+    <Content Include="pic\small-bg6.jpg" />
+    <Content Include="pic\small-bg7.jpg" />
+    <Content Include="pic\small-bg8.jpg" />
+    <Content Include="pic\small-bg9.jpg" />
     <Content Include="pic\titleicon.png" />
+    <Content Include="pic\water-storage.jpg" />
     <Content Include="pic\Water-stream.jpg" />
     <Content Include="pic\Water-stream1.jpg" />
     <Content Include="pic\Water-strem2.jpg" />
+    <Content Include="pic\water-usage.jpg" />
     <Content Include="pic\watericon.png" />
     <Content Include="pic\WaterStreamss.jpg" />
+    <Content Include="pic\yarra-river2.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <EntityDeploy Include="Models\waterremedyModel.edmx">
@@ -245,6 +279,8 @@
     <Content Include="App_Data\Melbourne_water_chemical.csv" />
     <Content Include="App_Data\Victoria_Water_usage.csv" />
     <Content Include="App_Data\Aus_Water_Usage_pc.csv" />
+    <Content Include="fonts\LayoutIconFonts\fonts\icofont.woff" />
+    <Content Include="fonts\LayoutIconFonts\fonts\icofont.woff2" />
     <None Include="Properties\PublishProfiles\WaterRemedy - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -358,6 +394,10 @@
     <Content Include="Views\LaundrySets\Alternatives.cshtml" />
     <Content Include="Views\BathroomSets\Alternatives.cshtml" />
     <Content Include="Views\Home\Instruction.cshtml" />
+    <Content Include="Views\ViewPage1.cshtml" />
+    <Content Include="Views\Home\StatisticsForWaterUsageAndChemicals.cshtml" />
+    <Content Include="Views\Home\WaterQualityAndPollution.cshtml" />
+    <Content Include="Views\Home\GrowthOfUsage.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
