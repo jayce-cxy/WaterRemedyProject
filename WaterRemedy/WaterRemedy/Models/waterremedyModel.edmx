@@ -4,57 +4,234 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="waterremedyModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="BathroomSet">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="chemical_name" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="harm" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="source" Type="nvarchar(max)" Nullable="false" />
-        </EntityType>
-        <EntityType Name="KitchenSet">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="chemical_name" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="harm" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="source" Type="nvarchar(max)" Nullable="false" />
-        </EntityType>
-        <EntityType Name="LaundrySet">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="chemical_name" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="harm" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="source" Type="nvarchar(max)" Nullable="false" />
-        </EntityType>
-        <EntityType Name="UserSet">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="username" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="password" Type="nvarchar(max)" Nullable="false" />
-        </EntityType>
-        <EntityContainer Name="waterremedyModelStoreContainer">
-          <EntitySet Name="BathroomSet" EntityType="Self.BathroomSet" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="KitchenSet" EntityType="Self.KitchenSet" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="LaundrySet" EntityType="Self.LaundrySet" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="UserSet" EntityType="Self.UserSet" Schema="dbo" store:Type="Tables" />
-        </EntityContainer>
-      </Schema></edmx:StorageModels>
+    <Schema Namespace="waterremedyModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="waterremedyModelStoreContainer">
+    <EntitySet Name="UserSet" EntityType="waterremedyModel.Store.UserSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BathroomSet" EntityType="waterremedyModel.Store.BathroomSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BathproductSet" EntityType="waterremedyModel.Store.BathproductSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BathalternativeSet" EntityType="waterremedyModel.Store.BathalternativeSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="KitchenSet" EntityType="waterremedyModel.Store.KitchenSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="KitproductSet" EntityType="waterremedyModel.Store.KitproductSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="KitalternativeSet" EntityType="waterremedyModel.Store.KitalternativeSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LaundrySet" EntityType="waterremedyModel.Store.LaundrySet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LaunproductSet" EntityType="waterremedyModel.Store.LaunproductSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LaunalternativeSet" EntityType="waterremedyModel.Store.LaunalternativeSet" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="BathroomBathproduct" Association="waterremedyModel.Store.BathroomBathproduct">
+      <End Role="Bathroom" EntitySet="BathroomSet" />
+      <End Role="Bathproduct" EntitySet="BathproductSet" />
+    </AssociationSet>
+    <AssociationSet Name="BathproductBathalternative" Association="waterremedyModel.Store.BathproductBathalternative">
+      <End Role="Bathproduct" EntitySet="BathproductSet" />
+      <End Role="Bathalternative" EntitySet="BathalternativeSet" />
+    </AssociationSet>
+    <AssociationSet Name="KitchenKitproduct" Association="waterremedyModel.Store.KitchenKitproduct">
+      <End Role="Kitchen" EntitySet="KitchenSet" />
+      <End Role="Kitproduct" EntitySet="KitproductSet" />
+    </AssociationSet>
+    <AssociationSet Name="KitproductKitalternative" Association="waterremedyModel.Store.KitproductKitalternative">
+      <End Role="Kitproduct" EntitySet="KitproductSet" />
+      <End Role="Kitalternative" EntitySet="KitalternativeSet" />
+    </AssociationSet>
+    <AssociationSet Name="LaundryLaunproduct" Association="waterremedyModel.Store.LaundryLaunproduct">
+      <End Role="Laundry" EntitySet="LaundrySet" />
+      <End Role="Launproduct" EntitySet="LaunproductSet" />
+    </AssociationSet>
+    <AssociationSet Name="LaunproductLaunalternative" Association="waterremedyModel.Store.LaunproductLaunalternative">
+      <End Role="Launproduct" EntitySet="LaunproductSet" />
+      <End Role="Launalternative" EntitySet="LaunalternativeSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="UserSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="username" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="password" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BathroomSet">
+    <Key>
+      <PropertyRef Name="bath_id" />
+    </Key>
+    <Property Name="bath_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="chemical_name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="harm" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BathproductSet">
+    <Key>
+      <PropertyRef Name="ba_product_id" />
+    </Key>
+    <Property Name="ba_product_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="chemical" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Bathroom_bath_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BathalternativeSet">
+    <Key>
+      <PropertyRef Name="alter_id" />
+    </Key>
+    <Property Name="alter_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Bathproduct_ba_product_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="KitchenSet">
+    <Key>
+      <PropertyRef Name="kitchen_id" />
+    </Key>
+    <Property Name="kitchen_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="chemical_name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="harm" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="KitproductSet">
+    <Key>
+      <PropertyRef Name="kit_product_id" />
+    </Key>
+    <Property Name="kit_product_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="chemical" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Kitchen_kitchen_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="KitalternativeSet">
+    <Key>
+      <PropertyRef Name="alter_id" />
+    </Key>
+    <Property Name="alter_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Kitproduct_kit_product_id" Type="int" Nullable="false" />
+    <Property Name="name" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LaundrySet">
+    <Key>
+      <PropertyRef Name="laun_id" />
+    </Key>
+    <Property Name="laun_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="chemical_name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="harm" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LaunproductSet">
+    <Key>
+      <PropertyRef Name="laun_id" />
+    </Key>
+    <Property Name="laun_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="chemical" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Laundry_laun_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LaunalternativeSet">
+    <Key>
+      <PropertyRef Name="alter_id" />
+    </Key>
+    <Property Name="alter_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Launproduct_laun_id" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="BathroomBathproduct">
+    <End Role="Bathroom" Type="waterremedyModel.Store.BathroomSet" Multiplicity="1" />
+    <End Role="Bathproduct" Type="waterremedyModel.Store.BathproductSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bathroom">
+        <PropertyRef Name="bath_id" />
+      </Principal>
+      <Dependent Role="Bathproduct">
+        <PropertyRef Name="Bathroom_bath_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BathproductBathalternative">
+    <End Role="Bathproduct" Type="waterremedyModel.Store.BathproductSet" Multiplicity="1" />
+    <End Role="Bathalternative" Type="waterremedyModel.Store.BathalternativeSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bathproduct">
+        <PropertyRef Name="ba_product_id" />
+      </Principal>
+      <Dependent Role="Bathalternative">
+        <PropertyRef Name="Bathproduct_ba_product_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="KitchenKitproduct">
+    <End Role="Kitchen" Type="waterremedyModel.Store.KitchenSet" Multiplicity="1" />
+    <End Role="Kitproduct" Type="waterremedyModel.Store.KitproductSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kitchen">
+        <PropertyRef Name="kitchen_id" />
+      </Principal>
+      <Dependent Role="Kitproduct">
+        <PropertyRef Name="Kitchen_kitchen_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="KitproductKitalternative">
+    <End Role="Kitproduct" Type="waterremedyModel.Store.KitproductSet" Multiplicity="1" />
+    <End Role="Kitalternative" Type="waterremedyModel.Store.KitalternativeSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kitproduct">
+        <PropertyRef Name="kit_product_id" />
+      </Principal>
+      <Dependent Role="Kitalternative">
+        <PropertyRef Name="Kitproduct_kit_product_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="LaundryLaunproduct">
+    <End Role="Laundry" Type="waterremedyModel.Store.LaundrySet" Multiplicity="1" />
+    <End Role="Launproduct" Type="waterremedyModel.Store.LaunproductSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Laundry">
+        <PropertyRef Name="laun_id" />
+      </Principal>
+      <Dependent Role="Launproduct">
+        <PropertyRef Name="Laundry_laun_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="LaunproductLaunalternative">
+    <End Role="Launproduct" Type="waterremedyModel.Store.LaunproductSet" Multiplicity="1" />
+    <End Role="Launalternative" Type="waterremedyModel.Store.LaunalternativeSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Launproduct">
+        <PropertyRef Name="laun_id" />
+      </Principal>
+      <Dependent Role="Launalternative">
+        <PropertyRef Name="Launproduct_laun_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="waterremedyModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
         <EntityContainer Name="waterremedyModelContainer" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="UserSet" EntityType="waterremedyModel.User" />
-          <EntitySet Name="BathroomSet" EntityType="waterremedyModel.BathroomSet" />
-          <EntitySet Name="KitchenSet" EntityType="waterremedyModel.KitchenSet" />
-          <EntitySet Name="LaundrySet" EntityType="waterremedyModel.LaundrySet" />
+          <EntitySet Name="BathroomSet" EntityType="waterremedyModel.Bathroom" />
+          <EntitySet Name="BathproductSet" EntityType="waterremedyModel.Bathproduct" />
+          <AssociationSet Name="BathroomBathproduct" Association="waterremedyModel.BathroomBathproduct">
+            <End Role="Bathroom" EntitySet="BathroomSet" />
+            <End Role="Bathproduct" EntitySet="BathproductSet" />
+          </AssociationSet>
+          <EntitySet Name="BathalternativeSet" EntityType="waterremedyModel.Bathalternative" />
+          <AssociationSet Name="BathproductBathalternative" Association="waterremedyModel.BathproductBathalternative">
+            <End Role="Bathproduct" EntitySet="BathproductSet" />
+            <End Role="Bathalternative" EntitySet="BathalternativeSet" />
+          </AssociationSet>
+          <EntitySet Name="KitchenSet" EntityType="waterremedyModel.Kitchen" />
+          <EntitySet Name="KitproductSet" EntityType="waterremedyModel.Kitproduct" />
+          <EntitySet Name="KitalternativeSet" EntityType="waterremedyModel.Kitalternative" />
+          <AssociationSet Name="KitchenKitproduct" Association="waterremedyModel.KitchenKitproduct">
+            <End Role="Kitchen" EntitySet="KitchenSet" />
+            <End Role="Kitproduct" EntitySet="KitproductSet" />
+          </AssociationSet>
+          <AssociationSet Name="KitproductKitalternative" Association="waterremedyModel.KitproductKitalternative">
+            <End Role="Kitproduct" EntitySet="KitproductSet" />
+            <End Role="Kitalternative" EntitySet="KitalternativeSet" />
+          </AssociationSet>
+          <EntitySet Name="LaundrySet" EntityType="waterremedyModel.Laundry" />
+          <EntitySet Name="LaunproductSet" EntityType="waterremedyModel.Launproduct" />
+          <EntitySet Name="LaunalternativeSet" EntityType="waterremedyModel.Launalternative" />
+          <AssociationSet Name="LaundryLaunproduct" Association="waterremedyModel.LaundryLaunproduct">
+            <End Role="Laundry" EntitySet="LaundrySet" />
+            <End Role="Launproduct" EntitySet="LaunproductSet" />
+          </AssociationSet>
+          <AssociationSet Name="LaunproductLaunalternative" Association="waterremedyModel.LaunproductLaunalternative">
+            <End Role="Launproduct" EntitySet="LaunproductSet" />
+            <End Role="Launalternative" EntitySet="LaunalternativeSet" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="User">
           <Key>
@@ -64,33 +241,162 @@
           <Property Name="username" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
           <Property Name="password" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
         </EntityType>
-        <EntityType Name="BathroomSet">
+        <EntityType Name="Bathroom">
           <Key>
-            <PropertyRef Name="Id" />
+            <PropertyRef Name="bath_id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="chemical_name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="harm" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="source" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="bath_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="chemical_name" Type="String" Nullable="false" />
+          <Property Name="harm" Type="String" Nullable="false" />
+          <NavigationProperty Name="Bathproduct" Relationship="waterremedyModel.BathroomBathproduct" FromRole="Bathroom" ToRole="Bathproduct" />
         </EntityType>
-        <EntityType Name="KitchenSet">
+        <EntityType Name="Bathproduct">
           <Key>
-            <PropertyRef Name="Id" />
+            <PropertyRef Name="ba_product_id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="chemical_name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="harm" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="source" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ba_product_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="chemical" Type="String" Nullable="false" />
+          <NavigationProperty Name="Bathroom" Relationship="waterremedyModel.BathroomBathproduct" FromRole="Bathproduct" ToRole="Bathroom" />
+          <Property Name="Bathroom_bath_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Bathalternative" Relationship="waterremedyModel.BathproductBathalternative" FromRole="Bathproduct" ToRole="Bathalternative" />
         </EntityType>
-        <EntityType Name="LaundrySet">
+        <Association Name="BathroomBathproduct">
+          <End Type="waterremedyModel.Bathroom" Role="Bathroom" Multiplicity="1" />
+          <End Type="waterremedyModel.Bathproduct" Role="Bathproduct" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Bathroom">
+              <PropertyRef Name="bath_id" />
+            </Principal>
+            <Dependent Role="Bathproduct">
+              <PropertyRef Name="Bathroom_bath_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Bathalternative">
           <Key>
-            <PropertyRef Name="Id" />
+            <PropertyRef Name="alter_id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="chemical_name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="harm" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="source" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="alter_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" Nullable="false" />
+          <NavigationProperty Name="Bathproduct" Relationship="waterremedyModel.BathproductBathalternative" FromRole="Bathalternative" ToRole="Bathproduct" />
+          <Property Name="Bathproduct_ba_product_id" Type="Int32" Nullable="false" />
         </EntityType>
+        <Association Name="BathproductBathalternative">
+          <End Type="waterremedyModel.Bathproduct" Role="Bathproduct" Multiplicity="1" />
+          <End Type="waterremedyModel.Bathalternative" Role="Bathalternative" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Bathproduct">
+              <PropertyRef Name="ba_product_id" />
+            </Principal>
+            <Dependent Role="Bathalternative">
+              <PropertyRef Name="Bathproduct_ba_product_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Kitchen">
+          <Key>
+            <PropertyRef Name="kitchen_id" />
+          </Key>
+          <Property Name="kitchen_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="chemical_name" Type="String" Nullable="false" />
+          <Property Name="harm" Type="String" Nullable="false" />
+          <NavigationProperty Name="Kitproduct" Relationship="waterremedyModel.KitchenKitproduct" FromRole="Kitchen" ToRole="Kitproduct" />
+        </EntityType>
+        <EntityType Name="Kitproduct">
+          <Key>
+            <PropertyRef Name="kit_product_id" />
+          </Key>
+          <Property Name="kit_product_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="chemical" Type="String" Nullable="false" />
+          <NavigationProperty Name="Kitchen" Relationship="waterremedyModel.KitchenKitproduct" FromRole="Kitproduct" ToRole="Kitchen" />
+          <Property Name="Kitchen_kitchen_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Kitalternative" Relationship="waterremedyModel.KitproductKitalternative" FromRole="Kitproduct" ToRole="Kitalternative" />
+        </EntityType>
+        <EntityType Name="Kitalternative">
+          <Key>
+            <PropertyRef Name="alter_id" />
+          </Key>
+          <Property Name="alter_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Kitproduct" Relationship="waterremedyModel.KitproductKitalternative" FromRole="Kitalternative" ToRole="Kitproduct" />
+          <Property Name="Kitproduct_kit_product_id" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" Nullable="false" />
+        </EntityType>
+        <Association Name="KitchenKitproduct">
+          <End Type="waterremedyModel.Kitchen" Role="Kitchen" Multiplicity="1" />
+          <End Type="waterremedyModel.Kitproduct" Role="Kitproduct" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Kitchen">
+              <PropertyRef Name="kitchen_id" />
+            </Principal>
+            <Dependent Role="Kitproduct">
+              <PropertyRef Name="Kitchen_kitchen_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="KitproductKitalternative">
+          <End Type="waterremedyModel.Kitproduct" Role="Kitproduct" Multiplicity="1" />
+          <End Type="waterremedyModel.Kitalternative" Role="Kitalternative" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Kitproduct">
+              <PropertyRef Name="kit_product_id" />
+            </Principal>
+            <Dependent Role="Kitalternative">
+              <PropertyRef Name="Kitproduct_kit_product_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Laundry">
+          <Key>
+            <PropertyRef Name="laun_id" />
+          </Key>
+          <Property Name="laun_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="chemical_name" Type="String" Nullable="false" />
+          <Property Name="harm" Type="String" Nullable="false" />
+          <NavigationProperty Name="Launproduct" Relationship="waterremedyModel.LaundryLaunproduct" FromRole="Laundry" ToRole="Launproduct" />
+        </EntityType>
+        <EntityType Name="Launproduct">
+          <Key>
+            <PropertyRef Name="laun_id" />
+          </Key>
+          <Property Name="laun_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="chemical" Type="String" Nullable="false" />
+          <NavigationProperty Name="Laundry" Relationship="waterremedyModel.LaundryLaunproduct" FromRole="Launproduct" ToRole="Laundry" />
+          <Property Name="Laundry_laun_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Launalternative" Relationship="waterremedyModel.LaunproductLaunalternative" FromRole="Launproduct" ToRole="Launalternative" />
+        </EntityType>
+        <EntityType Name="Launalternative">
+          <Key>
+            <PropertyRef Name="alter_id" />
+          </Key>
+          <Property Name="alter_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" Nullable="false" />
+          <NavigationProperty Name="Launproduct" Relationship="waterremedyModel.LaunproductLaunalternative" FromRole="Launalternative" ToRole="Launproduct" />
+          <Property Name="Launproduct_laun_id" Type="Int32" Nullable="false" />
+        </EntityType>
+        <Association Name="LaundryLaunproduct">
+          <End Type="waterremedyModel.Laundry" Role="Laundry" Multiplicity="1" />
+          <End Type="waterremedyModel.Launproduct" Role="Launproduct" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Laundry">
+              <PropertyRef Name="laun_id" />
+            </Principal>
+            <Dependent Role="Launproduct">
+              <PropertyRef Name="Laundry_laun_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="LaunproductLaunalternative">
+          <End Type="waterremedyModel.Launproduct" Role="Launproduct" Multiplicity="1" />
+          <End Type="waterremedyModel.Launalternative" Role="Launalternative" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Launproduct">
+              <PropertyRef Name="laun_id" />
+            </Principal>
+            <Dependent Role="Launalternative">
+              <PropertyRef Name="Launproduct_laun_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -106,36 +412,87 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-          <EntitySetMapping Name="BathroomSet">
-            <EntityTypeMapping TypeName="waterremedyModel.BathroomSet">
-              <MappingFragment StoreEntitySet="BathroomSet">
-                <ScalarProperty Name="source" ColumnName="source" />
-                <ScalarProperty Name="harm" ColumnName="harm" />
-                <ScalarProperty Name="chemical_name" ColumnName="chemical_name" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="KitchenSet">
-            <EntityTypeMapping TypeName="waterremedyModel.KitchenSet">
-              <MappingFragment StoreEntitySet="KitchenSet">
-                <ScalarProperty Name="source" ColumnName="source" />
-                <ScalarProperty Name="harm" ColumnName="harm" />
-                <ScalarProperty Name="chemical_name" ColumnName="chemical_name" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="LaundrySet">
-            <EntityTypeMapping TypeName="waterremedyModel.LaundrySet">
-              <MappingFragment StoreEntitySet="LaundrySet">
-                <ScalarProperty Name="source" ColumnName="source" />
-                <ScalarProperty Name="harm" ColumnName="harm" />
-                <ScalarProperty Name="chemical_name" ColumnName="chemical_name" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
+    <EntitySetMapping Name="BathroomSet">
+      <EntityTypeMapping TypeName="IsTypeOf(waterremedyModel.Bathroom)">
+        <MappingFragment StoreEntitySet="BathroomSet">
+          <ScalarProperty Name="bath_id" ColumnName="bath_id" />
+          <ScalarProperty Name="chemical_name" ColumnName="chemical_name" />
+          <ScalarProperty Name="harm" ColumnName="harm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BathproductSet">
+      <EntityTypeMapping TypeName="IsTypeOf(waterremedyModel.Bathproduct)">
+        <MappingFragment StoreEntitySet="BathproductSet">
+          <ScalarProperty Name="ba_product_id" ColumnName="ba_product_id" />
+          <ScalarProperty Name="chemical" ColumnName="chemical" />
+          <ScalarProperty Name="Bathroom_bath_id" ColumnName="Bathroom_bath_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BathalternativeSet">
+      <EntityTypeMapping TypeName="IsTypeOf(waterremedyModel.Bathalternative)">
+        <MappingFragment StoreEntitySet="BathalternativeSet">
+          <ScalarProperty Name="alter_id" ColumnName="alter_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="Bathproduct_ba_product_id" ColumnName="Bathproduct_ba_product_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KitchenSet">
+      <EntityTypeMapping TypeName="IsTypeOf(waterremedyModel.Kitchen)">
+        <MappingFragment StoreEntitySet="KitchenSet">
+          <ScalarProperty Name="kitchen_id" ColumnName="kitchen_id" />
+          <ScalarProperty Name="chemical_name" ColumnName="chemical_name" />
+          <ScalarProperty Name="harm" ColumnName="harm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KitproductSet">
+      <EntityTypeMapping TypeName="IsTypeOf(waterremedyModel.Kitproduct)">
+        <MappingFragment StoreEntitySet="KitproductSet">
+          <ScalarProperty Name="kit_product_id" ColumnName="kit_product_id" />
+          <ScalarProperty Name="chemical" ColumnName="chemical" />
+          <ScalarProperty Name="Kitchen_kitchen_id" ColumnName="Kitchen_kitchen_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KitalternativeSet">
+      <EntityTypeMapping TypeName="IsTypeOf(waterremedyModel.Kitalternative)">
+        <MappingFragment StoreEntitySet="KitalternativeSet">
+          <ScalarProperty Name="alter_id" ColumnName="alter_id" />
+          <ScalarProperty Name="Kitproduct_kit_product_id" ColumnName="Kitproduct_kit_product_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LaundrySet">
+      <EntityTypeMapping TypeName="IsTypeOf(waterremedyModel.Laundry)">
+        <MappingFragment StoreEntitySet="LaundrySet">
+          <ScalarProperty Name="laun_id" ColumnName="laun_id" />
+          <ScalarProperty Name="chemical_name" ColumnName="chemical_name" />
+          <ScalarProperty Name="harm" ColumnName="harm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LaunproductSet">
+      <EntityTypeMapping TypeName="IsTypeOf(waterremedyModel.Launproduct)">
+        <MappingFragment StoreEntitySet="LaunproductSet">
+          <ScalarProperty Name="laun_id" ColumnName="laun_id" />
+          <ScalarProperty Name="chemical" ColumnName="chemical" />
+          <ScalarProperty Name="Laundry_laun_id" ColumnName="Laundry_laun_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LaunalternativeSet">
+      <EntityTypeMapping TypeName="IsTypeOf(waterremedyModel.Launalternative)">
+        <MappingFragment StoreEntitySet="LaunalternativeSet">
+          <ScalarProperty Name="alter_id" ColumnName="alter_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="Launproduct_laun_id" ColumnName="Launproduct_laun_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping></edmx:Mappings>
   </edmx:Runtime>

@@ -26,8 +26,14 @@ namespace WaterRemedy.Models
         }
     
         public virtual DbSet<User> UserSet { get; set; }
-        public virtual DbSet<BathroomSet> BathroomSet { get; set; }
-        public virtual DbSet<KitchenSet> KitchenSet { get; set; }
-        public virtual DbSet<LaundrySet> LaundrySet { get; set; }
+        public virtual DbSet<Bathroom> BathroomSet { get; set; }
+        public virtual DbSet<Bathproduct> BathproductSet { get; set; }
+        public virtual DbSet<Bathalternative> BathalternativeSet { get; set; }
+        public virtual DbSet<Kitchen> KitchenSet { get; set; }
+        public virtual DbSet<Kitproduct> KitproductSet { get; set; }
+        public virtual DbSet<Kitalternative> KitalternativeSet { get; set; }
+        public virtual DbSet<Laundry> LaundrySet { get; set; }
+        public virtual DbSet<Launproduct> LaunproductSet { get; set; }
+        public virtual DbSet<Launalternative> LaunalternativeSet { get; set; }
     }
 }

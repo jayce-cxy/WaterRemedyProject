@@ -7,12 +7,19 @@ using System.Web.Mvc;
 using WaterRemedy.Utility;
 using System.Net.Http;
 using Newtonsoft.Json;
+using WaterRemedy.Models;
 
 namespace WaterRemedy.Controllers
 {
     public class HomeController : Controller
     {
+        private waterremedyModelContainer db = new waterremedyModelContainer();
         public ActionResult Index()
+        {
+            return View();
+        }
+
+        public ActionResult HomeIndex()
         {
             return View();
         }
@@ -159,6 +166,41 @@ namespace WaterRemedy.Controllers
         public ActionResult GrowthOfUsage()
         {
             return View();
+        }
+
+        public ActionResult DIYDetergent()
+        {
+            return View();
+        }
+        public ActionResult RoofWater()
+        {
+            return View();
+        }
+
+        public ActionResult AboutWater()
+        {
+            return View();
+        }
+
+        public ActionResult CatchmentInDanger()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult LockPage()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult SubmitLockCode(string lockCode)
+        {
+            var baseLockCode = Encryption.GetLockCode();
+
+            if (lockCode.Equals(baseLockCode)) return Content("/Home/HomeIndex", "text/plain");
+
+            return Content("/Home/LockPage", "text/plain");                    
         }
     }
 }

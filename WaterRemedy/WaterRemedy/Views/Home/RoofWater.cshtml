@@ -1,0 +1,238 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Water Remedy</title>
+    <meta content="" name="descriptison">
+    <meta content="" name="keywords">
+    <link rel="icon" href="~/pic/greenwater.png" type="image/x-icon">
+
+    <link href="~/StyleFolder/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/fonts/LayoutIconFonts/icofont.min.css" rel="stylesheet" />
+    <link href="~/StyleFolder/animate.css" rel="stylesheet" />
+    <link href="~/StyleFolder/venobox.css" rel="stylesheet" />
+    <link href="~/StyleFolder/style.css" rel="stylesheet" />
+    <link href="~/css/mdb.css" rel="stylesheet" />
+    <link href="~/StyleFolder/DataTables/css/dataTables.bootstrap4.css" rel="stylesheet" />
+    <script src="~/JavaScript/popper.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="~/Scripts/modernizr-2.8.3.js"></script>
+    <link href="~/StyleFolder/sideNavBar.css" rel="stylesheet" />
+    <link href="~/StyleFolder/aclculateArea.css" rel="stylesheet" />
+</head>
+<body>
+    <header id="header" class="fixed-top">
+        <div class="container">
+
+            <div class="logo float-left">
+                <h1 class="text-light"><a href="/Home/HomeIndex"><span>Water Remedy</span></a></h1>
+                <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+            </div>
+
+            <nav class="nav-menu float-right d-none d-lg-block">
+                <ul>
+                    <li>
+                        <a href="/Home/HomeIndex">Home</a>
+                    </li>
+                    <li>
+                        <a href="/Home/AboutWater">About us</a>
+                    </li>
+                    <li>
+                        <a href="/Home/DIYDetergent">DIY Detergent</a>
+                    </li>
+                    @*<li class="drop-down">
+                            <a href="">Roof Water</a>
+                            <ul>
+                                <li><a href="/Home/RoofWater#team1">Why is matter</a></li>
+                                <li><a href="/Home/RoofWater#threePic">Water it used for</a></li>
+                                <li><a href="/Home/RoofWater#team3">How much can save</a></li>
+                            </ul>
+                        </li>*@
+                    <li>
+                        <a href="">Roof Water</a>
+                    </li>
+                </ul>
+            </nav><!-- .nav-menu -->
+        </div>
+    </header><!-- End #header -->
+
+    <section id="Roof">
+        <div class="container" style="text-align:center; position: relative">
+            <img src="~/img/roof-water.jpg" style="width:880px; height:580px" />
+            <div class="Roof-container">
+                <h1 style="font-weight:600">Roof Water</h1>
+                <h2 style="font-weight:500">WATER IS MORE PRECIOUS THAN GOLD</h2>
+            </div>
+        </div>
+    </section><!-- #hero -->
+
+    <nav class="cd-vertical-nav">
+        <ul style="list-style:none">
+            <li>
+                <a href="#Roof" data-number="1">
+                    <span class="cd-dot"></span>
+                    <span class="cd-label">Top</span>
+                </a>
+            </li>
+            <li>
+                <a href="#team1" data-number="2">
+                    <span class="cd-dot"></span>
+                    <span class="cd-label">Why It Matters</span>
+                </a>
+            </li>
+            <li>
+                <a href="#threePic" data-number="3">
+                    <span class="cd-dot"></span>
+                    <span class="cd-label">What it use for</span>
+                </a>
+            </li>
+            <li>
+                <a href="#team3" data-number="3">
+                    <span class="cd-dot"></span>
+                    <span class="cd-label">How much can i save</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <a class="cd-nav-trigger cd-img-replace">Open navigation<span></span></a>
+
+
+
+    <section class="container" style="margin-top:20px; background-color:#e6ffff" id="team1">
+        <div class="container">
+            <h2 style="text-align:center; color:black; font-size:50px; font-weight:600">
+                Why it matters
+            </h2>
+            <p style="text-align:center; color:black; font-weight:600; font-size:25px">
+                Water resources in Melbourne are limited.
+            </p>
+            <br />
+            <p style="text-align:center; color:black; font-weight:500; font-size:20px">
+                Melbourne population has increased as the highest rate among capital cities that lead to water usage increasing, in addition, the natural events; bushfire has a serious impact to water catchment as well.
+            </p>
+            <p style="text-align:center; color:black; font-weight:600; font-size:25px">
+                everyone can reuse rainwater as an effective usage
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <div class="container" id="threePic">
+            <h2 style="text-align:center; color:black; font-size:50px; font-weight:600">
+                What it use for
+            </h2>
+            <div class="row" style="margin-top:50px">
+                <div class="c1 col-lg-4 col-md-4 filter-app">
+                    <img src="~/img/ggarden.png" class="img-fluid" id="ggarden" style="float:right" />
+                    <div class="words" style="margin-left:125px">GARDEN</div>
+                </div>
+                <div class="c1 col-lg-4 col-md-4 filter-app" style="text-align:center">
+                    <img src="~/img/bbath.png" class="img-fluid" id="bbath" />
+                    <div class="words" style="margin-left:0px">BATHROOM</div>
+                </div>
+                <div class="c1 col-lg-4 col-md-4 filter-app">
+                    <img src="~/img/llaundry.png" class="img-fluid" id="llaun" style="float:left" />
+                    <div class="words" style="margin-left:-125px">LAUNDRY</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container" id="team3">
+            <h2 style="text-align:center; color:black; font-size:50px; font-weight:600">
+                How much can save
+            </h2>
+            <div class="row" style="margin-top:50px">
+                <div class="c1 col-lg-3 col-md-3 filter-app">
+                    <label for="exampleForm2" style="font-weight:bold">Area(m^2)</label>
+                    <input type="text" id="area" class="form-control">
+                </div>
+                <div class="c1 col-lg-3 col-md-3 filter-app">
+                    <label for="exampleForm2" style="font-weight:bold">Rainfall(mm)</label>
+                    <input type="text" id="rainfall" class="form-control">
+                </div>
+                <div class="c1 col-lg-3 col-md-3 filter-app">
+                    <label for="exampleForm2" style="font-weight:bold">Total can be saved(L)</label>
+                    <input type="text" id="storage" class="form-control">
+                </div>
+                <div class="c1 col-lg-3 col-md-3 filter-app">
+                    <label for="exampleForm2" style="font-weight:bold">How much money you can save($)</label>
+                    <input type="text" id="money" class="form-control">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @*<div class="container">
+            <button type="button" class="btn btn-outline-info" id="RM" style="margin-left:90px" onclick="search()">search</button>
+        </div>*@
+
+    @*<div class="container">
+            <div id="panel">
+                <div id="color-palette" style="margin-left:50px"></div>
+                <div>
+                    <button class="btn btn-outline-info" id="delete-button">Delete Selected Shape</button>
+                    <button class="btn btn-outline-info" id="calculate" onClick="calcar()">calculate area</button>
+                </div>
+            </div>
+        </div>*@
+
+
+
+    <div class="container" style="text-align:center">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 filter-app">
+                <div id="map"></div>
+                <button class="btn btn-outline-info" id="delete-button">Delete Selected Shape</button>
+                @*<button class="btn btn-outline-info" id="calculate" onClick="calcar()">calculate area</button>*@
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <input id="pac-input" class="controls" type="text" placeholder="Enter a address..." />
+    </div>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong><span>Water Remedy</span></strong>. All Rights Reserved
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
+    <script src="~/JavaScript/bootstrap.js"></script>
+    @*<script src="~/JavaScript/bootstrap.bundle.js"></script>*@
+    <script src="~/JavaScript/jquery.easing.min.js"></script>
+    <script src="~/JavaScript/isotope.pkgd.js"></script>
+    <script src="~/JavaScript/venobox.js"></script>
+    <script src="~/JavaScript/main.js"></script>
+    <script src="~/js/mdb.js"></script>
+    <script src="~/JavaScript/DataTables/jquery.dataTables.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8juZ2HNagjrCBrnnjuBkhccADbTfjgt8&callback=initMap&libraries=drawing,places&v=weekly"
+            defer></script>
+    <script src="~/Scripts/calculateArea.js"></script>
+    <script src="~/Scripts/sidenavbar.js"></script>
+    <style>
+        #map {
+            height: 500px;
+            width: 1120px;
+            /*margin-left: 300px;
+            margin-bottom: 50px;*/
+        }
+    </style>
+</body>
+</html>

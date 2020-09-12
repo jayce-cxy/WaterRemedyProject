@@ -1,0 +1,128 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Water Remedy</title>
+    <meta content="" name="descriptison">
+    <meta content="" name="keywords">
+    <link rel="icon" href="~/pic/greenwater.png" type="image/x-icon">
+
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Pattaya' rel='stylesheet'>
+    <link href="~/StyleFolder/bootstrap.css" rel="stylesheet" />
+    <link href="~/fonts/LayoutIconFonts/icofont.min.css" rel="stylesheet" />
+    <link href="~/StyleFolder/animate.css" rel="stylesheet" />
+    <link href="~/StyleFolder/venobox.css" rel="stylesheet" />
+    <link href="~/css/mdb.css" rel="stylesheet" />
+    <link href="~/StyleFolder/style.css" rel="stylesheet" />
+</head>
+<body>
+
+    @*<div class="timeLine">
+            <div style="margin-top:0px">
+                <p class="bubble thought"><u style="font-size:large; font-weight:bold">Human Activit</u><br>Since 1970, CO2 emissions have increased by about 90%, with emissions from fossil fuel combustion and industrial processes contributing about 78% of the total</p>
+                <p class="bubble thought" style="margin-top:100px"><u style="font-size:large; font-weight:bold">Sea Level Increasing</u><br>Polar bears spend over 50% of their time hunting for food. A polar bear might catch only one or two out of 10 seals it hunts</p>
+                <p class="bubble thought" style="margin-top:150px">
+                    <u style="font-size:large; font-weight:bold">Bushfire</u><br>Chances of bushfire is  increasing, directly involved with water storage and water quality.<br><br>
+                    ash & slit washed into water storage facilities, when it rains.<br><br>
+                    Burnt atmospheric ash also settles on water streams making them unfit for human consumption.
+                </p>
+                <p class="bubble thought" style="margin-top:100px">
+                    <u style="font-size:large; font-weight:bold">Home detergent</u><br>Detergents have phosphates which tend to remove the hardness of the water by increasing the PH.<br><br>
+                    surfactants in detergents can lower the surface tension which forms bubbles<br><br>
+                    it make lubricants like grease and oil to mix well with water brightens and perfumes in detergents will alter the water chemistry and make them unfit for consumption.</p>
+            </div>
+            <img src="~/img/waterCatchmentIndanger.jpg" alt="this slowpoke moves" width=600 style="margin-top:100px" />
+            <div style="margin-top:50px">
+                <p class="bubble thought">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, nemo, debitis.</p>
+            </div>
+        </div>*@
+
+    <header id="header" class="fixed-top">
+        <div class="container">
+
+            <div class="logo float-left">
+                <h1 class="text-light"><a href="/Home/HomeIndex"><span>Water Remedy</span></a></h1>
+                <!-- Uncomment below if you prefer to use an image logo -->
+                <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+            </div>
+
+            <nav class="nav-menu float-right d-none d-lg-block">
+                <ul>
+                    <li>
+                        <a href="/Home/HomeIndex">Home</a>
+                    </li>
+                    <li>
+                        <a href="/Home/AboutWater">About us</a>
+                    </li>
+                    <li>
+                        <a href="/Home/DIYDetergent">DIY Detergent</a>
+                    </li>
+                    <li><a href="/Home/RoofWater">Roof Water</a></li>
+                </ul>
+            </nav><!-- .nav-menu -->
+        </div>
+    </header><!-- End #header -->
+
+    <div class="container" style="text-align:center; margin-top:120px">
+        <h3 style="color:black; font-size:40px; font-weight:bold">Why Waterways in Danger?</h3>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 filter-app">
+                <img src="~/img/dangers.png" style="width:100%; height:100%" />
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="background-color:#ccffee; margin-top:30px">
+        &nbsp;
+        <p style="text-align:center; color:black; font-size:20px; font-weight:600">
+            Take action now!
+        </p>
+        <p style="text-align:center; color:black; font-size:20px; font-weight:600">
+            Protect water catchments, Protect your child
+        </p>
+        &nbsp;
+    </div>
+
+    <div class="bub">
+        <div id="bubble1" style="margin-top:150px">
+            <p style="margin-left:50px; font-weight:bold; color:black">INDOOR</p>
+            <p style="margin-left:50px">Chemical detergents</p>
+            <p style="margin-left:50px; font-weight:bold; color:black">Stop & Change</p>
+            <button type="button" class="btn btn-outline-info" style="margin-left:50px" id="RM" onclick="window.location.href='/Home/DIYDetergent'">Learn More</button>
+        </div>
+        <img src="https://static.wixstatic.com/media/663b3e_907aa9475dbb4622854343ea6508c0ae~mv2.gif" alt="this slowpoke moves" width=600 />
+        <div id="bubble2" style="margin-top:50px">
+            <p style="margin-left:50px; font-weight:bold; color:black">OUTDOOR</p>
+            <p style="margin-left:50px">Rainfall from Roof</p>
+            <p style="margin-left:50px; font-weight:bold; color:black">Collect & Reuse</p>
+            <button type="button" class="btn btn-outline-info" style="margin-left:50px" id="RM" onclick="window.location.href='/Home/RoofWater'">Learn More</button>
+        </div>
+    </div>
+
+    <div style="margin-top:50px"></div>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong><span>Water Remedy</span></strong>. All Rights Reserved
+            </div>
+        </div>
+    </footer>
+    <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
+    <script src="~/JavaScript/bootstrap.js"></script>
+    <script src="~/JavaScript/jquery.easing.min.js"></script>
+    <script src="~/JavaScript/isotope.pkgd.js"></script>
+    <script src="~/JavaScript/venobox.js"></script>
+    <script src="~/JavaScript/main.js"></script>
+</body>
+</html>

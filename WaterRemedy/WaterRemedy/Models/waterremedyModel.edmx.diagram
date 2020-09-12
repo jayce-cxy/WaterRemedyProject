@@ -4,14 +4,23 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="7d45958ff0b742768ac1009d45ca2e38" Name="Diagram1" >
+      <Diagram DiagramId="7d45958ff0b742768ac1009d45ca2e38" Name="Diagram1" ZoomLevel="81" >
         <EntityTypeShape EntityType="waterremedyModel.User" Width="1.5" PointX="3.625" PointY="1" />
-        <EntityTypeShape EntityType="waterremedyModel.Kitchen" Width="1.5" PointX="5.875" PointY="4.125" />
-        <EntityTypeShape EntityType="waterremedyModel.Bathroom" Width="1.5" PointX="8.75" PointY="4.625" />
-        <EntityTypeShape EntityType="waterremedyModel.Laundry" Width="1.5" PointX="11.375" PointY="5.25" />
-        <EntityTypeShape EntityType="waterremedyModel.BathroomSet" Width="1.5" PointX="0.75" PointY="0.75" />
-        <EntityTypeShape EntityType="waterremedyModel.KitchenSet" Width="1.5" PointX="0.75" PointY="3.75" />
-        <EntityTypeShape EntityType="waterremedyModel.LaundrySet" Width="1.5" PointX="2.75" PointY="3.75" />
+        <EntityTypeShape EntityType="waterremedyModel.Kitchen" Width="1.5" PointX="9" PointY="3.875" />
+        <EntityTypeShape EntityType="waterremedyModel.Laundry" Width="1.5" PointX="12.375" PointY="4.375" />
+        <EntityTypeShape EntityType="waterremedyModel.Bathroom" Width="1.5" PointX="5.25" PointY="3.75" />
+        <EntityTypeShape EntityType="waterremedyModel.Bathproduct" Width="1.5" PointX="5.25" PointY="6.125" />
+        <AssociationConnector Association="waterremedyModel.BathroomBathproduct" />
+        <EntityTypeShape EntityType="waterremedyModel.Bathalternative" Width="1.5" PointX="5.125" PointY="9.25" />
+        <AssociationConnector Association="waterremedyModel.BathproductBathalternative" />
+        <EntityTypeShape EntityType="waterremedyModel.Kitproduct" Width="1.5" PointX="9.5" PointY="6.375" />
+        <EntityTypeShape EntityType="waterremedyModel.Kitalternative" Width="1.5" PointX="9.375" PointY="9.5" />
+        <AssociationConnector Association="waterremedyModel.KitchenKitproduct" />
+        <AssociationConnector Association="waterremedyModel.KitproductKitalternative" />
+        <EntityTypeShape EntityType="waterremedyModel.Launproduct" Width="1.5" PointX="12.5" PointY="6.75" />
+        <EntityTypeShape EntityType="waterremedyModel.Launalternative" Width="1.5" PointX="12.5" PointY="9.5" />
+        <AssociationConnector Association="waterremedyModel.LaundryLaunproduct" />
+        <AssociationConnector Association="waterremedyModel.LaunproductLaunalternative" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

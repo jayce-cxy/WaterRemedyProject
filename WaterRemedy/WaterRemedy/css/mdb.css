@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 
 /*!
  * Material Design for Bootstrap 4
@@ -2000,11 +2000,6 @@ button.bg-light:focus {
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1
-}
-
-body {
-    font-family: "Roboto", sans-serif;
-    font-weight: 300
 }
 
 h1,
