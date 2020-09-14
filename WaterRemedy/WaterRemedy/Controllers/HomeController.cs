@@ -8,6 +8,7 @@ using WaterRemedy.Utility;
 using System.Net.Http;
 using Newtonsoft.Json;
 using WaterRemedy.Models;
+using System.Collections;
 
 namespace WaterRemedy.Controllers
 {
@@ -174,7 +175,30 @@ namespace WaterRemedy.Controllers
         }
         public ActionResult RoofWater()
         {
-            return View();
+            DateTime dt = DateTime.Now;
+            var currentMonth = dt.ToString("MMMM");
+            var rainfallList = db.RainfallSet.ToList();
+            var currentMonthRainfall = 0.0;
+            var currentMonthIndoor = 0.0;
+            var yearRainfall = 0.0;
+            List<Double> water = new List<Double>();
+
+
+            foreach (var item in rainfallList) {
+                if (item.month.Equals(currentMonth)) {
+                    currentMonthRainfall = item.storage_month;
+                    currentMonthIndoor = item.indoor_req;
+                }
+            }
+            foreach (var a in rainfallList) {
+                yearRainfall += a.storage_month;
+                water.Add(a.storage_month);
+            }
+            ViewBag.currentMonthWater = currentMonthRainfall;
+            ViewBag.currentMonthIndoorReq = currentMonthIndoor;
+            ViewBag.list = yearRainfall;
+            ViewBag.rlist = water;
+            return View(db.RainfallSet.ToList());
         }
 
         public ActionResult AboutWater()

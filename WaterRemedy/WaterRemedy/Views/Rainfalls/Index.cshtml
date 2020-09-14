@@ -1,0 +1,70 @@
+﻿@model IEnumerable<WaterRemedy.Models.Rainfall>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.month)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rainfall_day)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rainfall_month)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.possibility)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.storage_month)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.indoor_req)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.outdoor_req)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.month)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rainfall_day)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rainfall_month)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.possibility)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.storage_month)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.indoor_req)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.outdoor_req)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

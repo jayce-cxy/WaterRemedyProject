@@ -53,6 +53,11 @@
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
+    <Reference Include="System.Collections.NonGeneric, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.NonGeneric.4.3.0\lib\net46\System.Collections.NonGeneric.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
@@ -129,6 +134,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\RainfallsController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -158,6 +164,9 @@
       <DependentUpon>waterremedyModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Launproduct.cs">
+      <DependentUpon>waterremedyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Rainfall.cs">
       <DependentUpon>waterremedyModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\User.cs">
@@ -255,6 +264,12 @@
     <Content Include="img - Copy\waterfall-3723422_1280.jpg" />
     <Content Include="img - Copy\weather.png" />
     <Content Include="img\about-bg.jpg" />
+    <Content Include="img\bath-01.jpg" />
+    <Content Include="img\bath-02.jpg" />
+    <Content Include="img\bath-03.jpg" />
+    <Content Include="img\bath-04.jpg" />
+    <Content Include="img\bath-05.jpg" />
+    <Content Include="img\bath-alter.jpg" />
     <Content Include="img\Bath.png" />
     <Content Include="img\bbath.png" />
     <Content Include="img\bbff.jpg" />
@@ -273,6 +288,7 @@
     <Content Include="img\fire1.png" />
     <Content Include="img\fire2.png" />
     <Content Include="img\flinders.jpg" />
+    <Content Include="img\flower.jpg" />
     <Content Include="img\GARDEN.png" />
     <Content Include="img\ggarden.png" />
     <Content Include="img\Glowarm.jpg" />
@@ -281,10 +297,22 @@
     <Content Include="img\heliu.jpg" />
     <Content Include="img\home-bg.jpg" />
     <Content Include="img\home-cleaner.jpg" />
+    <Content Include="img\kit-01.jpg" />
+    <Content Include="img\kit-02.jpg" />
+    <Content Include="img\kit-03.jpg" />
+    <Content Include="img\kit-04.jpg" />
+    <Content Include="img\kit-05.jpg" />
+    <Content Include="img\kit-alter.jpg" />
     <Content Include="img\kitchen-clean.jpg" />
     <Content Include="img\kitchen.png" />
     <Content Include="img\koala-tree.png" />
     <Content Include="img\koala.jpg" />
+    <Content Include="img\laun-01.jpg" />
+    <Content Include="img\laun-02.jpg" />
+    <Content Include="img\laun-03.jpg" />
+    <Content Include="img\laun-04.jpg" />
+    <Content Include="img\laun-05.jpg" />
+    <Content Include="img\laun-alter.jpg" />
     <Content Include="img\LAUN.png" />
     <Content Include="img\laundry-chemical.jpg" />
     <Content Include="img\laundry.png" />
@@ -303,7 +331,10 @@
     <Content Include="img\river-4744783_1920.jpg" />
     <Content Include="img\river-top.png" />
     <Content Include="img\roof-water.jpg" />
+    <Content Include="img\sm.jpg" />
+    <Content Include="img\tolit.jpg" />
     <Content Include="img\want-help.png" />
+    <Content Include="img\wash-car.jpg" />
     <Content Include="img\washdetergent.jpg" />
     <Content Include="img\waterCatchmentIndanger.jpg" />
     <Content Include="img\waterfall-3723422_1280.jpg" />
@@ -802,6 +833,11 @@
     <Content Include="Views\Home\AboutWater.cshtml" />
     <Content Include="Views\Home\LockPage.cshtml" />
     <Content Include="Views\Home\CatchmentInDanger.cshtml" />
+    <Content Include="Views\Rainfalls\Create.cshtml" />
+    <Content Include="Views\Rainfalls\Delete.cshtml" />
+    <Content Include="Views\Rainfalls\Details.cshtml" />
+    <Content Include="Views\Rainfalls\Edit.cshtml" />
+    <Content Include="Views\Rainfalls\Index.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

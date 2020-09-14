@@ -35,5 +35,6 @@ namespace WaterRemedy.Models
         public virtual DbSet<Laundry> LaundrySet { get; set; }
         public virtual DbSet<Launproduct> LaunproductSet { get; set; }
         public virtual DbSet<Launalternative> LaunalternativeSet { get; set; }
+        public virtual DbSet<Rainfall> RainfallSet { get; set; }
     }
 }

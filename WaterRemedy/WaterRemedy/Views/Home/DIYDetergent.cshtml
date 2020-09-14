@@ -21,8 +21,9 @@
     <link href="~/StyleFolder/venobox.css" rel="stylesheet" />
 
     <link href="~/StyleFolder/DataTables/css/dataTables.bootstrap4.css" rel="stylesheet" />
-    <link href="~/fonts/icofont.min.css" rel="stylesheet" />
+    @*<link href="~/fonts/icofont.min.css" rel="stylesheet" />*@
     <script src="~/JavaScript/popper.js"></script>
+    <link href="~/css/mdb.css" rel="stylesheet" />
     <link href="~/StyleFolder/style.css" rel="stylesheet" />
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
     <script src="~/Scripts/modernizr-2.8.3.js"></script>
@@ -47,12 +48,12 @@
                         <a href="/Home/AboutWater">About us</a>
                     </li>
                     @*<li class="drop-down">
-                        <a href="">DIY Detergent</a>
-                        <ul>
-                            <li><a href="/Home/DIYDetergent#threePic">Why is matter</a></li>
-                            <li><a href="/Home/DIYDetergent#team2">Check My Products</a></li>
-                        </ul>
-                    </li>*@
+                            <a href="">DIY Detergent</a>
+                            <ul>
+                                <li><a href="/Home/DIYDetergent#threePic">Why is matter</a></li>
+                                <li><a href="/Home/DIYDetergent#team2">Check My Products</a></li>
+                            </ul>
+                        </li>*@
                     <li>
                         <a href="">DIY Detergent</a>
                     </li>
@@ -64,18 +65,16 @@
 
     <section id="DIY">
         <div class="container" style="text-align:center; position: relative">
-            <img src="~/img/diy-clearn.jpg" />
-            <div class="DIY-container">
-                <h1 style="font-weight:600">DIY Detergent</h1>
-                <h2 style="font-weight:500">Replace chemical detergents with nature cleaner</h2>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 filter-app">
+                    <img src="~/img/diy-clearn.jpg" />
+                    <div class="DIY-container">
+                        <h1 style="font-weight:600">DIY Detergent</h1>
+                        <h2 style="font-weight:500">Replace chemical detergents with nature cleaner</h2>
+                    </div>
+                </div>
             </div>
         </div>
-        @*<div class="container" style="text-align:center">
-            <span type="button" id="RM" style="background-color:rgba(34, 201, 190, 1); width:225px; height:30px" onclick="window.location.href='#matter'"><span style="color:white">WHY IT MATTER</span></span>
-            <span type="button" id="RM" style="background-color:rgba(23, 134, 127, 1); width:218px; height:30px; margin-left:-4px;" onclick="window.location.href='/Home/RoofWater'"><span style="color:white">WHAT IT IMPACT ON</span></span>
-            <span type="button" id="RM" style="background-color:rgba(34, 201, 190, 1); width:218px; height:30px; margin-left:-5px;" onclick="window.location.href='/Home/RoofWater'"><span style="color:white">CHECK MY DETERGENT</span></span>
-            <span type="button" id="RM" style="background-color:rgba(23, 134, 127, 1); width:225px; height:30px; margin-left:-4px;" onclick="window.location.href='/Home/RoofWater'"><span style="color:white">CHECK REPLACEMENT</span></span>
-        </div>*@
     </section><!-- #hero -->
 
 
@@ -105,25 +104,32 @@
     <a class="cd-nav-trigger cd-img-replace">Open navigation<span></span></a>
 
 
+    <div style="background-color:#ffebcc">
+        <section class="container" id="matter">
+            <div class="container">
+                <h2 style="text-align:center; color:black; font-size:40px; font-weight:600">
+                    Why it matters
+                </h2>
+                <br />
+                <p style="text-align:center; color:black; font-weight:500; font-size:15px">
+                    Most household chemical products contain <span style="color:#05879c">phosphate & surfactant</span>
+                    <br />
+                    Phosphates can result in eutrophication in water and cause the death of fish.
+                    <br />
+                    The surfactants are not only toxic to aquatic creatures, but also persistent in water.
+                    <br />
+                </p>
+                <p style="text-align:center; color:black; font-weight:600; font-size:17px">
+                    The main entrance to the water is surface water through sewage treatment.
+                </p>
 
-    <section style="background-color:#ffebcc" class="container" id="matter">
+            </div>
+        </section>
+    </div>
+
+    <section style="margin-top:-50px">
         <div class="container" id="threePic">
-            <h2 style="text-align:center; color:black; font-size:50px; font-weight:600">
-                Why it matters
-            </h2>
-            <br />
-            <p style="text-align:center; color:black; font-weight:500; font-size:20px">
-                Most household chemical products contain <span style="color:#05879c">phosphate & surfactant</span>
-                <br />
-                Phosphates can result in eutrophication in water and cause the death of fish.
-                <br />
-                The surfactants are not only toxic to aquatic creatures, but also persistent in water.
-                <br />
-            </p>
-            <p style="text-align:center; color:black; font-weight:600; font-size:25px">
-                The main entrance to the water is surface water through sewage treatment.
-            </p>
-            <h2 style="text-align:center; color:black; font-size:50px; font-weight:600; margin-top:50px">
+            <h2 style="text-align:center; color:black; font-size:40px; font-weight:600; margin-top:50px">
                 What it impact on
             </h2>
             <div class="row" style="margin-top:50px">
@@ -144,14 +150,13 @@
     </section>
 
 
-    <h2 class='mb-3' style="text-align:center; color:black; font-size:50px; font-weight:600" id="team2">Check my product by place with alternative</h2>
+    <h2 class='mb-3' style="text-align:center; color:black; font-size:40px; font-weight:600" id="team2">Check my product by place with alternative</h2>
 
-    <div class="container" style="margin-top:50px">
-        <div class="row">
-            <div class="dropdown col-lg-4 col-md-4 filter-app">
-                <a class="btn btn-outline-info dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width:300px">
+    <div class="container" style="margin-top:50px; text-align:center">
+            <div class="dropdown">
+                <button class="btn btn-ligh dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width:300px; border:0px solid black; font-weight:bold; color:black">
                     MY PLACE
-                </a>
+                </button>
 
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                     <a class="dropdown-item" onclick="show1()" id="chice1">Kitchen</a>
@@ -159,249 +164,81 @@
                     <a class="dropdown-item" onclick="show3()" id="chice3">Laundry</a>
                 </div>
             </div>
+    </div>
 
-            <div class="dropdown col-lg-4 col-md-4 filter-app">
-                <a class="btn btn-outline-info dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width:300px">
-                    MY PRODUCT
-                </a>
-
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <a class="dropdown-item" onclick="show4()" id="chice1">Kitchen products</a>
-                    <a class="dropdown-item" onclick="show5()" id="chice2">Bathroom products</a>
-                    <a class="dropdown-item" onclick="show6()" id="chice3">Laundry products</a>
+    <section id="laundry" style="margin-top:50px">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 filter-app">
+                    <img src="~/img/laun-01.jpg" />
+                    <img src="~/img/laun-02.jpg" style="margin-left:70px"/>
+                    <img src="~/img/laun-03.jpg" />
+                    <img src="~/img/laun-04.jpg" />
+                    <img src="~/img/laun-05.jpg" style="margin-left:70px"/>
                 </div>
             </div>
-
-            <div class="dropdown col-lg-4 col-md-4 filter-app">
-                <a class="btn btn-outline-info dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width:300px">
-                    ALTERNATIVES
-                </a>
-
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <a class="dropdown-item" onclick="show7()" id="chice1">Alternatives for Kitchen</a>
-                    <a class="dropdown-item" onclick="show8()" id="chice2">Alternatives for Bathroom</a>
-                    <a class="dropdown-item" onclick="show9()" id="chice3">Alternatives for Laundry</a>
-                </div>
+            <div class="container" style="text-align:center; margin-top:70px">
+                @*<div type="button" style="margin-left:20px; background-color:rgba(242, 216, 160, 1); text-align:center; color:white; font-weight:bold" id="RM">Check DIY Detergents</div>*@
+                <button type="button" class="btn btn-ligh" style="border:0px solid black; font-weight:bold; color:black" onclick="show6()">Check DIY Detergents</button>
+            </div>
+            <div class="container" id="launAlt" style="margin-top:50px">
+                <img src="~/img/laun-alter.jpg" style="width:100%; height:100%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" />
             </div>
         </div>
-    </div>
 
-    <div class="container" id="kitchen" style="margin-top:50px">
-        <table id="dtBasicExample" class="table" width="100%">
-            <thead>
-                <tr>
-                    <th class="th-sm">
-                        Harmful ingredients
-                    </th>
-                    <th class="th-sm">
-                        Result in water
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Sodium Dodecyl Benzene Sulfonate</td>
-                    <td>Increase protean and carbonhydrate, result in disorder of microorganism in water.</td>
-                </tr>
-                <tr>
-                    <td>Sodium hydroxide</td>
-                    <td>Raise the ph value of water, harmful to all types of aquatic creatures</td>
-                </tr>
-                <tr>
-                    <td>Benzalkonium chloride</td>
-                    <td>Use products with more natural ingredients, such as enzymes and anionic surfactants</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="container" id="laundry" style="margin-top:50px">
-        <table id="dtBasicExample1" class="table" width="100%">
-            <thead>
-                <tr>
-                    <th class="th-sm">
-                        Harmful ingredients
-                    </th>
-                    <th class="th-sm">
-                        Result in water
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Sodium Dodecyl Benzene Sulfonate</td>
-                    <td>Increase protean and carbonhydrate, result in disorder of microorganism in water.</td>
-                </tr>
-                <tr>
-                    <td>Sodium Diethylenetriamine Pentamethylene Phosphonate (SDTPP) or phosphate</td>
-                    <td>The phosphonate will esult in eutrophication; result in death of aquatic animals</td>
-                </tr>
-                <tr>
-                    <td>Benzalkonium chloride</td>
-                    <td>Use products with more natural ingredients, such as enzymes and anionic surfactants</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="container" id="bathroom" style="margin-top:50px">
-        <table id="dtBasicExample2" class="table" width="100%">
-            <thead>
-                <tr>
-                    <th class="th-sm">
-                        Harmful ingredients
-                    </th>
-                    <th class="th-sm">
-                        Result in water
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Sodium Hypochlorite</td>
-                    <td>Promotes increment of trichlorinated acetic acid in water, harmful to aquatic lives.</td>
-                </tr>
-                <tr>
-                    <td>Sodium hydroxide</td>
-                    <td>Raise the ph value of water, harmful to all types of aquatic creatures</td>
-                </tr>
-                <tr>
-                    <td>Benzalkonium chloride</td>
-                    <td>Benzalkonium chloride Benzene derivatives are harmful to environment and hard to degrade</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+    </section>
 
-    <div class="container" id="kitchenpro" style="margin-top:50px">
-        <table id="dtBasicExample3" class="table" width="100%">
-            <thead>
-                <tr>
-                    <th class="th-sm">
-                        Product Name
-                    </th>
-                    <th class="th-sm">
-                        Harmful ingredients
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Ajax Professional Kitchen</td>
-                    <td>Sodium Dodecyl Benzene Sulfonate</td>
-                </tr>
-                <tr>
-                    <td>Ajax Spray n' Wipe Multi Purpose Anti-Bacterial Cleaner Ocean Fresh </td>
-                    <td>Sodium Dodecyl Benzene Sulfonate</td>
-                </tr>
-                <tr>
-                    <td>Mr Muscle Drano Crystals Tub</td>
-                    <td>Sodium hydroxide</td>
-                </tr>
-                <tr>
-                    <td>White King Bleach Lavender All Purpose  </td>
-                    <td>Sodium hydroxide</td>
-                </tr>
-                <tr>
-                    <td>Strike Kitchen Cleaner</td>
-                    <td>Benzalkonium chloride</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="container" id="laundrypro" style="margin-top:50px">
-        <table id="dtBasicExample4" class="table" width="100%">
-            <thead>
-                <tr>
-                    <th class="th-sm">
-                        Product Name
-                    </th>
-                    <th class="th-sm">
-                        Harmful ingredients
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Canesten Antibacterial And Antifungal Hygiene Laundry Rinse Lemon </td>
-                    <td>Benzalkonium chloride</td>
-                </tr>
-                <tr>
-                    <td>Dettol Anti-Bacterial Laundry Sanitiser Natural Eucalyptus is designed specifically for fabrics</td>
-                    <td>Benzalkonium chloride</td>
-                </tr>
-                <tr>
-                    <td>Surf Variants - Tropical, Sunshine, Lavendar, Herbals, Floral Spice</td>
-                    <td>Sodium Dodecyl Benzene Sulfonate</td>
-                </tr>
-                <tr>
-                    <td>Persil With A Touch Of Comfort Inspired Freshness Liquid ?€? For All Machine Types</td>
-                    <td>Sodium Dodecyl Benzene Sulfonate</td>
-                </tr>
-                <tr>
-                    <td>Variants - Quick Wash</td>
-                    <td>Sodium Dodecyl Benzene Sulfonate</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="container" id="bathroompro" style="margin-top:50px">
-        <table id="dtBasicExample5" class="table" width="100%">
-            <thead>
-                <tr>
-                    <th class="th-sm">
-                        Product Name
-                    </th>
-                    <th class="th-sm">
-                        Harmful ingredients
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>ALDI POWER FORCE BRIGHT & CLEAN OXY TOILET GEL </td>
-                    <td>Sodium Hypochlorite</td>
-                </tr>
-                <tr>
-                    <td>BREF 10X EFFECT TOILET GEL </td>
-                    <td>Sodium Hypochlorite</td>
-                </tr>
-                <tr>
-                    <td>COLES ULTRA BLEACH TOILET GEL WITH BAKING SODA </td>
-                    <td>Sodium Hypochlorite</td>
-                </tr>
-                <tr>
-                    <td>HARPIC PLATINUM PRO-SHIELD</td>
-                    <td>Sodium hydroxide</td>
-                </tr>
-                <tr>
-                    <td>HARPIC PLATINUM PRO-SHIELD</td>
-                    <td>Benzalkonium chloride</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+    <section id="kitchen" style="margin-top:50px">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 filter-app">
+                    <img src="~/img/kit-01.jpg" />
+                    <img src="~/img/kit-02.jpg" style="margin-left:20px"/>
+                    <img src="~/img/kit-03.jpg" style="margin-left:70px"/>
+                    <img src="~/img/kit-04.jpg" style="margin-left:70px"/>
+                    <img src="~/img/kit-05.jpg" style="margin-left:70px"/>
+                </div>
+            </div>
+            <div class="container" style="text-align:center; margin-top:70px">
+                @*<div type="button" style="margin-left:20px; background-color:rgba(242, 216, 160, 1); text-align:center; color:white; font-weight:bold" id="RM">Check DIY Detergents</div>*@
+                <button class="btn btn-ligh" style="border:0px solid black; font-weight:bold; color:black" onclick="show4()">Check DIY Detergents</button>
+            </div>
+            <div class="container" id="kitAlt" style="margin-top:50px">
+                <img src="~/img/kit-alter.jpg" style="width:100%; height:100%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" />
+            </div>
+        </div>
+    </section>
 
-    <div class="container" id="kitAlt" style="margin-top:50px">
-        <img src="~/img/kitchen.png" style="width:100%; height:auto; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" />
-    </div>
-    <div class="container" id="bathAlt" style="margin-top:50px">
-        <img src="~/img/Bath.png" style="width:100%; height:auto; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" />
-    </div>
-    <div class="container" id="launAlt" style="margin-top:50px">
-        <img src="~/img/laundry.png" style="width:100%; height:auto; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" />
-    </div>
+    <section id="bathroom" style="margin-top:50px">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 filter-app">
+                    <img src="~/img/bath-01.jpg" />
+                    <img src="~/img/bath-02.jpg" />
+                    <img src="~/img/bath-03.jpg" />
+                    <img src="~/img/bath-04.jpg" />
+                    <img src="~/img/bath-05.jpg" />
+                </div>
+            </div>
+            <div class="container" style="text-align:center; margin-top:60px">
+                @*<div type="button" style="margin-left:20px; background-color:rgba(242, 216, 160, 1); text-align:center; color:white; font-weight:bold" id="RM">Check DIY Detergents</div>*@
+                <button class="btn btn-ligh" style="border:0px solid black; font-weight:bold; color:black" onclick="show5()">Check DIY Detergents</button>
+            </div>
+            <div class="container" id="bathAlt" style="margin-top:50px">
+                <img src="~/img/bath-alter.jpg" style="width:100%; height:100%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" />
+            </div>
+        </div>
+    </section>
 
-    <div class="container embed-responsive embed-responsive-16by9 z-depth-3" style="margin-top:150px; margin-bottom:150px">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/9wcoeE0hhSE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
 
-    <footer id="footer">
+    <footer id="footer" style="margin-top:200px">
         <div class="container">
             <div class="copyright">
                 &copy; Copyright <strong><span>Water Remedy</span></strong>. All Rights Reserved
             </div>
         </div>
     </footer>
-    <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+    <a href="#" class="back-to-top"><i class="icofont-simple-up">Top</i></a>
 
 
 
@@ -418,17 +255,6 @@
             display: none;
         }
 
-        #kitchenpro {
-            display: none;
-        }
-
-        #laundrypro {
-            display: none;
-        }
-
-        #bathroompro {
-            display: none;
-        }
 
         #kitAlt {
             display: none;
@@ -457,44 +283,15 @@
         var kit = document.getElementById("kitchen");
         var bat = document.getElementById("bathroom");
         var lau = document.getElementById("laundry");
-        var kitpro = document.getElementById("kitchenpro");
-        var batpro = document.getElementById("bathroompro");
-        var laupro = document.getElementById("laundrypro");
         var kitpic = document.getElementById("kitAlt");
         var batpic = document.getElementById("bathAlt");
         var launpic = document.getElementById("launAlt");
 
-        $(document).ready(function () {
-            $('#dtBasicExample').DataTable();
-            $('.dataTables_length').addClass('bs-select');
-        });
-        $(document).ready(function () {
-            $('#dtBasicExample1').DataTable();
-            $('.dataTables_length').addClass('bs-select');
-        });
-        $(document).ready(function () {
-            $('#dtBasicExample2').DataTable();
-            $('.dataTables_length').addClass('bs-select');
-        });
-        $(document).ready(function () {
-            $('#dtBasicExample3').DataTable();
-            $('.dataTables_length').addClass('bs-select');
-        });
-        $(document).ready(function () {
-            $('#dtBasicExample4').DataTable();
-            $('.dataTables_length').addClass('bs-select');
-        });
-        $(document).ready(function () {
-            $('#dtBasicExample5').DataTable();
-            $('.dataTables_length').addClass('bs-select');
-        });
         function show1() {
             kit.style.display = "flex"
+            document.getElementById("dropdownMenuLink").innerHTML = "Kitchen";
             bat.style.display = "none"
             lau.style.display = "none"
-            kitpro.style.display = "none"
-            batpro.style.display = "none"
-            laupro.style.display = "none"
             kitpic.style.display = "none"
             batpic.style.display = "none"
             launpic.style.display = "none"
@@ -502,10 +299,8 @@
         function show2() {
             kit.style.display = "none"
             bat.style.display = "flex"
+            document.getElementById("dropdownMenuLink").innerHTML = "Bathroom";
             lau.style.display = "none"
-            kitpro.style.display = "none"
-            batpro.style.display = "none"
-            laupro.style.display = "none"
             kitpic.style.display = "none"
             batpic.style.display = "none"
             launpic.style.display = "none"
@@ -514,79 +309,35 @@
             kit.style.display = "none"
             bat.style.display = "none"
             lau.style.display = "flex"
-            kitpro.style.display = "none"
-            batpro.style.display = "none"
-            laupro.style.display = "none"
+            document.getElementById("dropdownMenuLink").innerHTML = "Laundry";
             kitpic.style.display = "none"
             batpic.style.display = "none"
             launpic.style.display = "none"
         }
         function show4() {
-            kitpro.style.display = "flex"
-            batpro.style.display = "none"
-            laupro.style.display = "none"
-            kit.style.display = "none"
-            bat.style.display = "none"
-            lau.style.display = "none"
-            kitpic.style.display = "none"
-            batpic.style.display = "none"
-            launpic.style.display = "none"
+            if (kitpic.style.display == "none") {
+                kitpic.style.display = "flex";
+            } else {
+                kitpic.style.display = "none";
+            }
         }
+
+
         function show5() {
-            kitpro.style.display = "none"
-            batpro.style.display = "flex"
-            laupro.style.display = "none"
-            kit.style.display = "none"
-            bat.style.display = "none"
-            lau.style.display = "none"
-            kitpic.style.display = "none"
-            batpic.style.display = "none"
-            launpic.style.display = "none"
+            if (batpic.style.display == "none") {
+                batpic.style.display = "flex";
+            } else {
+                batpic.style.display = "none";
+            }
         }
         function show6() {
-            kitpro.style.display = "none"
-            batpro.style.display = "none"
-            laupro.style.display = "flex"
-            kit.style.display = "none"
-            bat.style.display = "none"
-            lau.style.display = "none"
-            kitpic.style.display = "none"
-            batpic.style.display = "none"
-            launpic.style.display = "none"
+            if (launpic.style.display == "none") {
+                launpic.style.display = "flex";
+            } else {
+                launpic.style.display = "none";
+            }
         }
-        function show7() {
-            kitpic.style.display = "flex"
-            batpic.style.display = "none"
-            launpic.style.display = "none"
-            kitpro.style.display = "none"
-            batpro.style.display = "none"
-            laupro.style.display = "none"
-            kit.style.display = "none"
-            bat.style.display = "none"
-            lau.style.display = "none"
-        }
-        function show8() {
-            kitpic.style.display = "none"
-            batpic.style.display = "flex"
-            launpic.style.display = "none"
-            kitpro.style.display = "none"
-            batpro.style.display = "none"
-            laupro.style.display = "none"
-            kit.style.display = "none"
-            bat.style.display = "none"
-            lau.style.display = "none"
-        }
-        function show9() {
-            kitpic.style.display = "none"
-            batpic.style.display = "none"
-            launpic.style.display = "flex"
-            kitpro.style.display = "none"
-            batpro.style.display = "none"
-            laupro.style.display = "none"
-            kit.style.display = "none"
-            bat.style.display = "none"
-            lau.style.display = "none"
-        }
+
     </script>
     <style>
         #kitchen th {

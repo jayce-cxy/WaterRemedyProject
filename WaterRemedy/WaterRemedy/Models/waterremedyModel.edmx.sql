@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 09/07/2020 01:45:18
+-- Date Created: 09/12/2020 23:02:55
 -- Generated from EDMX file: D:\IEProject\WaterRemedyProject\WaterRemedy\WaterRemedy\Models\waterremedyModel.edmx
 -- --------------------------------------------------
 
@@ -17,6 +17,24 @@ GO
 -- Dropping existing FOREIGN KEY constraints
 -- --------------------------------------------------
 
+IF OBJECT_ID(N'[dbo].[FK_BathroomBathproduct]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[BathproductSet] DROP CONSTRAINT [FK_BathroomBathproduct];
+GO
+IF OBJECT_ID(N'[dbo].[FK_BathproductBathalternative]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[BathalternativeSet] DROP CONSTRAINT [FK_BathproductBathalternative];
+GO
+IF OBJECT_ID(N'[dbo].[FK_KitchenKitproduct]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[KitproductSet] DROP CONSTRAINT [FK_KitchenKitproduct];
+GO
+IF OBJECT_ID(N'[dbo].[FK_KitproductKitalternative]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[KitalternativeSet] DROP CONSTRAINT [FK_KitproductKitalternative];
+GO
+IF OBJECT_ID(N'[dbo].[FK_LaundryLaunproduct]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[LaunproductSet] DROP CONSTRAINT [FK_LaundryLaunproduct];
+GO
+IF OBJECT_ID(N'[dbo].[FK_LaunproductLaunalternative]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[LaunalternativeSet] DROP CONSTRAINT [FK_LaunproductLaunalternative];
+GO
 
 -- --------------------------------------------------
 -- Dropping existing tables
@@ -24,6 +42,33 @@ GO
 
 IF OBJECT_ID(N'[dbo].[UserSet]', 'U') IS NOT NULL
     DROP TABLE [dbo].[UserSet];
+GO
+IF OBJECT_ID(N'[dbo].[BathroomSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[BathroomSet];
+GO
+IF OBJECT_ID(N'[dbo].[BathproductSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[BathproductSet];
+GO
+IF OBJECT_ID(N'[dbo].[BathalternativeSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[BathalternativeSet];
+GO
+IF OBJECT_ID(N'[dbo].[KitchenSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[KitchenSet];
+GO
+IF OBJECT_ID(N'[dbo].[KitproductSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[KitproductSet];
+GO
+IF OBJECT_ID(N'[dbo].[KitalternativeSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[KitalternativeSet];
+GO
+IF OBJECT_ID(N'[dbo].[LaundrySet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[LaundrySet];
+GO
+IF OBJECT_ID(N'[dbo].[LaunproductSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[LaunproductSet];
+GO
+IF OBJECT_ID(N'[dbo].[LaunalternativeSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[LaunalternativeSet];
 GO
 
 -- --------------------------------------------------
@@ -110,6 +155,19 @@ CREATE TABLE [dbo].[LaunalternativeSet] (
 );
 GO
 
+-- Creating table 'RainfallSet'
+CREATE TABLE [dbo].[RainfallSet] (
+    [Id] int IDENTITY(1,1) NOT NULL,
+    [month] nvarchar(max)  NOT NULL,
+    [rainfall_day] float  NOT NULL,
+    [rainfall_month] float  NOT NULL,
+    [possibility] float  NOT NULL,
+    [storage_month] float  NOT NULL,
+    [indoor_req] float  NOT NULL,
+    [outdoor_req] float  NOT NULL
+);
+GO
+
 -- --------------------------------------------------
 -- Creating all PRIMARY KEY constraints
 -- --------------------------------------------------
@@ -172,6 +230,12 @@ GO
 ALTER TABLE [dbo].[LaunalternativeSet]
 ADD CONSTRAINT [PK_LaunalternativeSet]
     PRIMARY KEY CLUSTERED ([alter_id] ASC);
+GO
+
+-- Creating primary key on [Id] in table 'RainfallSet'
+ALTER TABLE [dbo].[RainfallSet]
+ADD CONSTRAINT [PK_RainfallSet]
+    PRIMARY KEY CLUSTERED ([Id] ASC);
 GO
 
 -- --------------------------------------------------

@@ -44,7 +44,7 @@ a {
 }
 
     .back-to-top i {
-        font-size: 24px;
+        font-size: 14px;
         position: absolute;
         top: 8px;
         left: 8px;
@@ -361,7 +361,7 @@ a {
     #hero h1 {
         margin: 0 0 10px 0;
         font-size: 48px;
-        font-weight: 300;
+        /*font-weight: 300;*/
         line-height: 56px;
         color: #fff;
     }
@@ -370,7 +370,7 @@ a {
         color: #eee;
         margin-bottom: 50px;
         font-size: 20px;
-        font-weight: 300;
+        /*font-weight: 300;*/
     }
 
     #hero .btn-get-started {
@@ -788,7 +788,6 @@ section {
 }*/
 #mel_population {
     position: relative;
-    border-radius: 50%;
     height: auto;
     width: 30%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -796,7 +795,6 @@ section {
 
 #mel_koala {
     position: relative;
-    border-radius: 50%;
     height: auto;
     width: 30%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -804,33 +802,34 @@ section {
 
 #mel_river {
     position: relative;
-    border-radius: 50%;
     height: auto;
     width: 30%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+
+
 #ggarden {
     position: relative;
-    border-radius: 50%;
     height: auto;
-    width: 30%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: auto;
 }
 #bbath {
     position: relative;
-    border-radius: 50%;
     height: auto;
-    width: 30%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: auto;
 }
 #llaun {
     position: relative;
-    border-radius: 50%;
     height: auto;
-    width: 30%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: auto;
 }
+#washCar {
+    position: relative;
+    height: auto;
+    width: auto;
+}
+
 /*three pics for HOME index*/
 #threeArtic .img {
     position: relative;
@@ -851,7 +850,7 @@ section {
         transform: translate(-50%, -50%);
         color: black;
         margin-left: 65px;
-        margin-top: 20px;
+        margin-top: 30px;
         font-size: 15px;
         font-weight: bold;
     }
@@ -1176,6 +1175,8 @@ section {
     }*/
 #DIY img {
     position:relative;
+    height:400px;
+    width:800px;
 }
 
     #DIY .DIY-container {
@@ -1205,6 +1206,7 @@ section {
         margin-bottom: 50px;
         font-size: 20px;
         font-weight: 300;
+        background-color:black;
     }
 
     #DIY .btn-get-started {
@@ -1385,13 +1387,13 @@ section {
 
 #bubble1 {
     position: relative;
-    width: 320px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
     padding: 21px;
     background: rgb(248, 231, 193);
-    -webkit-border-radius: 70px;
-    -moz-border-radius: 70px;
-    border-radius: 70px;
+    -webkit-border-radius: 110px;
+    -moz-border-radius: 110px;
+    border-radius: 110px;
 }
 
     #bubble1:after {
@@ -1403,19 +1405,19 @@ section {
         display: block;
         width: 0;
         z-index: 1;
-        right: -90px;
-        top: 56px;
+        right: -85px;
+        top: 76px;
     }
 
 #bubble2 {
     position: relative;
-    width: 320px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
     padding: 21px;
     background: rgb(248, 231, 193);
-    -webkit-border-radius: 70px;
-    -moz-border-radius: 70px;
-    border-radius: 70px;
+    -webkit-border-radius: 110px;
+    -moz-border-radius: 110px;
+    border-radius: 110px;
 }
 
     #bubble2:after {
@@ -1427,8 +1429,8 @@ section {
         display: block;
         width: 0;
         z-index: 1;
-        left: -90px;
-        top: 56px;
+        left: -85px;
+        top: 76px;
     }
 
 /*this is for the timeline in water catchment in danger*/

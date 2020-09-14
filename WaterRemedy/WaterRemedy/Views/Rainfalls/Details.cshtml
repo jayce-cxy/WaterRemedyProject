@@ -1,0 +1,75 @@
+﻿@model WaterRemedy.Models.Rainfall
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Rainfall</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.month)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.month)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.rainfall_day)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rainfall_day)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.rainfall_month)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rainfall_month)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.possibility)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.possibility)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.storage_month)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.storage_month)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.indoor_req)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.indoor_req)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.outdoor_req)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.outdoor_req)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

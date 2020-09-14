@@ -16,6 +16,7 @@
     <EntitySet Name="LaundrySet" EntityType="waterremedyModel.Store.LaundrySet" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="LaunproductSet" EntityType="waterremedyModel.Store.LaunproductSet" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="LaunalternativeSet" EntityType="waterremedyModel.Store.LaunalternativeSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RainfallSet" EntityType="waterremedyModel.Store.RainfallSet" store:Type="Tables" Schema="dbo" />
     <AssociationSet Name="BathroomBathproduct" Association="waterremedyModel.Store.BathroomBathproduct">
       <End Role="Bathroom" EntitySet="BathroomSet" />
       <End Role="Bathproduct" EntitySet="BathproductSet" />
@@ -120,6 +121,19 @@
     <Property Name="alter_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="name" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Launproduct_laun_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RainfallSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="month" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="rainfall_day" Type="float" Nullable="false" />
+    <Property Name="rainfall_month" Type="float" Nullable="false" />
+    <Property Name="possibility" Type="float" Nullable="false" />
+    <Property Name="storage_month" Type="float" Nullable="false" />
+    <Property Name="indoor_req" Type="float" Nullable="false" />
+    <Property Name="outdoor_req" Type="float" Nullable="false" />
   </EntityType>
   <Association Name="BathroomBathproduct">
     <End Role="Bathroom" Type="waterremedyModel.Store.BathroomSet" Multiplicity="1" />
@@ -232,6 +246,7 @@
             <End Role="Launproduct" EntitySet="LaunproductSet" />
             <End Role="Launalternative" EntitySet="LaunalternativeSet" />
           </AssociationSet>
+          <EntitySet Name="RainfallSet" EntityType="waterremedyModel.Rainfall" />
         </EntityContainer>
         <EntityType Name="User">
           <Key>
@@ -397,6 +412,19 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="Rainfall">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="month" Type="String" Nullable="false" />
+          <Property Name="rainfall_day" Type="Double" Nullable="false" />
+          <Property Name="rainfall_month" Type="Double" Nullable="false" />
+          <Property Name="possibility" Type="Double" Nullable="false" />
+          <Property Name="storage_month" Type="Double" Nullable="false" />
+          <Property Name="indoor_req" Type="Double" Nullable="false" />
+          <Property Name="outdoor_req" Type="Double" Nullable="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -490,6 +518,20 @@
           <ScalarProperty Name="alter_id" ColumnName="alter_id" />
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="Launproduct_laun_id" ColumnName="Launproduct_laun_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RainfallSet">
+      <EntityTypeMapping TypeName="IsTypeOf(waterremedyModel.Rainfall)">
+        <MappingFragment StoreEntitySet="RainfallSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="month" ColumnName="month" />
+          <ScalarProperty Name="rainfall_day" ColumnName="rainfall_day" />
+          <ScalarProperty Name="rainfall_month" ColumnName="rainfall_month" />
+          <ScalarProperty Name="possibility" ColumnName="possibility" />
+          <ScalarProperty Name="storage_month" ColumnName="storage_month" />
+          <ScalarProperty Name="indoor_req" ColumnName="indoor_req" />
+          <ScalarProperty Name="outdoor_req" ColumnName="outdoor_req" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

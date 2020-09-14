@@ -31,6 +31,8 @@ function setSelection(shape) {
 function deleteSelectedShape() {
     if (selectedShape) {
         selectedShape.setMap(null);
+        document.getElementById('lyear').innerHTML = 0;
+        document.getElementById('savemoney').innerHTML = 0;
     }
 }
 
@@ -83,7 +85,8 @@ function initMap() {
 
             });
             var area = google.maps.geometry.spherical.computeArea(newShape.getPath());
-            alert(area);
+            //alert(area);
+            document.getElementById('houseArea').value = area;
 
             setSelection(newShape);
 

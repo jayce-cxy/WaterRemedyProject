@@ -1,4 +1,5 @@
-﻿
+﻿@model IEnumerable<WaterRemedy.Models.Rainfall>
+
 @{
     Layout = null;
 }
@@ -66,10 +67,14 @@
 
     <section id="Roof">
         <div class="container" style="text-align:center; position: relative">
-            <img src="~/img/roof-water.jpg" style="width:880px; height:580px" />
-            <div class="Roof-container">
-                <h1 style="font-weight:600">Roof Water</h1>
-                <h2 style="font-weight:500">WATER IS MORE PRECIOUS THAN GOLD</h2>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 filter-app">
+                    <img src="~/img/roof-water.jpg" style="width:800px; height:400px" />
+                    <div class="Roof-container">
+                        <h1 style="font-weight:600">Roof Water</h1>
+                        <h2 style="font-weight:500; background-color:black">WATER IS MORE PRECIOUS THAN GOLD</h2>
+                    </div>
+                </div>
             </div>
         </div>
     </section><!-- #hero -->
@@ -105,24 +110,25 @@
     <a class="cd-nav-trigger cd-img-replace">Open navigation<span></span></a>
 
 
-
-    <section class="container" style="margin-top:20px; background-color:#e6ffff" id="team1">
-        <div class="container">
-            <h2 style="text-align:center; color:black; font-size:50px; font-weight:600">
-                Why it matters
-            </h2>
-            <p style="text-align:center; color:black; font-weight:600; font-size:25px">
-                Water resources in Melbourne are limited.
-            </p>
-            <br />
-            <p style="text-align:center; color:black; font-weight:500; font-size:20px">
-                Melbourne population has increased as the highest rate among capital cities that lead to water usage increasing, in addition, the natural events; bushfire has a serious impact to water catchment as well.
-            </p>
-            <p style="text-align:center; color:black; font-weight:600; font-size:25px">
-                everyone can reuse rainwater as an effective usage
-            </p>
-        </div>
-    </section>
+    <div style="margin-top:20px; background-color:#e6ffff">
+        <section id="team1">
+            <div class="container">
+                <h2 style="text-align:center; color:black; font-size:50px; font-weight:600">
+                    Why it matters
+                </h2>
+                <p style="text-align:center; color:black; font-weight:500; font-size:25px">
+                    Water resources in Melbourne are limited.
+                </p>
+                <br />
+                <p style="text-align:center; color:black; font-weight:500; font-size:20px">
+                    Melbourne population has increased as the highest rate among capital cities that lead to water usage increasing, in addition, the natural events; bushfire has a serious impact to water catchment as well.
+                </p>
+                <p style="text-align:center; color:black; font-weight:500; font-size:25px">
+                    everyone can reuse rainwater as an effective usage
+                </p>
+            </div>
+        </section>
+    </div>
 
     <section>
         <div class="container" id="threePic">
@@ -130,70 +136,54 @@
                 What it use for
             </h2>
             <div class="row" style="margin-top:50px">
-                <div class="c1 col-lg-4 col-md-4 filter-app">
-                    <img src="~/img/ggarden.png" class="img-fluid" id="ggarden" style="float:right" />
-                    <div class="words" style="margin-left:125px">GARDEN</div>
+                <div class="col-lg-2 col-md-2 filter-app"></div>
+                <div class="c1 col-lg-2 col-md-2 filter-app" style="text-align:center">
+                    <img src="~/img/tolit.jpg" class="img-fluid" id="ggarden" />
+                    @*<div class="words" style="margin-left:125px">GARDEN</div>*@
                 </div>
-                <div class="c1 col-lg-4 col-md-4 filter-app" style="text-align:center">
-                    <img src="~/img/bbath.png" class="img-fluid" id="bbath" />
-                    <div class="words" style="margin-left:0px">BATHROOM</div>
+                <div class="c1 col-lg-2 col-md-2 filter-app" style="text-align:center">
+                    <img src="~/img/flower.jpg" class="img-fluid" id="bbath" />
                 </div>
-                <div class="c1 col-lg-4 col-md-4 filter-app">
-                    <img src="~/img/llaundry.png" class="img-fluid" id="llaun" style="float:left" />
-                    <div class="words" style="margin-left:-125px">LAUNDRY</div>
+                <div class="c1 col-lg-2 col-md-2 filter-app" style="text-align:center">
+                    <img src="~/img/sm.jpg" class="img-fluid" id="llaun" />
                 </div>
+                <div class="c1 col-lg-2 col-md-2 filter-app" style="text-align:center">
+                    <img src="~/img/wash-car.jpg" class="img-fluid" id="washCar" />
+                </div>
+                <div class="col-lg-2 col-md-2 filter-app"></div>
             </div>
         </div>
     </section>
 
-    <section>
-        <div class="container" id="team3">
-            <h2 style="text-align:center; color:black; font-size:50px; font-weight:600">
-                How much can save
-            </h2>
-            <div class="row" style="margin-top:50px">
-                <div class="c1 col-lg-3 col-md-3 filter-app">
-                    <label for="exampleForm2" style="font-weight:bold">Area(m^2)</label>
-                    <input type="text" id="area" class="form-control">
-                </div>
-                <div class="c1 col-lg-3 col-md-3 filter-app">
-                    <label for="exampleForm2" style="font-weight:bold">Rainfall(mm)</label>
-                    <input type="text" id="rainfall" class="form-control">
-                </div>
-                <div class="c1 col-lg-3 col-md-3 filter-app">
-                    <label for="exampleForm2" style="font-weight:bold">Total can be saved(L)</label>
-                    <input type="text" id="storage" class="form-control">
-                </div>
-                <div class="c1 col-lg-3 col-md-3 filter-app">
-                    <label for="exampleForm2" style="font-weight:bold">How much money you can save($)</label>
-                    <input type="text" id="money" class="form-control">
-                </div>
-            </div>
-        </div>
-    </section>
+    <input id="houseArea" style="display:none" value="0.0" />
 
-    @*<div class="container">
-            <button type="button" class="btn btn-outline-info" id="RM" style="margin-left:90px" onclick="search()">search</button>
-        </div>*@
-
-    @*<div class="container">
-            <div id="panel">
-                <div id="color-palette" style="margin-left:50px"></div>
-                <div>
-                    <button class="btn btn-outline-info" id="delete-button">Delete Selected Shape</button>
-                    <button class="btn btn-outline-info" id="calculate" onClick="calcar()">calculate area</button>
-                </div>
-            </div>
-        </div>*@
-
-
-
-    <div class="container" style="text-align:center">
-        <div class="row">
-            <div class="col-lg-12 col-md-12 filter-app">
+    <div class="container" style="text-align:center; margin-bottom:50px">
+        <h2 style="text-align:center; color:black; font-size:50px; font-weight:600">
+            How much you can save from rainfall?
+        </h2>
+        <div class="row" style="margin-top:50px">
+            <div class="col-lg-8 col-md-8 filter-app">
                 <div id="map"></div>
-                <button class="btn btn-outline-info" id="delete-button">Delete Selected Shape</button>
-                @*<button class="btn btn-outline-info" id="calculate" onClick="calcar()">calculate area</button>*@
+
+            </div>
+            <div class="col-lg-4 col-md-4 filter-app">
+                <div class="card">
+                    <div class="card-header">
+                        Result
+                    </div>
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                            <h6>Rainfall collection Yearly (L/year)</h6>
+                            <p id="lyear">0</p>
+                        </blockquote>
+                        <blockquote class="blockquote mb-0">
+                            <h6>Equal value in AUD</h6>
+                            <p id="savemoney">0</p>
+                        </blockquote>
+                        <button class="btn btn-ligh" style="border:0px solid black; font-weight:bold; color:black" id="delete-button">Delete Selected Shape</button>
+                        <button class="btn btn-ligh" style="border:0px solid black; font-weight:bold; color:black" onclick="calculate()">Calculate</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -209,7 +199,7 @@
         </div>
     </footer>
 
-    <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+    <a href="#" class="back-to-top"><i class="icofont-simple-up">Top</i></a>
 
 
     <script src="~/Scripts/jquery-3.3.1.js"></script>
@@ -226,12 +216,49 @@
             defer></script>
     <script src="~/Scripts/calculateArea.js"></script>
     <script src="~/Scripts/sidenavbar.js"></script>
+
+    <script>
+            function calculate() {
+                var area = document.getElementById('houseArea').value;
+                var monthStorageMoney = 0.0;
+                var yearStorage;
+                @*var currentMonthWater = @ViewBag.currentMonthWater;*@
+                var currentMonthIndoorReq = @ViewBag.currentMonthIndoorReq;
+                var rainfallList = @ViewBag.list;
+                var rlist = @Html.Raw(Json.Encode(@ViewBag.rlist));
+                console.log(area);
+                console.log(rainfallList);
+                //console.log(currentMonthWater);
+                console.log(rlist[1]);
+
+
+
+                yearStorage = parseFloat(area) * rainfallList;
+                console.log(yearStorage);
+                document.getElementById('lyear').innerHTML = yearStorage.toFixed(2);
+
+                for (var i = 0; i < rlist.length; i++) {
+                    var mstorage = parseFloat(area) * parseFloat(rlist[i]);
+
+                    if (mstorage == 0) {
+                        monthStorageMoney = 0.0;
+                        break;
+                    } else if (mstorage < currentMonthIndoorReq) {
+                        monthStorageMoney = monthStorageMoney + parseFloat(((mstorage / 1000) * 2.68317).toFixed(2));
+                    } else if (mstorage > currentMonthIndoorReq){
+                        monthStorageMoney = monthStorageMoney + parseFloat(((currentMonthIndoorReq / 1000) * 2.68317 + ((mstorage - currentMonthIndoorReq)/1000) * 3.2252).toFixed(2));
+                    }
+                }
+                document.getElementById('savemoney').innerHTML = monthStorageMoney.toFixed(2);
+
+            }
+
+    </script>
+
     <style>
         #map {
             height: 500px;
-            width: 1120px;
-            /*margin-left: 300px;
-            margin-bottom: 50px;*/
+            width: auto;
         }
     </style>
 </body>
