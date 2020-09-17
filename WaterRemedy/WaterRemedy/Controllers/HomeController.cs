@@ -178,26 +178,38 @@ namespace WaterRemedy.Controllers
             DateTime dt = DateTime.Now;
             var currentMonth = dt.ToString("MMMM");
             var rainfallList = db.RainfallSet.ToList();
-            var currentMonthRainfall = 0.0;
             var currentMonthIndoor = 0.0;
             var yearRainfall = 0.0;
-            List<Double> water = new List<Double>();
+            List<string> month = new List<string>();
+            List<Double> storageMonth = new List<double>();
+
+            List<Double> rainfallMonth = new List<Double>();
+            List<Double> indoorRequired = new List<Double>();
+            List<Double> outdoorRequired = new List<Double>();
 
 
             foreach (var item in rainfallList) {
                 if (item.month.Equals(currentMonth)) {
-                    currentMonthRainfall = item.storage_month;
                     currentMonthIndoor = item.indoor_req;
                 }
             }
+
             foreach (var a in rainfallList) {
-                yearRainfall += a.storage_month;
-                water.Add(a.storage_month);
+                yearRainfall += a.rainfall_month;
+                month.Add(a.month);
+                storageMonth.Add(a.storage_month);
+                rainfallMonth.Add(a.rainfall_month);
+                indoorRequired.Add(a.indoor_req);
+                outdoorRequired.Add(a.outdoor_req);
             }
-            ViewBag.currentMonthWater = currentMonthRainfall;
+
             ViewBag.currentMonthIndoorReq = currentMonthIndoor;
             ViewBag.list = yearRainfall;
-            ViewBag.rlist = water;
+            ViewBag.rfmList = rainfallMonth;
+            ViewBag.indoorReq = indoorRequired;
+            ViewBag.outdoorReq = outdoorRequired;
+            ViewBag.monthList = month;
+            ViewBag.rlist = storageMonth;
             return View(db.RainfallSet.ToList());
         }
 

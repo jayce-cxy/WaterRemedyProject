@@ -40,7 +40,7 @@ function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
         zoom: 10,
         center: { lat: -37.840935, lng: 144.946457 },
-        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        mapTypeId: google.maps.MapTypeId.SATELLITE,
         disableDefaultUI: true,
         zoomControl: true,
         mapTypeControl: true

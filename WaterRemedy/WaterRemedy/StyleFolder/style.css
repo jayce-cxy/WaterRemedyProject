@@ -325,41 +325,72 @@ a {
 --------------------------------------------------------------*/
 #hero {
     /*width: 70%;*/
-    height: 55vh;
+    height: 60vh;
     background-image: url('../img/heliu.jpg');
     background-size: 90% 100%;
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
+    overflow: hidden;
     /*margin-bottom: -80px;*/
 }
-
-    #hero:before {
-        content: "";
-        background-color: transparent;
-        position: absolute;
-        bottom: 0;
-        top: 0;
-        left: 0;
-        right: 0;
+    #hero .btn {
+        font-weight:bold;
     }
+
+    #hero .btn:hover {
+        background-color:rgba(235, 186, 77, 1);
+    }
+
+#homepagebtn .btn {
+    border: 0px solid;
+}
+
+#homepagebtn .btn:hover {
+    background-color: rgba(235, 186, 77, 1);
+}
+
+#hero:before {
+    content: "";
+    background-color: transparent;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
 
     #hero .hero-container {
         position: absolute;
+        display:flex;
         bottom: 0;
         top: 0;
         left: 0;
         right: 0;
-        display: flex;
+        /*display: flex;*/
         padding-top: 80px;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         text-align: center;
     }
+        #hero .hero-container .instruction {
+            font-family: Raleway;
+            font-size: 15px;
+            color: #fff;
+        }
+        #hero .hero-container .instruction h6{
+            /*font-family: Raleway;*/
+            font-size: larger;
+            font-weight:600;
+            /*color: #fff;*/
+        }
+        /*#hero .hero-container #outdoor {
+            float: left;
+        }*/
 
     #hero h1 {
-        margin: 0 0 10px 0;
+        margin: 80px 0 10px 0;
         font-size: 48px;
         /*font-weight: 300;*/
         line-height: 56px;
@@ -772,9 +803,9 @@ section {
     #threePic div p {
         position: absolute;
         color: white;
-        left: 120px;
-        top: 120px;
-        font-size: 30px;
+        left: 40px;
+        top: 35px;
+        font-size: 15px;
         font-weight: bold;
     }
 
@@ -789,21 +820,21 @@ section {
 #mel_population {
     position: relative;
     height: auto;
-    width: 30%;
+    width: 100%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #mel_koala {
     position: relative;
     height: auto;
-    width: 30%;
+    width: 100%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #mel_river {
     position: relative;
     height: auto;
-    width: 30%;
+    width: 100%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -861,8 +892,9 @@ section {
 }
 
 #threeArtic .c1:hover img {
-    opacity: 0.4;
-    transform: scale(1.1);
+    /*opacity: 0.4;
+    transform: scale(1.1);*/
+    cursor:pointer;
 }
 
 
@@ -1489,238 +1521,20 @@ p.thought:after {
     border-radius: 18px;
 }
 
-
-/*.cd-nav-trigger {
-    display: none;
+/*diy detergent page words under the picture*/
+.item {
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    /*width: 120px;*/
 }
 
-.no-touch .cd-vertical-nav2 {
-    position: fixed;
-    right: 40px;
-    top: 50%;
-    bottom: auto;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    transform: translateY(-50%);
-    z-index: 1;
+.item img {
+    /*width: 100px;
+    height: 100px;*/
+    background-color: grey;
 }
 
-    .no-touch .cd-vertical-nav2 li {
-        text-align: right;
-    }
-
-    .no-touch .cd-vertical-nav2 a {
-        display: inline-block;
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-    }
-
-        .no-touch .cd-vertical-nav2 a:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        .no-touch .cd-vertical-nav2 a span {
-            float: right;
-            display: inline-block;
-            -webkit-transform: scale(0.6);
-            -moz-transform: scale(0.6);
-            -ms-transform: scale(0.6);
-            -o-transform: scale(0.6);
-            transform: scale(0.6);
-        }
-
-        .no-touch .cd-vertical-nav2 a:hover span {
-            -webkit-transform: scale(1);
-            -moz-transform: scale(1);
-            -ms-transform: scale(1);
-            -o-transform: scale(1);
-            transform: scale(1);
-        }
-
-        .no-touch .cd-vertical-nav2 a:hover .cd-label {
-            opacity: 1;
-        }
-
-        .no-touch .cd-vertical-nav2 a.is-selected .cd-dot {
-            background-color: white;
-        }
-
-    .no-touch .cd-vertical-nav2 .cd-dot {
-        position: relative;
-        top: 8px;
-        height: 12px;
-        width: 12px;
-        border-radius: 50%;
-        background-color: #d88683;
-        -webkit-transition: -webkit-transform 0.2s, background-color 0.5s;
-        -moz-transition: -moz-transform 0.2s, background-color 0.5s;
-        transition: transform 0.2s, background-color 0.5s;
-        -webkit-transform-origin: 50% 50%;
-        -moz-transform-origin: 50% 50%;
-        -ms-transform-origin: 50% 50%;
-        -o-transform-origin: 50% 50%;
-        transform-origin: 50% 50%;
-    }
-
-    .no-touch .cd-vertical-nav2 .cd-label {
-        position: relative;
-        margin-right: 10px;
-        padding: .4em .5em;
-        color: black;
-        font-size: 20px;
-        -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
-        -moz-transition: -moz-transform 0.2s, opacity 0.2s;
-        transition: transform 0.2s, opacity 0.2s;
-        -webkit-transform-origin: 100% 50%;
-        -moz-transform-origin: 100% 50%;
-        -ms-transform-origin: 100% 50%;
-        -o-transform-origin: 100% 50%;
-        transform-origin: 100% 50%;
-    }
-
-.touch .cd-nav-trigger {
+.item .caption {
     display: block;
-    z-index: 2;
-    position: fixed;
-    bottom: 30px;
-    right: 5%;
-    height: 44px;
-    width: 44px;
-    border-radius: 0.25em;
-    background: rgba(255, 255, 255, 0.9);
 }
-
-    .touch .cd-nav-trigger span {
-        position: absolute;
-        height: 4px;
-        width: 4px;
-        background-color: #3e3947;
-        border-radius: 50%;
-        left: 50%;
-        top: 50%;
-        bottom: auto;
-        right: auto;
-        -webkit-transform: translateX(-50%) translateY(-50%);
-        -moz-transform: translateX(-50%) translateY(-50%);
-        -ms-transform: translateX(-50%) translateY(-50%);
-        -o-transform: translateX(-50%) translateY(-50%);
-        transform: translateX(-50%) translateY(-50%);
-    }
-
-        .touch .cd-nav-trigger span::before, .touch .cd-nav-trigger span::after {
-            content: '';
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            left: 0;
-            background-color: inherit;
-            border-radius: inherit;
-        }
-
-        .touch .cd-nav-trigger span::before {
-            top: -9px;
-        }
-
-        .touch .cd-nav-trigger span::after {
-            bottom: -9px;
-        }
-
-.touch .cd-vertical-nav2 {
-    position: fixed;
-    z-index: 1;
-    right: 5%;
-    bottom: 30px;
-    width: 90%;
-    max-width: 400px;
-    max-height: 90%;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
-    -webkit-transform-origin: right bottom;
-    -moz-transform-origin: right bottom;
-    -ms-transform-origin: right bottom;
-    -o-transform-origin: right bottom;
-    transform-origin: right bottom;
-    -webkit-transform: scale(0);
-    -moz-transform: scale(0);
-    -ms-transform: scale(0);
-    -o-transform: scale(0);
-    transform: scale(0);
-    -webkit-transition-property: -webkit-transform;
-    -moz-transition-property: -moz-transform;
-    transition-property: transform;
-    -webkit-transition-duration: 0.2s;
-    -moz-transition-duration: 0.2s;
-    transition-duration: 0.2s;
-    border-radius: 0.25em;
-    background-color: rgba(255, 255, 255, 0.9);
-}
-
-    .touch .cd-vertical-nav2 a {
-        display: block;
-        padding: 1em;
-        border-bottom: 1px solid rgba(62, 57, 71, 0.1);
-    }
-
-        .touch .cd-vertical-nav2 a span:first-child {
-            display: none;
-        }
-
-        .touch .cd-vertical-nav2 a.is-selected span:last-child {
-            color: #d88683;
-        }
-
-    .touch .cd-vertical-nav2.open {
-        -webkit-transform: scale(1);
-        -moz-transform: scale(1);
-        -ms-transform: scale(1);
-        -o-transform: scale(1);
-        transform: scale(1);
-    }
-
-        .touch .cd-vertical-nav2.open + .cd-nav-trigger {
-            background-color: transparent;
-        }
-
-            .touch .cd-vertical-nav2.open + .cd-nav-trigger span {
-                background-color: rgba(62, 57, 71, 0);
-            }
-
-                .touch .cd-vertical-nav2.open + .cd-nav-trigger span::before, .touch .cd-vertical-nav2.open + .cd-nav-trigger span::after {
-                    background-color: #3e3947;
-                    height: 3px;
-                    width: 20px;
-                    border-radius: 0;
-                    left: -8px;
-                }
-
-                .touch .cd-vertical-nav2.open + .cd-nav-trigger span::before {
-                    -webkit-transform: rotate(45deg);
-                    -moz-transform: rotate(45deg);
-                    -ms-transform: rotate(45deg);
-                    -o-transform: rotate(45deg);
-                    transform: rotate(45deg);
-                    top: 1px;
-                }
-
-                .touch .cd-vertical-nav2.open + .cd-nav-trigger span::after {
-                    -webkit-transform: rotate(135deg);
-                    -moz-transform: rotate(135deg);
-                    -ms-transform: rotate(135deg);
-                    -o-transform: rotate(135deg);
-                    transform: rotate(135deg);
-                    bottom: 0;
-                }
-
-    .touch .cd-vertical-nav2 li:last-child a {
-        border-bottom: none;
-    }
-
-@media only screen and (min-width: 768px) {
-    .touch .cd-nav-trigger, .touch .cd-vertical-nav2 {
-        bottom: 40px;
-    }
-}*/

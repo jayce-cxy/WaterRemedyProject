@@ -135,6 +135,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RainfallsController.cs" />
+    <Compile Include="Controllers\RoomsController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -284,6 +285,7 @@
     <Content Include="img\contact-bg.jpg" />
     <Content Include="img\dangers.png" />
     <Content Include="img\diy-clearn.jpg" />
+    <Content Include="img\earth.jpg" />
     <Content Include="img\fire-01.png" />
     <Content Include="img\fire1.png" />
     <Content Include="img\fire2.png" />
@@ -297,11 +299,11 @@
     <Content Include="img\heliu.jpg" />
     <Content Include="img\home-bg.jpg" />
     <Content Include="img\home-cleaner.jpg" />
-    <Content Include="img\kit-01.jpg" />
-    <Content Include="img\kit-02.jpg" />
-    <Content Include="img\kit-03.jpg" />
-    <Content Include="img\kit-04.jpg" />
-    <Content Include="img\kit-05.jpg" />
+    <Content Include="img\kit-05 %281%29.jpg" />
+    <Content Include="img\kit-05 %282%29.jpg" />
+    <Content Include="img\kit-05 %283%29.jpg" />
+    <Content Include="img\kit-05 %284%29.jpg" />
+    <Content Include="img\kit-05 %285%29.jpg" />
     <Content Include="img\kit-alter.jpg" />
     <Content Include="img\kitchen-clean.jpg" />
     <Content Include="img\kitchen.png" />
@@ -538,6 +540,7 @@
     <None Include="Properties\PublishProfiles\WaterRemedy - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\calculateArea.js" />
+    <Content Include="Scripts\echarts-all-english-v2.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
@@ -838,6 +841,9 @@
     <Content Include="Views\Rainfalls\Details.cshtml" />
     <Content Include="Views\Rainfalls\Edit.cshtml" />
     <Content Include="Views\Rainfalls\Index.cshtml" />
+    <Content Include="Views\Rooms\BathroomList.cshtml" />
+    <Content Include="Views\Rooms\KitchenList.cshtml" />
+    <Content Include="Views\Rooms\LaundryList.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

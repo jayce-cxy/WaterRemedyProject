@@ -28,6 +28,7 @@
     <script src="~/Scripts/modernizr-2.8.3.js"></script>
     <link href="~/StyleFolder/sideNavBar.css" rel="stylesheet" />
     <link href="~/StyleFolder/aclculateArea.css" rel="stylesheet" />
+    <script src="~/js/echarts.min.js"></script>
 </head>
 <body>
     <header id="header" class="fixed-top">
@@ -88,85 +89,68 @@
                 </a>
             </li>
             <li>
+                <a href="#howmuch" data-number="3">
+                    <span class="cd-dot"></span>
+                    <span class="cd-label">How much can i save</span>
+                </a>
+            </li>
+            <li>
+                <a href="#graph" data-number="3">
+                    <span class="cd-dot"></span>
+                    <span class="cd-label">Further More</span>
+                </a>
+            </li>
+            <li>
                 <a href="#team1" data-number="2">
                     <span class="cd-dot"></span>
                     <span class="cd-label">Why It Matters</span>
                 </a>
             </li>
-            <li>
-                <a href="#threePic" data-number="3">
-                    <span class="cd-dot"></span>
-                    <span class="cd-label">What it use for</span>
-                </a>
-            </li>
-            <li>
-                <a href="#team3" data-number="3">
-                    <span class="cd-dot"></span>
-                    <span class="cd-label">How much can i save</span>
-                </a>
-            </li>
+
+
         </ul>
     </nav>
     <a class="cd-nav-trigger cd-img-replace">Open navigation<span></span></a>
 
+    <div id="howmuch" style="margin-top:50px"></div>
 
-    <div style="margin-top:20px; background-color:#e6ffff">
-        <section id="team1">
-            <div class="container">
-                <h2 style="text-align:center; color:black; font-size:50px; font-weight:600">
-                    Why it matters
-                </h2>
-                <p style="text-align:center; color:black; font-weight:500; font-size:25px">
-                    Water resources in Melbourne are limited.
-                </p>
-                <br />
-                <p style="text-align:center; color:black; font-weight:500; font-size:20px">
-                    Melbourne population has increased as the highest rate among capital cities that lead to water usage increasing, in addition, the natural events; bushfire has a serious impact to water catchment as well.
-                </p>
-                <p style="text-align:center; color:black; font-weight:500; font-size:25px">
-                    everyone can reuse rainwater as an effective usage
-                </p>
-            </div>
-        </section>
-    </div>
 
-    <section>
-        <div class="container" id="threePic">
-            <h2 style="text-align:center; color:black; font-size:50px; font-weight:600">
-                What it use for
-            </h2>
-            <div class="row" style="margin-top:50px">
-                <div class="col-lg-2 col-md-2 filter-app"></div>
-                <div class="c1 col-lg-2 col-md-2 filter-app" style="text-align:center">
-                    <img src="~/img/tolit.jpg" class="img-fluid" id="ggarden" />
-                    @*<div class="words" style="margin-left:125px">GARDEN</div>*@
-                </div>
-                <div class="c1 col-lg-2 col-md-2 filter-app" style="text-align:center">
-                    <img src="~/img/flower.jpg" class="img-fluid" id="bbath" />
-                </div>
-                <div class="c1 col-lg-2 col-md-2 filter-app" style="text-align:center">
-                    <img src="~/img/sm.jpg" class="img-fluid" id="llaun" />
-                </div>
-                <div class="c1 col-lg-2 col-md-2 filter-app" style="text-align:center">
-                    <img src="~/img/wash-car.jpg" class="img-fluid" id="washCar" />
-                </div>
-                <div class="col-lg-2 col-md-2 filter-app"></div>
-            </div>
-        </div>
-    </section>
+
 
     <input id="houseArea" style="display:none" value="0.0" />
 
-    <div class="container" style="text-align:center; margin-bottom:50px">
-        <h2 style="text-align:center; color:black; font-size:50px; font-weight:600">
+    <div style="margin-bottom:50px; background-color:rgba(128, 219, 213, 0.09)" id="rwater">
+        <h2 style="text-align:center; color:black; font-size:40px; font-weight:600">
             How much you can save from rainfall?
         </h2>
         <div class="row" style="margin-top:50px">
-            <div class="col-lg-8 col-md-8 filter-app">
+            <div class="col-lg-1 col-md-1 filter-app"></div>
+            <div class="col-lg-3 col-md-3 filter-app">
+                <section class="container" id="matter">
+                    <h2 style="color:black; font-size:30px; font-weight:600">
+                        Measure Your Roof
+                    </h2>
+                    <p style="color:black; font-weight:500; font-size:15px">
+                        Step 1: In the search box, type in your home address with street number and search
+                        <br />
+                        E.g.  1234 Collins Street, Melbourne
+                        <br />
+                        <br />
+                        Step 2: Zoom in until you can see the shape of your roof clearly
+                        <br />
+                        <br />
+                        Step 3: On the upper right corner of the map, click on the polyline sign and draw the shape of your roof
+                        <br />
+                        <br />
+                        Step 4: Click on the "Calculate" button
+                    </p>
+                </section>
+            </div>
+            <div class="col-lg-4 col-md-4 filter-app">
                 <div id="map"></div>
 
             </div>
-            <div class="col-lg-4 col-md-4 filter-app">
+            <div class="col-lg-3 col-md-3 filter-app">
                 <div class="card">
                     <div class="card-header">
                         Result
@@ -180,16 +164,111 @@
                             <h6>Equal value in AUD</h6>
                             <p id="savemoney">0</p>
                         </blockquote>
-                        <button class="btn btn-ligh" style="border:0px solid black; font-weight:bold; color:black" id="delete-button">Delete Selected Shape</button>
-                        <button class="btn btn-ligh" style="border:0px solid black; font-weight:bold; color:black" onclick="calculate()">Calculate</button>
+                        <button class="btn btn-ligh" style="border:0px solid black; font-weight:bold; color:black; width:250px" onclick="calculate()">Calculate</button>
+                        <button class="btn btn-ligh" style="border:0px solid black; font-weight:bold; color:black; width:250px" id="delete-button">Delete Selected Shape</button>
                     </div>
+                </div>
+            </div>
+            <div class="col-lg-1 col-md-1 filter-app"></div>
+        </div>
+    </div>
+    <div @*class="container"*@>
+        <input id="pac-input" class="controls" type="text" placeholder="Enter a address..." />
+    </div>
+
+    <div id="graph"></div>
+
+    <div class="container" style="margin-bottom:20px; margin-top:100px">
+        <h6 style="text-align:center; font-size:30px; font-weight:600; color:black">Your Monthly Feature and Water Storage</h6>
+        <p style="color:black; font-weight:500; font-size:15px; text-align:center">
+            The charts below shows your possible rainwater harvest by month.
+        </p>
+        <p style="color:black; font-weight:500; font-size:15px; text-align:center">
+            The yellow line chart indicates the monthly rainfall in millimeters in Melbourne.
+        </p>
+        <p style="color:black; font-weight:500; font-size:15px; text-align:center">
+        Meanwhile, the blue bar chart shows your roof water volume in Liter per square meter. </p>
+        <p style="color:black; font-weight:500; font-size:15px; text-align:center">TIPS:Hover your cursor on the chart to see the numbers.</p>
+        <div id="bar" class="row" style="width: inherit; height: 400px; margin-top:50px"></div>
+    </div>
+
+    <div class="container" style="margin-top:150px; margin-bottom:150px">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 filter-app" style="background-color:rgba(235, 186, 77, 0.18)">
+                <div>
+                    <section id="team1">
+                        <div class="container">
+                            <h2 style="text-align:center; color:black; font-size:30px; font-weight:600">
+                                Why it matters
+                            </h2>
+                            <p style="text-align:center; color:black; font-weight:500; font-size:15px">
+                                Water resources in Melbourne are limited.
+                            </p>
+                            <br />
+                            <p style="text-align:center; color:black; font-weight:500; font-size:15px">
+                                Melbourne's population has increased the highest rate among capital cities that leads to increased water usage.  Natural events such as bushfires have a severe impact on water catchments as well.
+                            </p>
+                            <p style="text-align:center; color:black; font-weight:500; font-size:15px">
+                                Everyone can reuse rainwater to save our water storage. 
+                            </p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 filter-app">
+                <section>
+                    <div class="container" id="threePic">
+                        <h2 style="text-align:center; color:black; font-size:30px; font-weight:600">
+                            What it use for
+                        </h2>
+                        <div class="row" style="margin-top:50px">
+                            @*<div class="col-lg-2 col-md-2 filter-app"></div>*@
+                            <div class="c1 col-lg-6 col-md-6 filter-app" style="text-align:center">
+                                <img src="~/img/tolit.jpg" class="img-fluid" id="ggarden" />
+                                @*<div class="words" style="margin-left:125px">GARDEN</div>*@
+                            </div>
+                            <div class="c1 col-lg-6 col-md-6 filter-app" style="text-align:center">
+                                <img src="~/img/flower.jpg" class="img-fluid" id="bbath" />
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top:50px">
+                            <div class="c1 col-lg-6 col-md-6 filter-app" style="text-align:center">
+                                <img src="~/img/sm.jpg" class="img-fluid" id="llaun" />
+                            </div>
+                            <div class="c1 col-lg-6 col-md-6 filter-app" style="text-align:center">
+                                <img src="~/img/wash-car.jpg" class="img-fluid" id="washCar" />
+                            </div>
+                            @*<div class="col-lg-2 col-md-2 filter-app"></div>*@
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="col-lg-4 col-md-4 filter-app" style="background-color:rgba(235, 186, 77, 1)">
+                <div>
+                    <section class="container" id="matter">
+                        <div class="container">
+                            <h2 style="color:black; font-size:30px; font-weight:600">
+                                About Water Tanks?
+                            </h2>
+                            <ul>
+                                <li style="color:black; font-weight:500; font-size:15px">
+                                    For a house with a roof of 200 square meters, a moderate rain shower of 10mm can provide a 2000L water harvest.
+                                </li>
+                                <li style="color:black; font-weight:100; font-size:15px">
+                                    A 3000L water tank from Bunnings is sufficient to store roof water, starting at $988.
+                                </li>
+                                <li style="color:black; font-weight:100; font-size:15px">
+                                    A water tank can be used for <span style="font-weight:bold">10 years!!!</span> On average, you pay $98 for the tank <span style="font-weight:bold">but earn $187.17 from saving water!!!</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container">
-        <input id="pac-input" class="controls" type="text" placeholder="Enter a address..." />
-    </div>
+
+
 
     <footer id="footer">
         <div class="container">
@@ -220,16 +299,19 @@
     <script>
             function calculate() {
                 var area = document.getElementById('houseArea').value;
-                var monthStorageMoney = 0.0;
+                var totalSaveMoney = 0.0;
                 var yearStorage;
+                var indoorSave = 0.0;
+                var outdoorSave = 0.0;
                 @*var currentMonthWater = @ViewBag.currentMonthWater;*@
                 var currentMonthIndoorReq = @ViewBag.currentMonthIndoorReq;
                 var rainfallList = @ViewBag.list;
-                var rlist = @Html.Raw(Json.Encode(@ViewBag.rlist));
+
+                var rainfallMonth = @Html.Raw(Json.Encode(@ViewBag.rfmList));
+                var indoorRequired = @Html.Raw(Json.Encode(@ViewBag.indoorReq));
+                var outdoorRequired = @Html.Raw(Json.Encode(@ViewBag.outdoorReq));
                 console.log(area);
                 console.log(rainfallList);
-                //console.log(currentMonthWater);
-                console.log(rlist[1]);
 
 
 
@@ -237,22 +319,112 @@
                 console.log(yearStorage);
                 document.getElementById('lyear').innerHTML = yearStorage.toFixed(2);
 
-                for (var i = 0; i < rlist.length; i++) {
-                    var mstorage = parseFloat(area) * parseFloat(rlist[i]);
+                for (var i = 0; i < rainfallMonth.length; i++) {
 
-                    if (mstorage == 0) {
-                        monthStorageMoney = 0.0;
+                    var currentMonthStorage = parseFloat(area) * parseFloat(rainfallMonth[i]);
+
+                    if (currentMonthStorage == 0) {
+                        totalSaveMoney = 0.0;
                         break;
-                    } else if (mstorage < currentMonthIndoorReq) {
-                        monthStorageMoney = monthStorageMoney + parseFloat(((mstorage / 1000) * 2.68317).toFixed(2));
-                    } else if (mstorage > currentMonthIndoorReq){
-                        monthStorageMoney = monthStorageMoney + parseFloat(((currentMonthIndoorReq / 1000) * 2.68317 + ((mstorage - currentMonthIndoorReq)/1000) * 3.2252).toFixed(2));
+                    }
+
+                    if (currentMonthStorage >= outdoorRequired[i]) {
+                        indoorSave += outdoorRequired[i] / 1000 * 2.683;
+                    } else {
+                        indoorSave += currentMonthStorage / 1000 * 2.683;
+                    }
+
+                    var remainingWater = currentMonthStorage - indoorRequired[i];
+                    if (remainingWater < 0) {
+                        outdoorSave += 0.0;
+                    } else if (remainingWater < outdoorRequired[i]) {
+                        outdoorSave += remainingWater / 1000 * 3.2552;
+                    } else if (remainingWater >= outdoorRequired[i]) {
+                        outdoorSave += outdoorRequired[i] / 1000 * 3.2552;
                     }
                 }
-                document.getElementById('savemoney').innerHTML = monthStorageMoney.toFixed(2);
+                totalSaveMoney = outdoorSave + indoorSave;
+                document.getElementById('savemoney').innerHTML = totalSaveMoney.toFixed(2);
 
             }
 
+    </script>
+
+    <script>
+        var myBar = echarts.init(document.getElementById("bar"), 'light');
+        var monthList = @Html.Raw(Json.Encode(@ViewBag.monthList));
+        var storageList = @Html.Raw(Json.Encode(@ViewBag.rlist));
+        var rainfallMonth = @Html.Raw(Json.Encode(@ViewBag.rfmList));
+        console.log(monthList);
+
+        option = {
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'cross',
+            crossStyle: {
+                color: '#999'
+            }
+        }
+    },
+    toolbox: {
+        feature: {
+            dataView: {show: true, readOnly: false},
+            magicType: {show: true, type: ['line', 'bar']},
+            restore: {show: true},
+            saveAsImage: {show: true}
+        }
+    },
+    legend: {
+        data: ['Monthly_rainfall', 'water_storage/m^2']
+    },
+    xAxis: [
+        {
+            type: 'category',
+            data: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+            axisPointer: {
+                type: 'shadow'
+            },
+        }
+    ],
+    yAxis: [
+        {
+            type: 'value',
+            name: 'collected per m^2',
+            min: 0,
+            max: 50,
+            interval: 10,
+            axisLabel: {
+                formatter: '{value} L'
+            },
+            splitLine:{show: false},
+        },
+        {
+            type: 'value',
+            name: 'Average rainfall',
+            min: 15,
+            max: 75,
+            interval: 15,
+            axisLabel: {
+                formatter: '{value} mm'
+            }
+        }
+    ],
+    series: [
+        {
+            name: 'water_storage/m^2',
+            type: 'bar',
+            data: storageList
+        },
+        {
+            name: 'Monthly_rainfall',
+            type: 'line',
+            yAxisIndex: 1,
+            data: rainfallMonth
+        }
+    ]
+};
+        myBar.setOption(option);
     </script>
 
     <style>
