@@ -1,0 +1,252 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Water Remedy</title>
+    <meta content="" name="descriptison">
+    <meta content="" name="keywords">
+    <link rel="icon" href="~/pic/greenwater.png" type="image/x-icon">
+
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Courgette' rel='stylesheet'>
+    <link href="~/StyleFolder/bootstrap.css" rel="stylesheet" />
+    <link href="~/fonts/LayoutIconFonts/icofont.min.css" rel="stylesheet" />
+    <link href="~/StyleFolder/animate.css" rel="stylesheet" />
+    <link href="~/StyleFolder/venobox.css" rel="stylesheet" />
+    @*<link href="~/css/mdb.css" rel="stylesheet" />*@
+    <link href="~/StyleFolder/StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <header id="header" class="fixed-top">
+        <div class="container">
+
+            <div class="logo float-left">
+                <h1 class="text-light"><a href="/Iteration2/HomeIndex"><span>Water Remedy</span></a></h1>
+                <!-- Uncomment below if you prefer to use an image logo -->
+                <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+            </div>
+
+            <nav class="nav-menu float-right d-none d-lg-block">
+                <ul>
+                    <li>
+                        <a href="/Iteration2/HomeIndex">Home</a>
+                    </li>
+                    <li>
+                        <a href="/Iteration2/AboutWater">About us</a>
+                    </li>
+                    <li>
+                        <a href="/Iteration2/DIYDetergent">DIY Detergent</a>
+                    </li>
+                    <li><a href="/Iteration2/RoofWater">Roof Water</a></li>
+                </ul>
+            </nav><!-- .nav-menu -->
+        </div>
+    </header><!-- End #header -->
+
+    <section id="hero">
+        <div class="hero-container">
+            <div class="row" style="width:1500px">
+                <div id="back1" class="col-lg-3 col-md-3 filter-app" style="margin-top:150px; visibility:hidden; float:right">
+                    <h6 style="font-family: Raleway;font-size: 15px;color: #fff; font-weight:bold">INDOOR</h6>
+                    <p style="font-family: Raleway;font-size: 15px;color: #fff;">Chemical detergents</p>
+                    <button type="button" class="btn btn-dark" onclick="window.location.href='/Iteration2/DIYDetergent'">More</button>
+                </div>
+                <div class="col-lg-6 col-md-6 filter-app">
+                    <h1 style="font-family:Courgette">Save Water, Save life</h1>
+                    <h2 style="font-family:Courgette; font-size:30px">protect water catchment by small changes</h2>
+                    <h2 style="font-family:Raleway; font-size:40px; font-weight:bold; margin-top:-30px">What can you do at home?</h2>
+                </div>
+                <div id="back2" class="col-lg-3 col-md-3 filter-app" style="margin-top:150px; visibility:hidden; float:left">
+                    <h6 style="font-family: Raleway;font-size: 15px;color: #fff; font-weight:bold">OUTDOOR</h6>
+                    <p style="font-family: Raleway;font-size: 15px;color: #fff;">Rainfall from Roof</p>
+                    <button type="button" class="btn btn-dark" onclick="window.location.href='/Iteration2/RoofWater'">More</button>
+                </div>
+            </div>
+            <div class="row" style="width:800px; margin-top:-30px">
+                @*<div class="col-lg-3 col-md-3 filter-app"></div>*@
+                <div id="indoor" class="instruction col-lg-6 col-md-6 filter-app" style="visibility:visible">
+                    <h6>INDOOR</h6>
+                    <p>Chemical detergents</p>
+                    <button type="button" class="btn btn-dark" onclick="window.location.href='/Iteration2/DIYDetergent'">More</button>
+                </div>
+                <div id="outdoor" class="instruction col-lg-6 col-md-6 filter-app" style="visibility:visible">
+                    <h6>OUTDOOR</h6>
+                    <p>Rainfall from Roof</p>
+                    <button type="button" class="btn btn-dark" onclick="window.location.href='/Iteration2/RoofWater'">More</button>
+                </div>
+                @*<div class="col-lg-3 col-md-3 filter-app"></div>*@
+            </div>
+        </div>
+    </section>
+
+    <div class="container" style="margin-top:50px">
+        <h2 style="text-align:center; color:black; font-size:30px; font-weight:600">
+            What Factor Impact On Water Catchment?
+        </h2>
+        <p style="text-align:center; font-size:19px">Limited water resources + Increasing water usage + chemical pollution.</p>
+    </div>
+
+    <section>
+        <div class="container" id="threeArtic">
+            <div class="row">
+                <div class="c1 col-lg-3 col-md-3 filter-app">
+                    <div class="img">
+                        <img src="~/img/Glowarm.jpg" class="img-fluid" id="climate" />
+                        <div class="words">Climate</div>
+                    </div>
+                </div>
+                <div class="c1 col-lg-3 col-md-3 filter-app">
+                    <div class="img">
+                        <img src="~/img/bbff.jpg" class="img-fluid" id="bushfire" />
+                        <div class="words">Bushfire</div>
+                    </div>
+                </div>
+                <div class="c1 col-lg-3 col-md-3 filter-app">
+                    <div class="img">
+                        <img src="~/img/pop_mel.jpg" class="img-fluid" id="population" />
+                        <div class="words">Population</div>
+                    </div>
+                </div>
+                <div class="c1 col-lg-3 col-md-3 filter-app">
+                    <div class="img">
+                        <img src="~/img/washdetergent.jpg" class="img-fluid" id="cleaner" />
+                        <div class="words">Detergent</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container">
+        <div id="homepagebtn" style="text-align:center; margin-top: 150px">
+            <button type="button" class="btn btn-dark" onclick="window.location.href='/Iteration2/CatchmentInDanger'">Learn More</button>
+        </div>
+    </div>
+
+    <h2 style="text-align:center; color:black; font-size:30px; font-weight:500; margin-top:50px; margin-bottom:100px">Your Next Generation deserve a better Environment</h2>
+
+
+    @*<div style="width:1500px;height:1px;margin:0px auto;padding:0px;background-color:black;overflow:hidden;"></div>*@
+
+    @*<div style="background-color:rgba(170, 231, 192, 0.61); margin-top:-30px; text-align:center">
+            &nbsp;
+            <p style="text-align:center; color:black; font-size:20px; font-weight:600">
+                Take action now!
+            </p>
+
+            <p style="text-align:center; color:black; font-size:17px; font-weight:100">
+                Protect water catchments, Protect your child
+            </p>
+            <p style="text-align:center; color:black; font-size:20px; font-weight:600">
+                Find out What Can you do by Indoor & Outdoor
+            </p>
+            &nbsp;
+        </div>
+
+        <div class="bub">
+            <div id="bubble1" style="margin-top:130px">
+                <p style="margin-top:35px; text-align:center">
+                    <span style="margin-top:20px; font-weight:bold; color:black">INDOOR</span>
+                    <br><span style="margin-left:10px">Chemical detergents</span>
+                    <span style="font-weight:bold; color:black">Stop & Change</span>
+                </p>
+                <div style="margin-left:30px; background-color:rgba(242, 216, 160, 1); text-align:center; color:white; font-weight:bold; width:120px; height:35px">
+                    <div type="button" style="padding-top:5px" id="RM" onclick="window.location.href='/Iteration2/DIYDetergent'">Check out now</div>
+                </div>
+            </div>
+            <img src="https://static.wixstatic.com/media/663b3e_907aa9475dbb4622854343ea6508c0ae~mv2.gif" alt="this slowpoke moves" width=600 />
+            <div id="bubble2" style="margin-top:30px">
+                <p style="margin-top:35px; text-align:center">
+                    <span style="font-weight:bold; color:black">OUTDOOR</span>
+                    <br><span>Rainfall from Roof</span>
+                    <span style="font-weight:bold; color:black">Collect & Reuse</span>
+                </p>
+                <div style="margin-left:30px; background-color:rgba(242, 216, 160, 1); text-align:center; color:white; font-weight:bold; width:120px; height:35px">
+                    <div type="button" style="padding-top:5px" id="RM" onclick="window.location.href='/Iteration2/RoofWater'">Check out now</div>
+                </div>
+            </div>
+        </div>*@
+
+    <div style="margin-top:50px"></div>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong><span>Water Remedy</span></strong>. All Rights Reserved
+            </div>
+        </div>
+    </footer>
+    <a href="#" class="back-to-top"><i class="icofont-simple-up">Top</i></a>
+
+    <main>
+    </main>
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
+    <script src="~/JavaScript/bootstrap.js"></script>
+    @*<script src="~/JavaScript/bootstrap.bundle.js"></script>*@
+    <script src="~/JavaScript/jquery.easing.min.js"></script>
+    <script src="~/JavaScript/isotope.pkgd.js"></script>
+    <script src="~/JavaScript/venobox.js"></script>
+    <script src="~/JavaScript/main.js"></script>
+
+    <script>
+    $(function () {
+        changeClass();
+    });
+
+    //浏览器的窗口大小发生改变时执行
+    $(window).resize(function () {
+        //执行代码块
+        changeClass();
+    });
+
+    //当屏幕小于1400时添加一个属性，大于的时候删除属性
+        function changeClass() {
+            var back1 = document.getElementById("back1");
+            var back2 = document.getElementById("back2");
+            var real1 = document.getElementById("indoor");
+            var real2 = document.getElementById("outdoor");
+            let ww = $(window).height();
+
+            if (ww > 600) {
+                back1.style.visibility = "hidden";
+                back2.style.visibility = "hidden";
+                real1.style.visibility = "visible";
+                real2.style.visibility = "visible";
+            } else if (ww < 600) {
+                back1.style.visibility = "visible";
+                back2.style.visibility = "visible";
+                real1.style.visibility = "hidden"
+                real2.style.visibility = "hidden"
+	        }
+    }
+    </script>
+
+    <script>
+        $("#roof_water").click(function () {
+            location.href = '/Iteration2/RoofWater';
+        });
+        $("#detergent").click(function () {
+            location.href = '/Iteration2/DIYDetergent';
+        });
+
+        $("#climate").click(function () {
+            location.href = '/Iteration2/CatchmentInDanger';
+        });
+        $("#bushfire").click(function () {
+            location.href = '/Iteration2/CatchmentInDanger';
+        });
+        $("#population").click(function () {
+            location.href = '/Iteration2/CatchmentInDanger';
+        });
+        $("#cleaner").click(function () {
+            location.href = '/Iteration2/CatchmentInDanger';
+        });
+    </script>
+</body>
+</html>

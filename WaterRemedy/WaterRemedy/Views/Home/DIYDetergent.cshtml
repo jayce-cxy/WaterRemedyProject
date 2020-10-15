@@ -9,7 +9,7 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Water Remedy</title>
+    <title>DIY Detergent</title>
     <meta content="" name="descriptison">
     <meta content="" name="keywords">
     <link rel="icon" href="~/pic/greenwater.png" type="image/x-icon">
@@ -21,107 +21,199 @@
     <link href="~/StyleFolder/venobox.css" rel="stylesheet" />
 
     <link href="~/StyleFolder/DataTables/css/dataTables.bootstrap4.css" rel="stylesheet" />
-    @*<link href="~/fonts/icofont.min.css" rel="stylesheet" />*@
     <script src="~/JavaScript/popper.js"></script>
-    <link href="~/css/mdb.css" rel="stylesheet" />
     <link href="~/StyleFolder/style.css" rel="stylesheet" />
+    <link href="~/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="~/css/mdb.css" rel="stylesheet" />
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
     <script src="~/Scripts/modernizr-2.8.3.js"></script>
     <link href="~/StyleFolder/sideNavBar.css" rel="stylesheet" />
 </head>
 <body>
     <header id="header" class="fixed-top">
-        <div class="container">
+        <div class="HeaderContainer">
 
             <div class="logo float-left">
-                <h1 class="text-light"><a href="/Home/HomeIndex"><span>Water Remedy</span></a></h1>
+                <h1 class="text-light"><img src="~/img/TTOL.jpg" style="max-height:50px" /><a href="/Home/HomeIndex"><span>Water Remedy</span></a></h1>
                 <!-- Uncomment below if you prefer to use an image logo -->
                 <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
             </div>
 
             <nav class="nav-menu float-right d-none d-lg-block">
                 <ul>
-                    <li>
+                    <li class="active">
                         <a href="/Home/HomeIndex">Home</a>
                     </li>
                     <li>
-                        <a href="/Home/AboutWater">About us</a>
+                        <a href="/Home/AboutWater">About Us</a>
                     </li>
-                    @*<li class="drop-down">
-                            <a href="">DIY Detergent</a>
-                            <ul>
-                                <li><a href="/Home/DIYDetergent#threePic">Why is matter</a></li>
-                                <li><a href="/Home/DIYDetergent#team2">Check My Products</a></li>
-                            </ul>
-                        </li>*@
+                    <li class="drop-down">
+                        <a href="/Home/DIYDetergent">Clean Water</a>
+                        <ul>
+                            <li><a href="/Home/DIYDetergent#hello">Check my products</a></li>
+                        </ul>
+                    </li>
+                    <li class="drop-down">
+                        <a href="/Home/RoofWater">Water Saver</a>
+                        <ul>
+                            <li><a href="/Home/RoofWater#rwater">How Much Can Save</a></li>
+                            @*<li><a href="/Home/RoofWater#rwater">Have A Water Tank</a></li>*@
+                        </ul>
+                    </li>
                     <li>
-                        <a href="">DIY Detergent</a>
+                        <a href="/Home/CatchmentInDanger">Water Facts</a>
                     </li>
-                    <li><a href="/Home/RoofWater">Roof Water</a></li>
                 </ul>
             </nav><!-- .nav-menu -->
         </div>
     </header><!-- End #header -->
+    @*<section id="DIY">
+            <div class="container" style="text-align:center; position: relative">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 filter-app">
+                        <img src="~/img/diy-clearn.jpg" />
+                        <div class="DIY-container">
+                            <h1 style="font-weight:600">DIY Detergent</h1>
+                            <h2 style="font-weight:500">Replace chemical detergents with nature cleaner</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>*@
 
-    <section id="DIY">
-        <div class="container" style="text-align:center; position: relative">
+    <section>
+        <div class="container-diy" @*style="text-align:center; position: relative"*@>
             <div class="row">
-                <div class="col-lg-12 col-md-12 filter-app">
-                    <img src="~/img/diy-clearn.jpg" />
+                <div id="DIY" class="col-lg-12 col-md-12 filter-app">
+                    @*<img src="~/img/diy-clearn.jpg" />*@
                     <div class="DIY-container">
-                        <h1 style="font-weight:600">DIY Detergent</h1>
-                        <h2 style="font-weight:500">Replace chemical detergents with nature cleaner</h2>
+                        <h1 style="font-weight:600">Clean Water</h1>
+                        @*<div></div>*@
+                        <div style="margin-top:30px">
+                            <span class="p">Do you know?</span>
+                            <br>
+                            <span class="ps">Chemical Detergents have seriously impact to water catchment</span>
+                            <br>
+                            <span class="p">What small changes can do? </span>
+                            <br>
+                            <span class="ps">Check your common detergents in home and alter them to eco-friendly detergents</span>
+                        </div>
+                        @*<h2 style="font-weight:bold">Replace chemical detergents with nature cleaner.</h2>*@
                     </div>
                 </div>
             </div>
         </div>
-    </section><!-- #hero -->
+    </section>
+
+    @*<div id="Whymatter" class="container-diy" style="margin-top:80px">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 filter-app">
+                    <h2 style="text-align:center; color:black; font-size:27px; font-weight:600">
+                        Why it matters
+                    </h2>
+                    <br />
+                    <p style="color:black; font-weight:500; font-size:17px">
+                        Most household chemical products contain <span style="font-weight:bold; color:#7C9139">disinfectants, phosphate, and surfactants.</span>
+                    </p>
+                    <p style="color:black; font-weight:500; font-size:17px">
+                        The disinfectants and surfactants often contain <span style="font-weight:bold; color:black">sodium hypochlorite and benzalkonium</span> chloride which are toxic to aquatic lives including plants, animals, and microorganisms.
+                        Besides the toxicity, the derivatives from these chemicals can hardly be bio-degradable.
+                    </p>
+                    <p style="color:black; font-weight:500; font-size:17px">
+                        <span style="font-weight:bold; color:black">Phosphates</span> existing in laundry detergents can result in eutrophication in water, which will cause the death of fish. 
+                    </p>
+                </div>
+
+                <div id="DIYheader" class="col-lg-6 col-md-6 filter-app" style="text-align:center">
+                    <div id="diytitle">
+                        <span id="span1">Chemical & Eco-Friendly Detergents</span>
+                        <br>
+                        <span id="span2">Replace chemical detergents with nature cleaner</span>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-3 filter-app">
+                    <h2 style="text-align:center; color:black; font-size:27px; font-weight:600">
+                        What it impacts on?
+                    </h2>
+                    <div style="text-align:center">
+                        <div id="threePic">
+                            <div class="threePics">
+                                <img src="~/img/mel-pop.png" class="img-fluids" id="mel_population" />
+                                <div id="words1">HUMAN</div>
+                            </div>
+                            <div class="threePics">
+                                <img src="~/img/koala-tree.png" class="img-fluids" id="mel_koala" />
+                                <div id="words2">ANIMAL</div>
+                            </div>
+                            <div class="threePics">
+                                <img src="~/img/river-top.png" class="img-fluids" id="mel_river" />
+                                <div id="words3">RIVER</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>*@
 
 
 
-    <nav class="cd-vertical-nav">
-        <ul style="list-style:none">
-            <li>
-                <a href="#DIY" data-number="1">
-                    <span class="cd-dot"></span>
-                    <span class="cd-label">Top</span>
-                </a>
-            </li>
-            <li>
-                <a href="#hello" data-number="3">
-                    <span class="cd-dot"></span>
-                    <span class="cd-label">Check My Products</span>
-                </a>
-            </li>
-            <li>
-                <a href="#matter" data-number="2">
-                    <span class="cd-dot"></span>
-                    <span class="cd-label">Why It Matters</span>
-                </a>
-            </li>
+    @*<nav class="cd-vertical-nav">
+            <ul style="list-style:none">
+                <li>
+                    <a href="#Whymatter" data-number="1">
+                        <span class="cd-dot"></span>
+                        <span class="cd-label">Why It Matters?</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#hello" data-number="3">
+                        <span class="cd-dot"></span>
+                        <span class="cd-label">What chemical I have?</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#domore" data-number="2">
+                        <span class="cd-dot"></span>
+                        <span class="cd-label">Want to do more?</span>
+                    </a>
+                </li>
 
-        </ul>
-    </nav>
-    <a class="cd-nav-trigger cd-img-replace">Open navigation<span></span></a>
+            </ul>
+        </nav>
+        <a class="cd-nav-trigger cd-img-replace">Open navigation<span></span></a>*@
 
 
 
 
 
     <div id="hello"></div>
+    <div style="text-align:center; margin-top:50px">
+        <img src="~/img/arrow-down.png" style="width:auto;height:50px" />
+    </div>
+    <h2 class='mb-3' style="text-align:center; color:black; font-size:40px; font-weight:600" id="team22">Check common detergents by places</h2>
 
-    <h2 class='mb-3' style="text-align:center; color:black; font-size:40px; font-weight:600; margin-top:50px" id="team22">Check common detergents by places</h2>
+    <div class="homeSelecter container" style="margin-top:50px; text-align:center">
+        @*<div class="dropdown">
+                <button class="btn btn-ligh dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width:300px; border:0px solid black; font-weight:bold; color:black">
+                    MY PLACE
+                </button>
 
-    <div class="container" style="margin-top:50px; text-align:center">
-        <div class="dropdown">
-            <button class="btn btn-ligh dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width:300px; border:0px solid black; font-weight:bold; color:black">
-                MY PLACE
-            </button>
-
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" onclick="show1()" id="chice1">Kitchen</a>
-                <a class="dropdown-item" onclick="show2()" id="chice2">Bathroom</a>
-                <a class="dropdown-item" onclick="show3()" id="chice3">Laundry</a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" onclick="show1()" id="chice1">Kitchen</a>
+                    <a class="dropdown-item" onclick="show2()" id="chice2">Bathroom</a>
+                    <a class="dropdown-item" onclick="show3()" id="chice3">Laundry</a>
+                </div>
+            </div>*@
+        <div class="row">
+            <div class="col-lg-4 col-md-4 filter-app">
+                <button type="button" class="btn btn-ligh" style="border:0px solid black; font-weight:bold; color:black; font-size:18px" onclick="show1()">Kitchen</button>
+            </div>
+            <div class="col-lg-4 col-md-4 filter-app">
+                <button type="button" class="btn btn-ligh" style="border:0px solid black; font-weight:bold; color:black; font-size:18px" onclick="show3()">Laundry</button>
+            </div>
+            <div class="col-lg-4 col-md-4 filter-app">
+                <button type="button" class="btn btn-ligh" style="border:0px solid black; font-weight:bold; color:black; font-size:18px" onclick="show2()">Bathroom</button>
             </div>
         </div>
     </div>
@@ -156,10 +248,10 @@
             </div>
             <div class="container" style="text-align:center; margin-top:70px">
                 @*<div type="button" style="margin-left:20px; background-color:rgba(242, 216, 160, 1); text-align:center; color:white; font-weight:bold" id="RM">Check DIY Detergents</div>*@
-                <button type="button" class="btn btn-ligh" style="border:0px solid black; font-weight:bold; color:black" onclick="show6()">Check DIY Detergents</button>
+                <button type="button" class="btn btn-ligh" style="border:0px solid black; font-weight:bold; color:black; font-size:18px" onclick="show6()">ALTERNATIVES</button>
             </div>
             <div class="container" id="launAlt" style="margin-top:50px">
-                <img src="~/img/laun-alter.jpg" style="width:100%; height:100%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" />
+                <img src="~/img/laun-alter.jpg" style="width:155vh; height:35vh; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" />
             </div>
         </div>
 
@@ -196,10 +288,10 @@
             </div>
             <div class="container" style="text-align:center; margin-top:70px">
                 @*<div type="button" style="margin-left:20px; background-color:rgba(242, 216, 160, 1); text-align:center; color:white; font-weight:bold" id="RM">Check DIY Detergents</div>*@
-                <button class="btn btn-ligh" style="border:0px solid black; font-weight:bold; color:black" onclick="show4()">Check DIY Detergents</button>
+                <button class="btn btn-ligh" style="border:0px solid black; font-weight:bold; color:black; font-size:18px" onclick="show4()">ALTERNATIVES</button>
             </div>
             <div class="container" id="kitAlt" style="margin-top:50px">
-                <img src="~/img/kit-alter.jpg" style="width:100%; height:100%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" />
+                <img src="~/img/kit-alter.jpg" style="width:155vh; height:35vh; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)" />
             </div>
         </div>
     </section>
@@ -235,106 +327,101 @@
             </div>
             <div class="container" style="text-align:center; margin-top:60px">
                 @*<div type="button" style="margin-left:20px; background-color:rgba(242, 216, 160, 1); text-align:center; color:white; font-weight:bold" id="RM">Check DIY Detergents</div>*@
-                <button class="btn btn-ligh" style="border:0px solid black; font-weight:bold; color:black" onclick="show5()">Check DIY Detergents</button>
+                <button class="btn btn-ligh" style="border:0px solid black; font-weight:bold; color:black; font-size:18px" onclick="show5()">ALTERNATIVES</button>
             </div>
             <div class="container" id="bathAlt" style="margin-top:50px">
-                <img src="~/img/bath-alter.jpg" style="width:100%; height:100%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" />
+                <img src="~/img/bath-alter.jpg" style="width:155vh; height:35vh; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" />
             </div>
         </div>
     </section>
 
-    <div class="container" style="margin-top:150px">
-        <div class="row">
-            <div class="col-lg-4 col-md-4 filter-app" style="background-color:rgba(128, 219, 213, 0.18)">
-                <div>
-                    <section class="container" id="matter">
-                        <div class="container">
-                            <h2 style="text-align:center; color:black; font-size:30px; font-weight:600">
-                                Why it matters
-                            </h2>
-                            <br />
-                            <p style="text-align:center; color:black; font-weight:500; font-size:15px">
-                                Most household chemical products contain <span style="font-weight:bold; color:#7C9139">disinfectants, phosphate, and surfactants.</span>
-                                <br />
-                                Phosphates can result in eutrophication in water and cause the death of fish.
-                                <br />
-                                The surfactants are not only toxic to aquatic creatures, but also persistent in water.
-                                <br />
-                            </p>
-                            <p style="text-align:center; color:black; font-weight:600; font-size:17px">
-                                The main entrance to the water is surface water through sewage treatment.
-                            </p>
+    @*<div class="container DIY" style="margin-top:50px; margin-bottom:100px; text-align:center">
+            <h2 style="text-align:center; color:#363636; font-size:30px; font-weight:bold">
+                Want to do more?
+            </h2>
+            <h5 style="color:#363636; font-size:15px; font-weight:bold; margin-top:20px">Check out what home detergents impact out water catchment</h5>
+            <img src="~/img/parents.png" style="width:auto; height:100px; margin-top:30px; margin-right:50px"/>
+            <button type="button" class="btn btn-dark" onclick="window.location.href='/Home/DIYDetergent'">Action Now ></button>
+        </div>*@
 
-                        </div>
-                    </section>
+    @*<div class="Detergents" style="margin-top:50px; margin-bottom:100px; text-align:center">
+            <h2 style="text-align:center; color:#363636; font-size:30px; font-weight:bold">
+                Want to do more?
+            </h2>
+            <h5 style="color:#363636; font-size:15px; font-weight:bold; margin-top:20px">Check out how to save water from roof</h5>
+            <div style="text-align:center; position:relative; margin-left:-100px">
+                <img src="~/img/parents.png" style="width:auto; height:100px; margin-top:30px; margin-right:10px" />
+
+                <button type="button" class="btns" onclick="window.location.href='/Home/RoofWater'">LEARN MORE ></button>
+            </div>
+        </div>*@
+
+    <div class="l_c_h">
+        <div class="c_h">
+            <div class="left_c">
+                <div class="left center_icons">
+                    <!--center_icons-->
+                    Live help!
+                </div><!--end center_icons-->
+                <div class="right right_c left_icons">
+                    @*<a href="#" class="mini" style="font-size:23px;">+</a>*@
+                    <img src="~/img/chat-icon3.png" style="width:auto; height:35px" />
                 </div>
             </div>
-            <div class="col-lg-4 col-md-4 filter-app" style="background-color:rgba(235, 186, 77, 0.18)">
-                <section style="margin-top:-50px">
-                    <div class="container" id="threePic">
-                        <h2 style="text-align:center; color:black; font-size:30px; font-weight:600; margin-top:50px">
-                            What it impact on
-                        </h2>
-                        <div class="row" style="margin-top:100px">
-                            <div class="c1 col-lg-4 col-md-4 filter-app">
-                                <img src="~/img/mel-pop.png" class="img-fluid" id="mel_population" style="float:right" />
-                                <p class="words" style="margin-left:-5px">HUMAN</p>
-                            </div>
-                            <div class="c1 col-lg-4 col-md-4 filter-app" style="text-align:center">
-                                <img src="~/img/koala-tree.png" class="img-fluid" id="mel_koala" />
-                                <p class="words" style="margin-left:-5px">ANIMAL</p>
-                            </div>
-                            <div class="c1 col-lg-4 col-md-4 filter-app">
-                                <img src="~/img/river-top.png" class="img-fluid" id="mel_river" style="float:left" />
-                                <p class="words" @*style="margin-left:-125px"*@>RIVER</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-            <div class="col-lg-4 col-md-4 filter-app" style="background-color:rgba(235, 186, 77, 1)">
-                <div>
-                    <section class="container" id="matter">
-                        <div class="container">
-                            <h2 style="text-align:center; color:black; font-size:30px; font-weight:600">
-                                what chemicals they have?
-                            </h2>
-                            <p style="text-align:center; color:black; font-weight:500; font-size:15px">
-                                Many kitchen and bathroom cleaners contain disinfectants like <span style="font-weight:bold">sodium hypochlorite</span> and <span style="font-weight:bold">benzalkonium chloride</span>
-                                <br />
-                                which are harmful to aquatic lives.
-                                <br />
-                                Additionally, the aromatic derivative from benzalkonium chloride can hardly be bio-degraded.
-                                <br />
-                            </p>
-                            <p style="text-align:center; color:black; font-weight:100; font-size:15px">
-                                For laundry detergents, besides the disinfectants, the widely-used surfactants like <span style="font-weight:bold">sodium dodecylbenzene sulfonate</span> are also harmful and
-                                persistent in the environment. The <span style="font-weight:bold">phosphate</span> in laundry liquid can result in eutrophication
-                            </p>
-                        </div>
-                    </section>
-                </div>
-            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="chat_container" style="display: none;">
+            <iframe src='https://webchat.botframework.com/embed/myqnaserver-bot?s=e1ts79DPVWo.zIh5ekvimyEqEIVKnaPRLDS7fXMX7r-7HdjQgFv_CBc' style='min-width: 100px; width: 270px; min-height: 500px; border:0'></iframe>
         </div>
     </div>
 
+    <div class="container" style="text-align:center; margin-bottom:50px">
+        <h3 style="color:#363636; font-size:45px; font-weight:bold; margin-top:20px; margin-bottom:20px">What can do next   ?</h3>
+        <div class="row" style="text-align:center">
+            <div class="col-lg-4 col-md-4 filter-app"></div>
+            <div class="col-lg-4 col-md-4 filter-app" style="background-color:rgba(170, 231, 192, 0.53)">
+                <div style="margin-top:50px; margin-bottom:50px">
+                    <span style="font-family:Raleway; color:black">OUT DOOR</span>
+                    <br>
+                    <span style="font-family:Raleway; color:black; font-weight:bold">Check out Rainfall from Your Roof</span>
+                    <br>
+                    <span style="font-family:Raleway; color:black; font-weight:bold">Collect & Reuse</span>
+                    <br>
+                    <button type="button" class="Navbtn" data-aos="fade-right" data-aos-duration="1000" onclick="window.location.href='/Home/RoofWater'">LEARN MORE ></button>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 filter-app"></div>
+        </div>
+    </div>
 
-
-    <footer id="footer" style="margin-top:200px">
+    <footer id="footer">
         <div class="container">
-            <div class="copyright">
-                &copy; Copyright <strong><span>Water Remedy</span></strong>. All Rights Reserved
+            <div class="row">
+                <div class="col-lg-4 col-md-4 filter-app" style="text-align:center">
+                    <img src="~/img/TTOL.jpg" style="width:9vh; height:10vh" />
+                </div>
+                <div class="col-lg-4 col-md-4 filter-app">
+                    <h5>WHO WE ARE</h5>
+                    <a href="#">Home</a>
+                    <br>
+                    <a href="/Home/AboutWater">About Us</a>
+                </div>
+                <div class="col-lg-4 col-md-4 filter-app">
+                    <h5>OUR SERVICES</h5>
+                    <a href="/Home/RoofWater">Water Save</a>
+                    <br>
+                    <a href="/Home/DIYDetergent">Clean Water</a>
+                </div>
             </div>
         </div>
     </footer>
-    <a href="#" class="back-to-top"><i class="icofont-simple-up">Top</i></a>
 
 
 
     <style>
-        #kitchen {
-            display: none;
-        }
+        /*#kitchen {
+            display: flex;
+        }*/
 
         #bathroom {
             display: none;
@@ -347,14 +434,20 @@
 
         #kitAlt {
             display: none;
+            margin-top: 50px;
+            margin-bottom: 100px;
         }
 
         #bathAlt {
             display: none;
+            margin-top: 50px;
+            margin-bottom: 100px;
         }
 
         #launAlt {
             display: none;
+            margin-top: 50px;
+            margin-bottom: 100px;
         }
     </style>
 
@@ -376,9 +469,12 @@
         var batpic = document.getElementById("bathAlt");
         var launpic = document.getElementById("launAlt");
 
+        $(document).ready(function () {
+            kitpic.style.display = "none";
+        });
+
         function show1() {
             kit.style.display = "flex"
-            document.getElementById("dropdownMenuLink").innerHTML = "Kitchen";
             bat.style.display = "none"
             lau.style.display = "none"
             kitpic.style.display = "none"
@@ -388,7 +484,6 @@
         function show2() {
             kit.style.display = "none"
             bat.style.display = "flex"
-            document.getElementById("dropdownMenuLink").innerHTML = "Bathroom";
             lau.style.display = "none"
             kitpic.style.display = "none"
             batpic.style.display = "none"
@@ -398,7 +493,6 @@
             kit.style.display = "none"
             bat.style.display = "none"
             lau.style.display = "flex"
-            document.getElementById("dropdownMenuLink").innerHTML = "Laundry";
             kitpic.style.display = "none"
             batpic.style.display = "none"
             launpic.style.display = "none"
@@ -427,73 +521,18 @@
             }
         }
 
+        $(function () {
+            $(".c_h").click(function (e) {
+                //if ($(".chat_container").is(":visible")) {
+                //    $(".c_h .right_c .mini").text("+")
+                //} else {
+                //    $(".c_h .right_c .mini").text("-")
+                //}
+                $(".chat_container").slideToggle("slow");
+                return false
+            });
+        });
+
     </script>
-    <style>
-        #kitchen th {
-            color: black;
-            font-weight: bold;
-            font-size: 20px;
-        }
-
-        #kitchen td {
-            color: black;
-            font-weight: 500;
-        }
-
-        #bathroom th {
-            color: black;
-            font-weight: bold;
-            font-size: 20px;
-        }
-
-        #bathroom td {
-            color: black;
-            font-weight: 500;
-        }
-
-        #laundry th {
-            color: black;
-            font-weight: bold;
-            font-size: 20px;
-        }
-
-        #laundry td {
-            color: black;
-            font-weight: 500;
-        }
-
-        #kitchenpro th {
-            color: black;
-            font-weight: bold;
-            font-size: 20px;
-        }
-
-        #kitchenpro td {
-            color: black;
-            font-weight: 500;
-        }
-
-        #bathroompro th {
-            color: black;
-            font-weight: bold;
-            font-size: 20px;
-        }
-
-        #bathroompro td {
-            color: black;
-            font-weight: 500;
-        }
-
-        #laundrypro th {
-            color: black;
-            font-weight: bold;
-            font-size: 20px;
-        }
-
-        #laundrypro td {
-            color: black;
-            font-weight: 500;
-        }
-    </style>
 </body>
 </html>

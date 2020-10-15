@@ -1,0 +1,67 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="~/pic/greenwater.png" type="image/x-icon">
+    <title>LockPage</title>
+    <link href="~/StyleFolder/bootstrap.css" rel="stylesheet" />
+    <link href="~/fonts/LayoutIconFonts/icofont.min.css" rel="stylesheet" />
+    <link href="~/StyleFolder/animate.css" rel="stylesheet" />
+    <link href="~/StyleFolder/venobox.css" rel="stylesheet" />
+    <link href="~/css/mdb.css" rel="stylesheet" />
+    <link href="~/StyleFolder/StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="card" style="margin-top:250px; width:600px; margin-left:260px">
+
+            <h5 class="card-header info-color white-text text-center py-4">
+                <strong>Password lock</strong>
+            </h5>
+
+            <div class="card-body px-lg-5">
+                <p>Please enter the password to enter the main page</p>
+
+                <div class="md-form mt-3">
+                    <h3>Enter the password here</h3>
+                </div>
+
+                <div class="md-form">
+                    <input type="password" name="paswd" id="materialSubscriptionFormEmail" class="form-control" placeholder="Password" required oninvalid="this.setCustomValidity('Please enter the password')">
+                </div>
+
+                <button id="submitLockCode" class="btn btn-outline-info btn-rounded btn-block z-depth-0 my-4 waves-effect" type="submit">Get in</button>
+            </div>
+
+        </div>
+    </div>
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
+    <script src="~/JavaScript/bootstrap.js"></script>
+    <script src="~/JavaScript/bootstrap.bundle.js"></script>
+    <script src="~/JavaScript/jquery.easing.min.js"></script>
+    <script src="~/JavaScript/isotope.pkgd.js"></script>
+    <script src="~/JavaScript/venobox.js"></script>
+    <script src="~/JavaScript/main.js"></script>
+    <script src="~/JavaScript/jquery.md5.min.js"></script>
+
+    <script>
+        $('#submitLockCode').click(() => {
+            var data = document.getElementById('materialSubscriptionFormEmail').value;
+            $.post('/Iteration2/SubmitLockCode', { lockCode: $.md5(data) }).done((data) => {
+                if (window.location.href.indexOf(data) >= 0) {
+                    window.location = data;
+                    alert('The password is not correct.');
+                } else {
+                    window.location = data;
+                }
+            });
+        });
+    </script>
+</body>
+</html>

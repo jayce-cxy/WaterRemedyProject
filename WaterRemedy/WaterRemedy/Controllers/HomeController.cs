@@ -12,6 +12,7 @@ using System.Collections;
 
 namespace WaterRemedy.Controllers
 {
+    [Authentication("MA32", "Jedi", BasicRealm = "your-realm")]
     public class HomeController : Controller
     {
         private waterremedyModelContainer db = new waterremedyModelContainer();
@@ -236,7 +237,49 @@ namespace WaterRemedy.Controllers
 
             if (lockCode.Equals(baseLockCode)) return Content("/Home/HomeIndex", "text/plain");
 
-            return Content("/Home/LockPage", "text/plain");                    
+            return Content("/Home/LockPage", "text/plain");
+        }
+
+        public ActionResult WaterTank() {
+            DateTime dt = DateTime.Now;
+            var currentMonth = dt.ToString("MMMM");
+            var rainfallList = db.RainfallSet.ToList();
+            var currentMonthIndoor = 0.0;
+            var yearRainfall = 0.0;
+            List<string> month = new List<string>();
+            List<Double> storageMonth = new List<double>();
+
+            List<Double> rainfallMonth = new List<Double>();
+            List<Double> indoorRequired = new List<Double>();
+            List<Double> outdoorRequired = new List<Double>();
+
+
+            foreach (var item in rainfallList)
+            {
+                if (item.month.Equals(currentMonth))
+                {
+                    currentMonthIndoor = item.indoor_req;
+                }
+            }
+
+            foreach (var a in rainfallList)
+            {
+                yearRainfall += a.rainfall_month;
+                month.Add(a.month);
+                storageMonth.Add(a.storage_month);
+                rainfallMonth.Add(a.rainfall_month);
+                indoorRequired.Add(a.indoor_req);
+                outdoorRequired.Add(a.outdoor_req);
+            }
+
+            ViewBag.currentMonthIndoorReq = currentMonthIndoor;
+            ViewBag.list = yearRainfall;
+            ViewBag.rfmList = rainfallMonth;
+            ViewBag.indoorReq = indoorRequired;
+            ViewBag.outdoorReq = outdoorRequired;
+            ViewBag.monthList = month;
+            ViewBag.rlist = storageMonth;
+            return View(db.RainfallSet.ToList());
         }
     }
 }

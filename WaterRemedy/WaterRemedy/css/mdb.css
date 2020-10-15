@@ -10593,16 +10593,18 @@ body.scrollable {
 
 .carousel .carousel-control-prev-icon,
 .carousel .carousel-control-next-icon {
-    width: 20px;
-    height: 20px
+    width: 50px;
+    height: 50px
 }
 
 .carousel .carousel-control-prev-icon {
-    background-image: url(../img/svg/arrow_left.svg)
+    background-image: url(../img/arrow_left.svg);
+    background-color: rgb(105,105,105);
 }
 
 .carousel .carousel-control-next-icon {
-    background-image: url(../img/svg/arrow_right.svg)
+    background-image: url(../img/arrow_right.svg);
+    background-color: rgb(105,105,105);
 }
 
 .carousel .carousel-indicators li {

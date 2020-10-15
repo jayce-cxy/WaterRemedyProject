@@ -1,0 +1,571 @@
+﻿@model IEnumerable<WaterRemedy.Models.Rainfall>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Water Remedy</title>
+    <meta content="" name="descriptison">
+    <meta content="" name="keywords">
+    <link rel="icon" href="~/pic/greenwater.png" type="image/x-icon">
+
+    <link href="~/StyleFolder/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/fonts/LayoutIconFonts/icofont.min.css" rel="stylesheet" />
+    <link href="~/StyleFolder/animate.css" rel="stylesheet" />
+    <link href="~/StyleFolder/venobox.css" rel="stylesheet" />
+    <link href="~/StyleFolder/style.css" rel="stylesheet" />
+    <link href="~/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="~/css/mdb.css" rel="stylesheet" />
+    <link href="~/StyleFolder/DataTables/css/dataTables.bootstrap4.css" rel="stylesheet" />
+    <script src="~/JavaScript/popper.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="~/Scripts/modernizr-2.8.3.js"></script>
+    <link href="~/StyleFolder/sideNavBar.css" rel="stylesheet" />
+    <link href="~/StyleFolder/aclculateArea.css" rel="stylesheet" />
+    <script src="~/js/echarts.min.js"></script>
+</head>
+<body>
+    <header id="header" class="fixed-top">
+        <div class="HeaderContainer">
+
+            <div class="logo float-left">
+                <h1 class="text-light"><a href="/Home/HomeIndex"><span>Water Remedy</span></a></h1>
+                <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+            </div>
+
+            <nav class="nav-menu float-right d-none d-lg-block">
+                <ul>
+                    <li class="active">
+                        <a href="/Home/HomeIndex">Home</a>
+                    </li>
+                    <li>
+                        <a href="/Home/AboutWater">About Us</a>
+                    </li>
+                    <li class="drop-down">
+                        <a href="/Home/DIYDetergent">Clean Water</a>
+                        <ul>
+                            <li><a href="/Home/DIYDetergent#hello">Check my products</a></li>
+                        </ul>
+                    </li>
+                    <li class="drop-down">
+                        <a href="/Home/RoofWater">Water Saver</a>
+                        <ul>
+                            <li><a href="/Home/RoofWater#rwater">How Much Can Save</a></li>
+                            @*<li><a href="/Home/RoofWater#rwater">Have A Water Tank</a></li>*@
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/Home/CatchmentInDanger">Water Facts</a>
+                    </li>
+                </ul>
+            </nav><!-- .nav-menu -->
+        </div>
+    </header><!-- End #header -->
+    <section>
+        <div @*class="container"*@ style="text-align:center; position: relative">
+            <div class="row">
+                <div id="Roof" class="col-lg-12 col-md-12 filter-app">
+                    @*<img src="~/img/roof-water.jpg" style="width:800px; height:400px" />*@
+                    <div class="Roof-container">
+                        <h1 style="font-weight:600">Water Saver</h1>
+                        @*<h2 style="font-weight:bold">Water is more precious than gold</h2>*@
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="CardContainer">
+        <section id="team1">
+            <div style="text-align:center">
+                <h2 style="color:black; font-size:30px; font-weight:600; align-self:center">
+                    Have a water tank now!
+                </h2>
+            </div>
+            <p class="bubble thought" style="color:black; font-size:30px; font-weight:600">Planning</p>
+
+            <div class="card card-body">
+                <div style="text-align:center">
+                    <h4 class="card-title">Where do you want to put the watertank?</h4>
+                </div>
+                <p class="card-text" style="color:black; font-weight:100; font-size:20px">
+                    Find a position close to the outlet of the downpipe from the roof.
+                </p>
+            </div>
+            <div class="card card-body" style="margin-top:50px">
+                <div style="text-align:center">
+                    <h4 class="card-title">If you only want to buy one tank for all the purposes...</h4>
+                </div>
+                <p class="card-text" style="color:black; font-weight:100; font-size:20px">
+                    Plan A: one 3000L polyethylene tanks; starting from $988; the lifespan of 10 years; need further installation to export water to indoor use
+                </p>
+                <p class="card-text" style="color:black; font-weight:100; font-size:20px">
+                    Plan B: one 3000L steel tanks; starting from around $1600; the lifespan of 20 years; need further installation to export water to indoor use
+                </p>
+            </div>
+            <div class="card card-body" style="margin-top:50px">
+                <div style="text-align:center">
+                    <h4 class="card-title">If you want several tanks for different purposes</h4>
+                </div>
+                <p class="card-text" style="color:black; font-weight:100; font-size:20px">
+                    Plan C: three 1000L polyethylene tanks; starting from $1392 in total; the lifespan of 10 years; can be installed close to the target room; less complexity of installation
+                </p>
+                <p class="card-text" style="color:black; font-weight:100; font-size:20px">
+                    Plan D: three 1000L steel tanks; starting from $3669in total; the lifespan of 10 years; can be installed close to the target room; less complexity of installation
+                </p>
+            </div>
+            <div class="card card-body" style="margin-top:50px">
+                <div style="text-align:center">
+                    <h4 class="card-title">Other components</h4>
+                </div>
+                <p class="card-text">
+                    <ul>
+                        <li style="color:black; font-weight:500; font-size:20px">
+                            Gutter mesh: prevent blockage
+                        </li>
+                        <li style="color:black; font-weight:100; font-size:20px">
+                            Gutter outlet: allow water to flow to the water tank
+                        </li>
+                        <li style="color:black; font-weight:100; font-size:20px">
+                            First flush plus water diverter
+                        </li>
+                        <li style="color:black; font-weight:100; font-size:20px">
+                            Rain head
+                        </li>
+                        <li style="color:black; font-weight:100; font-size:20px">
+                            PVC pipes
+                        </li>
+                        <li style="color:black; font-weight:100; font-size:20px">
+                            A bases : concrete or crusher dust
+                        </li>
+                        <li style="color:black; font-weight:100; font-size:20px">
+                            Filter: keep leaves and other debris from entering the tank
+                        </li>
+                        <li style="color:black; font-weight:100; font-size:20px">
+                            Water gauge: check the volume of water inside the tank
+                        </li>
+                    </ul>
+                </p>
+            </div>
+        </section>
+
+    </div>
+
+
+    <div id="howmuch" style="margin-top:50px"></div>
+
+
+
+
+    <input id="houseArea" style="display:none" value="0.0" />
+    <div style="margin-bottom:50px" id="rwater">
+        <p class="bubble thought" style="color:black; font-size:30px; font-weight:600">Buy Your Tank</p>
+        <h2 style="text-align:center; color:black; font-size:40px; font-weight:600">
+            Where to buy the tanks?
+        </h2>
+
+        <div class="mapContainer">
+            <div class="row" style="margin-top:50px">
+                <div class="col-lg-1 col-md-1 filter-app"></div>
+                <div class="col-lg-10 col-md-10 filter-app">
+
+                        <div style="text-align:center; margin-bottom:20px">
+                            <input id="pac-input" class="controls" type="text" placeholder="Enter a address..." />
+                        </div>
+                        <div id="map"></div>
+                        <div class="row" style="margin-top:30px; text-align:center">
+                            <div class="col-lg-6 col-md-6 filter-app"><button class="btn btn-ligh" style="border:0px solid black; font-weight:bold; color:black; width:250px; background-color:rgba(235, 186, 77, 1)" id="delete-button">Clear Map</button></div>
+                            <div class="col-lg-6 col-md-6 filter-app"><button class="btn btn-ligh" style="border:0px solid black; font-weight:bold; color:black; width:250px; background-color:rgba(235, 186, 77, 1)" id="find">Find Stores</button></div>
+                        </div>
+                </div>
+                <div class="col-lg-1 col-md-1 filter-app"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="graph"></div>
+
+    <div id="showbar">
+        <div class="container" style="margin-bottom:20px; margin-top:100px; text-align:center">
+            <h6 style="text-align:center; font-size:27px; font-weight:600; color:black">Check Your Monthly Water Savings!</h6>
+            <p style="color:black; font-weight:500; font-size:20px; text-align:center">
+                The yellow line indicates the amount of monthly rainfall in Melbourne.
+            </p>
+            <p style="color:black; font-weight:500; font-size:20px; text-align:center">
+                The blue bar indicates the volume of your water storage in each month.
+            </p>
+            <p style="color:black; font-weight:500; font-size:20px; text-align:center">
+                You can hang your cursor over the bars to see the exact number of rainfall and water storage.
+            </p>
+            <p style="color:black; font-weight:500; font-size:20px; text-align:center">
+                In February and March, there is less rainfall. Hence, it's good time to install new tanks.
+            </p>
+            <div id="bar" class="row" style="width: inherit; height: 400px; margin-top:50px"></div>
+        </div>
+    </div>
+
+    <div class="container" style="text-align:center; margin-top:70px">
+        <p class="bubble thought" style="color:black; font-size:30px; font-weight:600">
+            Installation
+        </p>
+        <iframe width="760" height="515" src="https://www.youtube.com/embed/2Bq71mPvK0k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <div class="container" style="text-align:center; margin-top:70px; margin-bottom:70px">
+        <h3 style="color:#363636; font-size:45px; font-weight:bold; margin-top:20px; margin-bottom:20px">What we offer  ?</h3>
+        <div class="row" style="text-align:center">
+            <div class="col-lg-2 col-md-2 filter-app"></div>
+            <div class="col-lg-4 col-md-4 filter-app" style="background-color: rgba(235, 186, 77, 0.18)">
+                <div style="margin-top:50px; margin-bottom:50px">
+                    <span style="font-family:Raleway; color:black">IN DOOR</span>
+                    <br>
+                    <span style="font-family:Raleway; color:black; font-weight:bold">Check out Home Detergents</span>
+                    <br>
+                    <span style="font-family:Raleway; color:black; font-weight:bold">Stop & Replace</span>
+                    <br>
+                    <button type="button" class="Navbtn" data-aos="fade-right" data-aos-duration="1000" onclick="window.location.href='/Home/DIYDetergent'">LEARN MORE ></button>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 filter-app" style="background-color:rgba(170, 231, 192, 0.53)">
+                <div style="margin-top:50px; margin-bottom:50px">
+                    <span style="font-family:Raleway; color:black">OUT DOOR</span>
+                    <br>
+                    <span style="font-family:Raleway; color:black; font-weight:bold">Check out Rainfall from Your Roof</span>
+                    <br>
+                    <span style="font-family:Raleway; color:black; font-weight:bold">Collect & Reuse</span>
+                    <br>
+                    <button type="button" class="Navbtn" data-aos="fade-right" data-aos-duration="1000" onclick="window.location.href='/Home/RoofWater'">LEARN MORE ></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="l_c_h">
+        <div class="c_h">
+            <div class="left_c">
+                <div class="left center_icons">
+                    <!--center_icons-->
+                    Live help!
+                </div><!--end center_icons-->
+                <div class="right right_c left_icons">
+                    @*<a href="#" class="mini" style="font-size:23px;">+</a>*@
+                    <img src="~/img/chat-icon3.png" style="width:auto; height:35px" />
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="chat_container" style="display: none;">
+            <iframe src='https://webchat.botframework.com/embed/myqnaserver-bot?s=e1ts79DPVWo.zIh5ekvimyEqEIVKnaPRLDS7fXMX7r-7HdjQgFv_CBc' style='min-width: 100px; width: 270px; min-height: 500px; border:0'></iframe>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 filter-app" style="text-align:center">
+                    <img src="~/img/TTOL.jpg" style="width:9vh; height:10vh" />
+                </div>
+                <div class="col-lg-4 col-md-4 filter-app">
+                    <h5>WHO WE ARE</h5>
+                    <a href="#">Home</a>
+                    <br>
+                    <a href="/Home/AboutWater">About Us</a>
+                </div>
+                <div class="col-lg-4 col-md-4 filter-app">
+                    <h5>OUR SERVICES</h5>
+                    <a href="/Home/RoofWater">Water Save</a>
+                    <br>
+                    <a href="/Home/DIYDetergent">Clean Water</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    @*<a href="#" class="back-to-top"><i class="icofont-simple-up">Top</i></a>*@
+
+
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
+    <script src="~/JavaScript/bootstrap.js"></script>
+    @*<script src="~/JavaScript/bootstrap.bundle.js"></script>*@
+    <script src="~/JavaScript/jquery.easing.min.js"></script>
+    <script src="~/JavaScript/isotope.pkgd.js"></script>
+    <script src="~/JavaScript/venobox.js"></script>
+    <script src="~/JavaScript/main.js"></script>
+    <script src="~/js/mdb.js"></script>
+    <script src="~/JavaScript/DataTables/jquery.dataTables.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8juZ2HNagjrCBrnnjuBkhccADbTfjgt8&callback=initMap&libraries=drawing,places,geometry&v=weekly"
+            defer></script>
+    <script src="~/Scripts/waterTanks.js"></script>
+    <script src="~/Scripts/JQDrap.js"></script>
+    <script src="~/Scripts/sidenavbar.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+        var displayBar = document.getElementById("showbar");
+        var monthStorageArray = [];
+            function calculate() {
+                var area = document.getElementById('houseArea').value;
+                var totalSaveMoney = 0.0;
+                var yearStorage;
+                var indoorSave = 0.0;
+                var outdoorSave = 0.0;
+                @*var currentMonthWater = @ViewBag.currentMonthWater;*@
+                var currentMonthIndoorReq = @ViewBag.currentMonthIndoorReq;
+                var rainfallList = @ViewBag.list;
+
+                var rainfallMonth = @Html.Raw(Json.Encode(@ViewBag.rfmList));
+                var indoorRequired = @Html.Raw(Json.Encode(@ViewBag.indoorReq));
+                var outdoorRequired = @Html.Raw(Json.Encode(@ViewBag.outdoorReq));
+
+                console.log(area);
+                console.log(rainfallList);
+
+
+
+                yearStorage = parseFloat(area) * rainfallList;
+                console.log(yearStorage);
+                document.getElementById('lyear').innerHTML = yearStorage.toFixed(2);
+
+                for (var i = 0; i < rainfallMonth.length; i++) {
+
+                    var currentMonthStorage = parseFloat(area) * parseFloat(rainfallMonth[i]);
+
+                    if (currentMonthStorage == 0) {
+                        totalSaveMoney = 0.0;
+                        break;
+                    }
+
+                    monthStorageArray.push(parseFloat(currentMonthStorage.toFixed(2)));
+
+                    if (currentMonthStorage >= outdoorRequired[i]) {
+                        indoorSave += outdoorRequired[i] / 1000 * 2.683;
+                    } else {
+                        indoorSave += currentMonthStorage / 1000 * 2.683;
+                    }
+
+                    var remainingWater = currentMonthStorage - indoorRequired[i];
+                    if (remainingWater < 0) {
+                        outdoorSave += 0.0;
+                    } else if (remainingWater < outdoorRequired[i]) {
+                        outdoorSave += remainingWater / 1000 * 3.2552;
+                    } else if (remainingWater >= outdoorRequired[i]) {
+                        outdoorSave += outdoorRequired[i] / 1000 * 3.2552;
+                    }
+                }
+                totalSaveMoney = outdoorSave + indoorSave;
+                document.getElementById('savemoney').innerHTML = totalSaveMoney.toFixed(2);
+
+                console.log(monthStorageArray);
+
+                if (currentMonthStorage == 0) {
+                    displayBar.style.display = "none";
+                } else {
+                    displayBar.style.display = "flex";
+                }
+
+
+                var myBar = echarts.init(document.getElementById("bar"), 'light');
+        var monthList = @Html.Raw(Json.Encode(@ViewBag.monthList));
+        var storageList = @Html.Raw(Json.Encode(@ViewBag.rlist));
+        var rainfallMonth = @Html.Raw(Json.Encode(@ViewBag.rfmList));
+        console.log(monthList);
+
+        option = {
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'cross',
+                    crossStyle: {
+                        color: '#999'
+                    }
+                }
+            },
+            toolbox: {
+                feature: {
+                    dataView: {show: true, readOnly: false},
+                    magicType: {show: true, type: ['line', 'bar']},
+                    restore: {show: true},
+                    saveAsImage: {show: true}
+                }
+            },
+            legend: {
+                data: ['Monthly_rainfall', 'water_storage/m^2']
+            },
+            xAxis: [
+                {
+                    type: 'category',
+                    data: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                    axisPointer: {
+                        type: 'shadow'
+                    },
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value',
+                    name: 'collected per m^2',
+                    //min: 0,
+                    //max: 50,
+                    //interval: 10,
+                    axisLabel: {
+                        formatter: '{value} L'
+                    },
+                    splitLine:{show: false},
+                },
+                {
+                    type: 'value',
+                    name: 'Average rainfall',
+                    //min: 15,
+                    //max: 75,
+                    //interval: 15,
+                    axisLabel: {
+                        formatter: '{value} mm'
+                    }
+                }
+            ],
+            series: [
+                {
+                    name: 'water_storage/m^2',
+                    type: 'bar',
+                    data: monthStorageArray
+                },
+                {
+                    name: 'Monthly_rainfall',
+                    type: 'line',
+                    yAxisIndex: 1,
+                    data: rainfallMonth
+                }
+            ]
+        };
+                myBar.setOption(option);
+
+
+        }
+
+        var reset = document.getElementById("delete-button");
+        var findStore = document.getElementById("find");
+        findStore.addEventListener("click", searchLocation);
+
+        reset.addEventListener("click", resetGraph);
+        function resetGraph() {
+            monthStorageArray = [];
+            resetMap();
+        }
+
+
+
+        $(function(){
+            $(".c_h").click(function(e) {
+                //if ($(".chat_container").is(":visible")) {
+                //    $(".c_h .right_c .mini").text("+")
+                //} else {
+                //    $(".c_h .right_c .mini").text("-")
+                //}
+                $(".chat_container").slideToggle("slow");
+                return false
+        });
+});
+    </script>
+
+    @*<script>
+                var myBar = echarts.init(document.getElementById("bar"), 'light');
+                var monthList = @Html.Raw(Json.Encode(@ViewBag.monthList));
+                var storageList = @Html.Raw(Json.Encode(@ViewBag.rlist));
+                var rainfallMonth = @Html.Raw(Json.Encode(@ViewBag.rfmList));
+                console.log(monthList);
+
+                option = {
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'cross',
+                    crossStyle: {
+                        color: '#999'
+                    }
+                }
+            },
+            toolbox: {
+                feature: {
+                    dataView: {show: true, readOnly: false},
+                    magicType: {show: true, type: ['line', 'bar']},
+                    restore: {show: true},
+                    saveAsImage: {show: true}
+                }
+            },
+            legend: {
+                data: ['Monthly_rainfall', 'water_storage/m^2']
+            },
+            xAxis: [
+                {
+                    type: 'category',
+                    data: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                    axisPointer: {
+                        type: 'shadow'
+                    },
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value',
+                    name: 'collected per m^2',
+                    min: 0,
+                    max: 50,
+                    interval: 10,
+                    axisLabel: {
+                        formatter: '{value} L'
+                    },
+                    splitLine:{show: false},
+                },
+                {
+                    type: 'value',
+                    name: 'Average rainfall',
+                    min: 15,
+                    max: 75,
+                    interval: 15,
+                    axisLabel: {
+                        formatter: '{value} mm'
+                    }
+                }
+            ],
+            series: [
+                {
+                    name: 'water_storage/m^2',
+                    type: 'bar',
+                    data: storageList
+                },
+                {
+                    name: 'Monthly_rainfall',
+                    type: 'line',
+                    yAxisIndex: 1,
+                    data: rainfallMonth
+                }
+            ]
+        };
+                myBar.setOption(option);
+            </script>*@
+
+    <style>
+        #map {
+            height: 500px;
+            width: auto;
+        }
+
+        #showbar {
+            display: none;
+        }
+    </style>
+</body>
+</html>
