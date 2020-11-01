@@ -16,7 +16,6 @@
 
 
     <link href="~/StyleFolder/bootstrap.min.css" rel="stylesheet" />
-    <link href="~/fonts/LayoutIconFonts/icofont.min.css" rel="stylesheet" />
     <link href="~/StyleFolder/animate.css" rel="stylesheet" />
     <link href="~/StyleFolder/venobox.css" rel="stylesheet" />
 
@@ -34,7 +33,7 @@
         <div class="HeaderContainer">
 
             <div class="logo float-left">
-                <h1 class="text-light"><img src="~/img/TTOL.jpg" style="max-height:50px" /><a href="/Home/HomeIndex"><span>Water Remedy</span></a></h1>
+                <h1 class="text-light"><img src="~/img/lllg.png" style="max-height:50px" /><a href="/Home/HomeIndex"><span>Water Remedy</span></a></h1>
                 <!-- Uncomment below if you prefer to use an image logo -->
                 <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
             </div>
@@ -47,16 +46,16 @@
                     <li>
                         <a href="/Home/AboutWater">About Us</a>
                     </li>
-                    <li class="drop-down">
-                        <a href="/Home/DIYDetergent">Clean Water</a>
-                        <ul>
-                            <li><a href="/Home/DIYDetergent#hello">Check my products</a></li>
-                        </ul>
-                    </li>
+                    @*<li class="drop-down">
+                            <a href="/Home/DIYDetergent">Clean Water</a>
+                            <ul>
+                                <li><a href="/Home/DIYDetergent#hello">Check my products</a></li>
+                            </ul>
+                        </li>*@
                     <li class="drop-down">
                         <a href="/Home/RoofWater">Water Saver</a>
                         <ul>
-                            <li><a href="/Home/RoofWater#rwater">How Much Can Save</a></li>
+                            <li><a href="/Home/RoofWater#rwater">How Much Can You Save</a></li>
                             @*<li><a href="/Home/RoofWater#rwater">Have A Water Tank</a></li>*@
                         </ul>
                     </li>
@@ -89,14 +88,14 @@
                     <div class="DIY-container">
                         <h1 style="font-weight:600">Clean Water</h1>
                         @*<div></div>*@
-                        <div style="margin-top:30px">
+                        <div style="margin-top:30px; margin-left:20px">
                             <span class="p">Do you know?</span>
                             <br>
-                            <span class="ps">Chemical Detergents have seriously impact to water catchment</span>
+                            <span class="ps">Chemical detergents have severe impacts on water catchments.</span>
                             <br>
-                            <span class="p">What small changes can do? </span>
+                            <span class="p">What small changes can we do? </span>
                             <br>
-                            <span class="ps">Check your common detergents in home and alter them to eco-friendly detergents</span>
+                            <span class="ps">Check your common detergents at home and alter them to eco-friendly detergents.</span>
                         </div>
                         @*<h2 style="font-weight:bold">Replace chemical detergents with nature cleaner.</h2>*@
                     </div>
@@ -104,6 +103,11 @@
             </div>
         </div>
     </section>
+
+    <ol class="container-diy breadcrumb" style="background-color:#fff">
+        <li class="breadcrumb-item"><a href="/Home/HomeIndex">Home</a></li>
+        <li class="breadcrumb-item active">Clean Water</li>
+    </ol>
 
     @*<div id="Whymatter" class="container-diy" style="margin-top:80px">
             <div class="row">
@@ -207,13 +211,13 @@
             </div>*@
         <div class="row">
             <div class="col-lg-4 col-md-4 filter-app">
-                <button type="button" class="btn btn-ligh" style="border:0px solid black; font-weight:bold; color:black; font-size:18px" onclick="show1()">Kitchen</button>
+                <button id="kc" type="button" class="btn btn-ligh" style="border:0px solid black; font-weight:bold; color:black; font-size:18px" onclick="show1()" href="#kitchen">Kitchen</button>
             </div>
             <div class="col-lg-4 col-md-4 filter-app">
-                <button type="button" class="btn btn-ligh" style="border:0px solid black; font-weight:bold; color:black; font-size:18px" onclick="show3()">Laundry</button>
+                <button id="ld" type="button" class="btn btn-ligh" style="border:0px solid black; font-weight:bold; color:black; font-size:18px" onclick="show3()" href="#laundry">Laundry</button>
             </div>
             <div class="col-lg-4 col-md-4 filter-app">
-                <button type="button" class="btn btn-ligh" style="border:0px solid black; font-weight:bold; color:black; font-size:18px" onclick="show2()">Bathroom</button>
+                <button id="bh" type="button" class="btn btn-ligh" style="border:0px solid black; font-weight:bold; color:black; font-size:18px" onclick="show2()" href="#bathroom">Bathroom</button>
             </div>
         </div>
     </div>
@@ -356,30 +360,35 @@
             </div>
         </div>*@
 
-    <div class="l_c_h">
-        <div class="c_h">
-            <div class="left_c">
-                <div class="left center_icons">
-                    <!--center_icons-->
-                    Live help!
-                </div><!--end center_icons-->
-                <div class="right right_c left_icons">
-                    @*<a href="#" class="mini" style="font-size:23px;">+</a>*@
-                    <img src="~/img/chat-icon3.png" style="width:auto; height:35px" />
+    @*<div class="l_c_h">
+            <div class="c_h">
+                <div class="left_c">
+                    <div class="left center_icons">
+                        Live help!
+                    </div>
+                    <div class="right right_c left_icons">
+                        <img src="~/img/chat-icon3.png" style="width:auto; height:35px" />
+                    </div>
                 </div>
+                <div class="clear"></div>
             </div>
-            <div class="clear"></div>
-        </div>
-        <div class="chat_container" style="display: none;">
-            <iframe src='https://webchat.botframework.com/embed/myqnaserver-bot?s=e1ts79DPVWo.zIh5ekvimyEqEIVKnaPRLDS7fXMX7r-7HdjQgFv_CBc' style='min-width: 100px; width: 270px; min-height: 500px; border:0'></iframe>
-        </div>
-    </div>
+            <div class="chat_container" style="display: none;">
+                <iframe src='https://webchat.botframework.com/embed/myqnaserver-bot?s=e1ts79DPVWo.zIh5ekvimyEqEIVKnaPRLDS7fXMX7r-7HdjQgFv_CBc' style='min-width: 100px; width: 350px; min-height: 500px; border:0'></iframe>
+            </div>
+        </div>*@
+
+    <script SameSite="None; Secure" src="https://static.landbot.io/landbot-widget/landbot-widget-1.0.0.js"></script>
+    <script>
+        var myLandbot = new LandbotLivechat({
+            index: 'https://chats.landbot.io/v2/H-732989-4YFSIQ5565VKNWEA/index.html',
+        });
+    </script>
 
     <div class="container" style="text-align:center; margin-bottom:50px">
-        <h3 style="color:#363636; font-size:45px; font-weight:bold; margin-top:20px; margin-bottom:20px">What can do next   ?</h3>
+        <h3 style="color:#363636; font-size:45px; font-weight:bold; margin-top:20px; margin-bottom:20px">What can you do next   ?</h3>
         <div class="row" style="text-align:center">
-            <div class="col-lg-4 col-md-4 filter-app"></div>
-            <div class="col-lg-4 col-md-4 filter-app" style="background-color:rgba(170, 231, 192, 0.53)">
+            @*<div class="col-lg-4 col-md-4 filter-app"></div>*@
+            <div class="col-lg-12 col-md-12 filter-app" style="background-color:rgba(170, 231, 192, 0.53)">
                 <div style="margin-top:50px; margin-bottom:50px">
                     <span style="font-family:Raleway; color:black">OUT DOOR</span>
                     <br>
@@ -390,7 +399,7 @@
                     <button type="button" class="Navbtn" data-aos="fade-right" data-aos-duration="1000" onclick="window.location.href='/Home/RoofWater'">LEARN MORE ></button>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-4 filter-app"></div>
+            @*<div class="col-lg-4 col-md-4 filter-app"></div>*@
         </div>
     </div>
 
@@ -398,11 +407,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-4 filter-app" style="text-align:center">
-                    <img src="~/img/TTOL.jpg" style="width:9vh; height:10vh" />
+                    <img src="~/img/lllg.png" style="width:9vh; height:10vh" />
                 </div>
                 <div class="col-lg-4 col-md-4 filter-app">
                     <h5>WHO WE ARE</h5>
-                    <a href="#">Home</a>
+                    <a href="/Home/HomeIndex">Home</a>
                     <br>
                     <a href="/Home/AboutWater">About Us</a>
                 </div>
@@ -531,6 +540,29 @@
                 $(".chat_container").slideToggle("slow");
                 return false
             });
+        });
+
+        function delay(URL) {
+            setTimeout(function () { window.location = URL });
+        }
+
+        $('#kc').click(function () {
+            $('html, body').animate({
+                scrollTop: $($.attr(this, 'href')).offset().top
+            }, 500);
+            return false;
+        });
+        $('#ld').click(function () {
+            $('html, body').animate({
+                scrollTop: $($.attr(this, 'href')).offset().top
+            }, 500);
+            return false;
+        });
+        $('#bh').click(function () {
+            $('html, body').animate({
+                scrollTop: $($.attr(this, 'href')).offset().top
+            }, 500);
+            return false;
         });
 
     </script>

@@ -133,6 +133,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\Iteration2Controller.cs" />
     <Compile Include="Controllers\RainfallsController.cs" />
@@ -272,6 +273,15 @@
     <Content Include="img\arrow-down.png" />
     <Content Include="img\arrow_left.svg" />
     <Content Include="img\arrow_right.svg" />
+    <Content Include="img\au-bbushfire.png" />
+    <Content Include="img\au-det.png" />
+    <Content Include="img\au-detergent.png" />
+    <Content Include="img\au-pop.png" />
+    <Content Include="img\aubf.png" />
+    <Content Include="img\auclean.png" />
+    <Content Include="img\aude.png" />
+    <Content Include="img\augw.png" />
+    <Content Include="img\aupo.png" />
     <Content Include="img\banner-water.png" />
     <Content Include="img\bath-01.jpg" />
     <Content Include="img\bath-02.jpg" />
@@ -282,6 +292,7 @@
     <Content Include="img\Bath.png" />
     <Content Include="img\bbath.png" />
     <Content Include="img\bbff.jpg" />
+    <Content Include="img\burgerIcon.png" />
     <Content Include="img\bushfire.jpg" />
     <Content Include="img\bushfiremel.png" />
     <Content Include="img\catchment-danger.png" />
@@ -289,12 +300,16 @@
     <Content Include="img\chat-icon2.png" />
     <Content Include="img\chat-icon3.png" />
     <Content Include="img\chemical.jpg" />
+    <Content Include="img\clean-supply.jpg" />
     <Content Include="img\Cleaner.jpg" />
     <Content Include="img\cleaner2.jpg" />
+    <Content Include="img\cleanersss.jpg" />
     <Content Include="img\climate-01.png" />
     <Content Include="img\climatemel.png" />
     <Content Include="img\contact-bg.jpg" />
     <Content Include="img\cross.png" />
+    <Content Include="img\cycle-diy.png" />
+    <Content Include="img\cycle-roof.png" />
     <Content Include="img\D1.png" />
     <Content Include="img\D2.png" />
     <Content Include="img\danger10.png" />
@@ -307,6 +322,7 @@
     <Content Include="img\diybg3.jpg" />
     <Content Include="img\diybg4.jpg" />
     <Content Include="img\diybg5.png" />
+    <Content Include="img\earth-warm.png" />
     <Content Include="img\earth.jpg" />
     <Content Include="img\eco-detergent.png" />
     <Content Include="img\fire-01.png" />
@@ -318,7 +334,9 @@
     <Content Include="img\ggarden.png" />
     <Content Include="img\Glowarm.png" />
     <Content Include="img\green-family.jpg" />
+    <Content Include="img\hamburger.png" />
     <Content Include="img\hand-cleaner.png" />
+    <Content Include="img\harm-detergent.png" />
     <Content Include="img\heliu.jpg" />
     <Content Include="img\home-bg.jpg" />
     <Content Include="img\home-cleaner.jpg" />
@@ -342,10 +360,21 @@
     <Content Include="img\laundry.png" />
     <Content Include="img\line.png" />
     <Content Include="img\llaundry.png" />
+    <Content Include="img\lllg.png" />
     <Content Include="img\main-page.jpg" />
     <Content Include="img\mel-pop.png" />
     <Content Include="img\mountain-river.jpg" />
     <Content Include="img\parents.png" />
+    <Content Include="img\PET-1.JPG" />
+    <Content Include="img\PET-2.JPG" />
+    <Content Include="img\PET-3.JPG" />
+    <Content Include="img\PET-4.JPG" />
+    <Content Include="img\PET-5.JPG" />
+    <Content Include="img\PET1.jpg" />
+    <Content Include="img\PET2.jpg" />
+    <Content Include="img\PET3.jpg" />
+    <Content Include="img\PET4.jpg" />
+    <Content Include="img\PET5.jpg" />
     <Content Include="img\pigmoney.jpg" />
     <Content Include="img\POP3.png" />
     <Content Include="img\population-01.png" />
@@ -363,13 +392,30 @@
     <Content Include="img\roofwater.jpg" />
     <Content Include="img\sm.jpg" />
     <Content Include="img\smile-face.png" />
+    <Content Include="img\Steel -1.JPG" />
+    <Content Include="img\Steel-2.JPG" />
+    <Content Include="img\Steel-3.JPG" />
+    <Content Include="img\Steel-4.JPG" />
+    <Content Include="img\Steel-5.JPG" />
+    <Content Include="img\STEEL1.jpg" />
+    <Content Include="img\STEEL2.jpg" />
+    <Content Include="img\STEEL3.jpg" />
+    <Content Include="img\STEEL4.jpg" />
+    <Content Include="img\STEEL5.jpg" />
     <Content Include="img\T1.png" />
     <Content Include="img\T2.png" />
     <Content Include="img\T3.png" />
     <Content Include="img\T4.png" />
     <Content Include="img\T5.png" />
     <Content Include="img\T6.png" />
+    <Content Include="img\tank1.png" />
+    <Content Include="img\tank2.png" />
+    <Content Include="img\tank3.png" />
+    <Content Include="img\tank4.png" />
+    <Content Include="img\tank5.png" />
+    <Content Include="img\tank6.png" />
     <Content Include="img\toilt2.png" />
+    <Content Include="img\TOL.png" />
     <Content Include="img\tolit.jpg" />
     <Content Include="img\TTOL.jpg" />
     <Content Include="img\want-help.png" />
@@ -378,6 +424,7 @@
     <Content Include="img\waterfall-3723422_1280.jpg" />
     <Content Include="img\weather.png" />
     <Content Include="img\wild-river.jpg" />
+    <Content Include="img\x512.png" />
     <Content Include="JavaScript\bootstrap.bundle.js" />
     <Content Include="JavaScript\bootstrap.bundle.min.js" />
     <Content Include="JavaScript\bootstrap.js" />
@@ -573,6 +620,8 @@
     <Content Include="fonts\static\Raleway-ThinItalic.ttf" />
     <Content Include="fonts\Raleway-Italic-VariableFont_wght.ttf" />
     <Content Include="fonts\Raleway-VariableFont_wght.ttf" />
+    <Content Include="App_Data\Melbourne_rainfall_bot .ipynb" />
+    <Content Include="App_Data\month_avg_consume.csv" />
     <None Include="Properties\PublishProfiles\WaterRemedy - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\calculateArea.js" />
@@ -591,8 +640,10 @@
     <Content Include="Scripts\jspdf.js" />
     <Content Include="Scripts\jspdf.umd.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\notify.min.js" />
     <Content Include="Scripts\popper.js" />
     <Content Include="Scripts\sidenavbar.js" />
+    <Content Include="Scripts\stepper.js" />
     <Content Include="Scripts\Tanks.js" />
     <Content Include="Scripts\waterTanks.js" />
     <Content Include="StyleFolder\aclculateArea.css" />
@@ -760,6 +811,9 @@
     <Content Include="StyleFolder\DataTables\images\sort_both.png" />
     <Content Include="StyleFolder\DataTables\images\sort_desc.png" />
     <Content Include="StyleFolder\DataTables\images\sort_desc_disabled.png" />
+    <Content Include="StyleFolder\Error.css" />
+    <Content Include="StyleFolder\mstepper.css" />
+    <Content Include="StyleFolder\mstepper.min.css" />
     <Content Include="StyleFolder\StyleSheet.css" />
     <Content Include="StyleFolder\DataTables\swf\flashExport.swf" />
     <Content Include="StyleFolder\sideNavBar.css" />
@@ -897,6 +951,7 @@
     <Content Include="vendor\icofont\fonts\icofont.woff" />
     <Content Include="vendor\icofont\fonts\icofont.woff2" />
     <Content Include="Views\Home\WaterTank.cshtml" />
+    <Content Include="Views\Error\PageNotFound.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

@@ -12,7 +12,8 @@ using System.Collections;
 
 namespace WaterRemedy.Controllers
 {
-    [Authentication("MA32", "Jedi", BasicRealm = "your-realm")]
+    //[Authentication("MA32", "Jedi", BasicRealm = "your-realm")]
+    [HandleError]
     public class HomeController : Controller
     {
         private waterremedyModelContainer db = new waterremedyModelContainer();
@@ -59,6 +60,26 @@ namespace WaterRemedy.Controllers
                 var data = process.ReadCsvFileToTable();
 
                 return Content(JsonConvert.SerializeObject(new { isSuccess = true, Data = data }), "application/json");                
+            }
+            catch (Exception e)
+            {
+                return Content(JsonConvert.SerializeObject(new { isSuccess = false, Message = e.Message }), "application/json");
+            }
+        }
+
+        [HttpGet]
+        public ActionResult GetAustralianWaterStorage()
+        {
+            try
+            {
+                var directoryInfo = new DirectoryInfo(StaticFilePath.LocalFilePath);
+                var fileInfo = directoryInfo.GetFiles().FirstOrDefault(x => x.Name.Equals("Population v Water usage.csv"));
+                if (fileInfo == null) return Content(JsonConvert.SerializeObject(new { isSuccess = false, Message = "No Data" }), "application/json");
+
+                var process = new ImportCSV($@"{fileInfo.DirectoryName}\", fileInfo.Name);
+                var data = process.ReadCsvFileToTable();
+
+                return Content(JsonConvert.SerializeObject(new { isSuccess = true, Data = data }), "application/json");
             }
             catch (Exception e)
             {

@@ -1,7 +1,33 @@
 ﻿jQuery(document).ready(function ($) {
     initMap();
     initAutocomplete();
+    $.notify.addStyle('happyblue', {
+        html: "<div>\n<span data-notify-text></span>\n</div>",
+        classes: {
+            base: {
+                "white-space": "nowrap",
+                "background-color": "#F2DEDE",
+                "padding": "8px 15px 8px 20px",
+                "font-size": "25px",
+                "margin-top": "50px",
+                "border-radius": "10px",
+                "color": "#B94A48",
+                "background-image": "url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAtRJREFUeNqkVc1u00AQHq+dOD+0poIQfkIjalW0SEGqRMuRnHos3DjwAH0ArlyQeANOOSMeAA5VjyBxKBQhgSpVUKKQNGloFdw4cWw2jtfMOna6JOUArDTazXi/b3dm55socPqQhFka++aHBsI8GsopRJERNFlY88FCEk9Yiwf8RhgRyaHFQpPHCDmZG5oX2ui2yilkcTT1AcDsbYC1NMAyOi7zTX2Agx7A9luAl88BauiiQ/cJaZQfIpAlngDcvZZMrl8vFPK5+XktrWlx3/ehZ5r9+t6e+WVnp1pxnNIjgBe4/6dAysQc8dsmHwPcW9C0h3fW1hans1ltwJhy0GxK7XZbUlMp5Ww2eyan6+ft/f2FAqXGK4CvQk5HueFz7D6GOZtIrK+srupdx1GRBBqNBtzc2AiMr7nPplRdKhb1q6q6zjFhrklEFOUutoQ50xcX86ZlqaZpQrfbBdu2R6/G19zX6XSgh6RX5ubyHCM8nqSID6ICrGiZjGYYxojEsiw4PDwMSL5VKsC8Yf4VRYFzMzMaxwjlJSlCyAQ9l0CW44PBADzXhe7xMdi9HtTrdYjFYkDQL0cn4Xdq2/EAE+InCnvADTf2eah4Sx9vExQjkqXT6aAERICMewd/UAp/IeYANM2joxt+q5VI+ieq2i0Wg3l6DNzHwTERPgo1ko7XBXj3vdlsT2F+UuhIhYkp7u7CarkcrFOCtR3H5JiwbAIeImjT/YQKKBtGjRFCU5IUgFRe7fF4cCNVIPMYo3VKqxwjyNAXNepuopyqnld602qVsfRpEkkz+GFL1wPj6ySXBpJtWVa5xlhpcyhBNwpZHmtX8AGgfIExo0ZpzkWVTBGiXCSEaHh62/PoR0p/vHaczxXGnj4bSo+G78lELU80h1uogBwWLf5YlsPmgDEd4M236xjm+8nm4IuE/9u+/PH2JXZfbwz4zw1WbO+SQPpXfwG/BBgAhCNZiSb/pOQAAAAASUVORK5CYII=)",
+                "background-repeat": "no-repeat",
+                "background-position": "3px 7px",
+                "font-weight": "bold",
+                "white-space": "nowrap",
+            },
+        }
+    });
 });
+var options = {
+    style: 'happyblue',
+    clickToHide: true,
+    autoHide: true,
+    globalPosition: 'top right',
+    autoHideDelay: 2000
+}
 var loc;
 var nearStores = [];
 var markers = [];
@@ -103,7 +129,8 @@ function addMarkers() {
     //    suppressMarkers: true
     //}
     if (nearStores.length == 0) {
-        alert('Please enter the correct ADDRESS');
+        //alert('Please enter the correct ADDRESS', options);
+        $.notify("Please enter the correct ADDRESS", options);
     } else {
     for (i = 0; i < nearStores.length; i++) {
         var pt = new google.maps.LatLng(nearStores[i].lat, nearStores[i].lng);
@@ -151,7 +178,7 @@ function addMarkers() {
             }
         })
             (marker));
-        }//zaizhe
+        }
     }
 }
 function createMarker(latlng, title) {
@@ -257,7 +284,8 @@ function searchLocation() {
 
     var location;
     if (address == "") {
-        alert("Please enter the address");
+        //alert("Please enter the address");
+        $.notify("Please enter the address.", options);
     } else {
     console.log(address);
     $.get(

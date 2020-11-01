@@ -18,20 +18,20 @@
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
 
     <link href="~/StyleFolder/bootstrap.css" rel="stylesheet" />
-    <link href="~/fonts/LayoutIconFonts/icofont.min.css" rel="stylesheet" />
     <link href="~/StyleFolder/animate.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href="~/StyleFolder/venobox.css" rel="stylesheet" />
-    <link href="~/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bs-stepper/dist/css/bs-stepper.min.css" rel="stylesheet" />
     <link href="~/css/mdb.css" rel="stylesheet" />
     <link href="~/StyleFolder/style.css" rel="stylesheet" />
+
 </head>
 <body>
     <header id="header" class="fixed-top">
         <div class="HeaderContainer">
 
             <div class="logo float-left">
-                <h1 class="text-light"><img src="~/img/TTOL.jpg" style="max-height:50px" /><a href="/Home/HomeIndex"><span>Water Remedy</span></a></h1>
+                <h1 class="text-light"><img src="~/img/lllg.png" style="max-height:50px" /><a href="/Home/HomeIndex"><span>Water Remedy</span></a></h1>
                 <!-- Uncomment below if you prefer to use an image logo -->
                 <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
             </div>
@@ -44,16 +44,16 @@
                     <li>
                         <a href="/Home/AboutWater">About Us</a>
                     </li>
-                    <li class="drop-down">
-                        <a href="/Home/DIYDetergent">Clean Water</a>
-                        <ul>
-                            <li><a href="/Home/DIYDetergent#hello">Check my products</a></li>
-                        </ul>
-                    </li>
+                    @*<li class="drop-down">
+                            <a href="/Home/DIYDetergent">Clean Water</a>
+                            <ul>
+                                <li><a href="/Home/DIYDetergent#hello">Check my products</a></li>
+                            </ul>
+                        </li>*@
                     <li class="drop-down">
                         <a href="/Home/RoofWater">Water Saver</a>
                         <ul>
-                            <li><a href="/Home/RoofWater#rwater">How Much Can Save</a></li>
+                            <li><a href="/Home/RoofWater#rwater">How Much Can You Save</a></li>
                             @*<li><a href="/Home/RoofWater#rwater">Have A Water Tank</a></li>*@
                         </ul>
                     </li>
@@ -65,40 +65,162 @@
         </div>
     </header><!-- End #header -->
 
-    <div class="container" style="margin-top:150px; margin-bottom:100px">
+    <ol class="container-diy breadcrumb" style="background-color:#fff; margin-top:150px">
+        <li class="breadcrumb-item"><a href="/Home/HomeIndex">Home</a></li>
+        <li class="breadcrumb-item active">About Us</li>
+    </ol>
+
+
+    <div class="container" style="margin-top:100px; margin-bottom:100px">
         <div class="row">
-            <div class="col-lg-3 col-md-3 filter-app" style="text-align:center">
-                <div style="position: relative">
-                    <img src="~/img/TTOL.jpg" style="width:100%; height:100%" />
-                </div>
-            </div>
-            <div class="col-lg-9 col-md-9 filter-app">
-                <div style="margin-top:30px">
-                    <h3 style="font-family:Raleway; color:black; font-weight:bold">About Us</h3>
-                    <p style="font-family:Raleway; color:black; font-weight:bold">
-                        Water Remedy aims to help people to manage their water usage by providing interactive solutions on roof water harvest and home-made replacements for chemical detergents.
-                    </p>
-                    <p style="font-family:Raleway; color:black; font-weight:bold">
-                        Through our effort, people can be more confident of their capability of protecting water catchments in Melbourne.
-                    </p>
-                    <p style="font-family:Raleway; color:black; font-weight:bold">
-                        Melbourne has been suffering from shortage of water storage and water pollution during the last few years.
-                        However, these problems can be tolerated or solved if more people participate in saving water.
-                        Therefore, we hope to activate people's awareness and promote their actions to  protect the limited water resources.
-                    </p>
+            @*<div class="col-lg-3 col-md-3 filter-app" style="text-align:center">
+                    <div style="position: relative">
+                        <img src="~/img/lllg.png" style="width:60%; height:100%" />
+                    </div>
+                </div>*@
+            <div class="col-lg-12 col-md-12 filter-app">
+                <div style="margin-top:30px; text-align:center">
+                    <h3 style="font-family:Raleway; color:black; font-weight:bold; font-size:100px">About Us</h3>
+                    @*<p style="font-family:Raleway; color:black; font-weight:bold">
+                            Water Remedy aims to help people to manage their water usage by providing interactive solutions on roof water harvest and home-made replacements for chemical detergents.
+                        </p>
+                        <p style="font-family:Raleway; color:black; font-weight:bold">
+                            Through our effort, people can be more confident of their capability of protecting water catchments in Melbourne.
+                        </p>
+                        <p style="font-family:Raleway; color:black; font-weight:bold">
+                            Melbourne has been suffering from shortage of water storage and water pollution during the last few years.
+                            However, these problems can be tolerated or solved if more people participate in saving water.
+                            Therefore, we hope to activate people's awareness and promote their actions to  protect the limited water resources.
+                        </p>*@
                 </div>
             </div>
             @*<div class="col-lg-2 col-md-2 filter-app"></div>*@
         </div>
     </div>
 
+
+
+
+    <!-- timeline -->
+    <div class="container" style="margin-top:150px">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="main-timeline">
+                    <div class="timeline">
+                        <div class="icon"></div>
+                        <div class="date-content">
+                            <div class="date-outer">
+                                <span class="date">
+                                    @*<span class="month">23/04</span>
+                                        <span class="year">2017</span>*@
+                                </span>
+                            </div>
+                        </div>
+                        <div class="timeline-content">
+                            <h3 class="title" onclick="window.location.href='/Home/HomeIndex'" style="cursor: pointer">About Waterremedy</h3>
+                            <p class="description" style="color:black">
+                                Water Remedy aims to help people to manage their water usage by providing interactive solutions on roof water harvest and home-made replacements for chemical detergents.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline">
+                        <div class="icon"></div>
+                        <div class="date-content">
+                            <div class="date-outer1">
+                                <span class="date">
+                                    @*<span class="month">24/04</span>
+                                        <span class="year">2017</span>*@
+                                </span>
+                            </div>
+                        </div>
+                        <div class="timeline-content">
+                            <h3 class="title" onclick="window.location.href='/Home/RoofWater'" style="cursor: pointer">Roof Water</h3>
+                            <p class="description" style="color:black">
+                                Melbourne's population has increased the highest rate among capital cities that leads to increased water usage.  Natural events such as bushfires have a severe impact on water catchments as well. Everyone can reuse rainwater to save our water storage.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline">
+                        <div class="icon"></div>
+                        <div class="date-content">
+                            <div class="date-outer2">
+                                <span class="date">
+                                    @*<span class="month">24/04</span>
+                                        <span class="year">2017</span>*@
+                                </span>
+                            </div>
+                        </div>
+                        <div class="timeline-content">
+                            <h3 class="title" onclick="window.location.href='/Home/DIYDetergent'" style="cursor: pointer">Clean Water</h3>
+                            <p class="description" style="color:black">
+                                Most household chemical products contain disinfectants, phosphate, and surfactants. They will impacts on human, animal and river. Phosphates can result in eutrophication in water and cause the death of fish.
+                                The surfactants are not only toxic to aquatic creatures, but also persistent in water. Our website provide some alternatives for these detergents go and check it!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline">
+                        <div class="icon"></div>
+                        <div class="date-content">
+                            <div class="date-outer3">
+                                <span class="date">
+                                    @*<span class="month">24/04</span>
+                                        <span class="year">2017</span>*@
+                                </span>
+                            </div>
+                        </div>
+                        <div class="timeline-content">
+                            <h3 class="title" onclick="window.location.href='/Home/CatchmentInDanger'" style="cursor: pointer">What Facts</h3>
+                            <p class="description" style="color:black">
+                                Over the last century, the excess emission of carbon from human activity has led to notable climate
+                                change that is harmful to limited water resources.
+                                Meanwhile, the increasing population has contributed to the growing risks of chemical pollution.
+                                In Melbourne, both of the problems put intense pressure on people’s water usage.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
     <div class="container" style="text-align:center; margin-bottom:50px">
-        <h3 style="color:#363636; font-size:45px; font-weight:bold; margin-top:20px; margin-bottom:20px">Want to do in favor to earth?</h3>
+            <h3 style="color:#363636; font-size:45px; font-weight:bold; margin-top:20px; margin-bottom:20px">Want to do in favor to earth?</h3>
+            <div class="row" style="text-align:center">
+                <div class="col-lg-2 col-md-2 filter-app"></div>
+                <div class="col-lg-4 col-md-4 filter-app" style="background-color: rgba(235, 186, 77, 0.18)">
+                    <div style="margin-top:50px; margin-bottom:50px">
+                        <span style="font-family:Raleway; color:black">IN DOOR</span>
+                        <br>
+                        <span style="font-family:Raleway; color:black; font-weight:bold">Check out Home Detergents</span>
+                        <br>
+                        <span style="font-family:Raleway; color:black; font-weight:bold">Stop & Replace</span>
+                        <br>
+                        <button type="button" class="Navbtn" data-aos="fade-right" data-aos-duration="1000" onclick="window.location.href='/Home/DIYDetergent'">LEARN MORE ></button>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 filter-app" style="background-color:rgba(170, 231, 192, 0.53)">
+                    <div style="margin-top:50px; margin-bottom:50px">
+                        <span style="font-family:Raleway; color:black">OUT DOOR</span>
+                        <br>
+                        <span style="font-family:Raleway; color:black; font-weight:bold">Check out Rainfall from Your Roof</span>
+                        <br>
+                        <span style="font-family:Raleway; color:black; font-weight:bold">Collect & Reuse</span>
+                        <br>
+                        <button type="button" class="Navbtn" data-aos="fade-right" data-aos-duration="1000" onclick="window.location.href='/Home/RoofWater'">LEARN MORE ></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    @*<div class="container" style="text-align:center; margin-bottom:50px; margin-top:50px">
+        <h3 style="color:#363636; font-size:45px; font-weight:bold; margin-top:20px; margin-bottom:20px">What can you do next   ?</h3>
         <div class="row" style="text-align:center">
-            <div class="col-lg-2 col-md-2 filter-app"></div>
-            <div class="col-lg-4 col-md-4 filter-app" style="background-color: rgba(235, 186, 77, 0.18)">
+            <div class="col-lg-12 col-md-12 filter-app" style="background-color:rgba(235, 186, 77, 0.18)">
                 <div style="margin-top:50px; margin-bottom:50px">
-                    <span style="font-family:Raleway; color:black">IN DOOR</span>
+                    <span style="font-family:Raleway; color:black">INDOOR</span>
                     <br>
                     <span style="font-family:Raleway; color:black; font-weight:bold">Check out Home Detergents</span>
                     <br>
@@ -107,44 +229,38 @@
                     <button type="button" class="Navbtn" data-aos="fade-right" data-aos-duration="1000" onclick="window.location.href='/Home/DIYDetergent'">LEARN MORE ></button>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-4 filter-app" style="background-color:rgba(170, 231, 192, 0.53)">
-                <div style="margin-top:50px; margin-bottom:50px">
-                    <span style="font-family:Raleway; color:black">OUT DOOR</span>
-                    <br>
-                    <span style="font-family:Raleway; color:black; font-weight:bold">Check out Rainfall from Your Roof</span>
-                    <br>
-                    <span style="font-family:Raleway; color:black; font-weight:bold">Collect & Reuse</span>
-                    <br>
-                    <button type="button" class="Navbtn" data-aos="fade-right" data-aos-duration="1000" onclick="window.location.href='/Home/RoofWater'">LEARN MORE ></button>
-                </div>
-            </div>
         </div>
-    </div>
+    </div>*@
 
-    <div class="l_c_h">
-        <div class="c_h">
-            <div class="left_c">
-                <div class="left center_icons">
-                    <!--center_icons-->
-                    Live help!
-                </div><!--end center_icons-->
-                <div class="right right_c left_icons">
-                    @*<a href="#" class="mini" style="font-size:23px;">+</a>*@
-                    <img src="~/img/chat-icon3.png" style="width:auto; height:35px" />
+    @*<div class="l_c_h">
+            <div class="c_h">
+                <div class="left_c">
+                    <div class="left center_icons">
+                        Live help!
+                    </div>
+                    <div class="right right_c left_icons">
+                        <img src="~/img/chat-icon3.png" style="width:auto; height:35px" />
+                    </div>
                 </div>
+                <div class="clear"></div>
             </div>
-            <div class="clear"></div>
-        </div>
-        <div class="chat_container" style="display: none;">
-            <iframe src='https://webchat.botframework.com/embed/myqnaserver-bot?s=e1ts79DPVWo.zIh5ekvimyEqEIVKnaPRLDS7fXMX7r-7HdjQgFv_CBc' style='min-width: 100px; width: 270px; min-height: 500px; border:0'></iframe>
-        </div>
-    </div>
+            <div class="chat_container" style="display: none;">
+                <iframe src='https://webchat.botframework.com/embed/myqnaserver-bot?s=e1ts79DPVWo.zIh5ekvimyEqEIVKnaPRLDS7fXMX7r-7HdjQgFv_CBc' style='min-width: 100px; width: 350px; min-height: 500px; border:0'></iframe>
+            </div>
+        </div>*@
+
+    <script SameSite="None; Secure" src="https://static.landbot.io/landbot-widget/landbot-widget-1.0.0.js"></script>
+    <script>
+        var myLandbot = new LandbotLivechat({
+            index: 'https://chats.landbot.io/v2/H-732989-4YFSIQ5565VKNWEA/index.html',
+        });
+    </script>
 
     <footer id="footer">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-4 filter-app" style="text-align:center">
-                    <img src="~/img/TTOL.jpg" style="width:9vh; height:10vh" />
+                    <img src="~/img/lllg.png" style="width:9vh; height:10vh" />
                 </div>
                 <div class="col-lg-4 col-md-4 filter-app">
                     <h5>WHO WE ARE</h5>
@@ -170,12 +286,15 @@
     <script src="~/JavaScript/isotope.pkgd.js"></script>
     <script src="~/JavaScript/venobox.js"></script>
     <script src="~/JavaScript/main.js"></script>
+    <script src="~/js/mdb.js"></script>
+
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bs-stepper/dist/js/bs-stepper.min.js"></script>
     <script>
         AOS.init();
 
-        $(function(){
-            $(".c_h").click(function(e) {
+        $(function () {
+            $(".c_h").click(function (e) {
                 //if ($(".chat_container").is(":visible")) {
                 //    $(".c_h .right_c .mini").text("+")
                 //} else {
@@ -183,8 +302,34 @@
                 //}
                 $(".chat_container").slideToggle("slow");
                 return false
+            });
         });
-});
+
+
+                        //$(function () {
+                        //    $('.btn-circle').on('click', function () {
+                        //        $('.btn-circle.btn-info').removeClass('btn-info').addClass('btn-default');
+                        //        $(this).addClass('btn-info').removeClass('btn-default').blur();
+                        //    });
+
+                        //    $('.next-step, .prev-step').on('click', function (e) {
+                        //        var $activeTab = $('.tab-pane.active');
+
+                        //        $('.btn-circle.btn-info').removeClass('btn-info').addClass('btn-default');
+
+                        //        if ($(e.target).hasClass('next-step')) {
+                        //            var nextTab = $activeTab.next('.tab-pane').attr('id');
+                        //            $('[href="#' + nextTab + '"]').addClass('btn-info').removeClass('btn-default');
+                        //            $('[href="#' + nextTab + '"]').tab('show');
+                        //        }
+                        //        else {
+                        //            var prevTab = $activeTab.prev('.tab-pane').attr('id');
+                        //            $('[href="#' + prevTab + '"]').addClass('btn-info').removeClass('btn-default');
+                        //            $('[href="#' + prevTab + '"]').tab('show');
+                        //        }
+                        //    });
+                        //});
+
     </script>
 
 </body>

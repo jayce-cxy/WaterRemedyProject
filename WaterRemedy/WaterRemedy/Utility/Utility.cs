@@ -36,30 +36,19 @@ namespace WaterRemedy.Utility
             string files = path + fileName;
             DataTable dt = new DataTable();
             StreamReader fileReader = new StreamReader(files, Encoding.Default);
-            try
-            {
-                
+            try{
                 int lsi = 0;
-                
                 char cv = span;
-                while (fileReader.EndOfStream == false)
-                {
+                while (fileReader.EndOfStream == false){
                     string line = fileReader.ReadLine();
                     string[] y = line.Split(cv);
-                    
-                    if (HeadYes == true)
-                    {
-                        
-                        if (lsi == 0)
-                        {
-                            for (int i = 0; i < y.Length; i++)
-                            {
+                    if (HeadYes == true){
+                        if (lsi == 0){
+                            for (int i = 0; i < y.Length; i++){
                                 dt.Columns.Add(y[i].Trim().ToString());
                             }
                             lsi++;
-                        }
-                        
-                        else
+                        }else
                         {
                             DataRow dr = dt.NewRow();
                             for (int i = 0; i < y.Length; i++)
@@ -68,46 +57,28 @@ namespace WaterRemedy.Utility
                             }
                             dt.Rows.Add(dr);
                         }
-                    }
-
-                    
-
-                    else
-                    {
-
-                        if (lsi == 0)
-                        {
-                            for (int i = 0; i < y.Length; i++)
-                            {
+                    }else{
+                        if (lsi == 0){
+                            for (int i = 0; i < y.Length; i++){
                                 dt.Columns.Add(i.ToString());
                             }
                             lsi++;
                         }
-
                         DataRow dr = dt.NewRow();
-
-                        for (int i = 0; i < y.Length; i++)
-                        {
+                        for (int i = 0; i < y.Length; i++){
                             dr[i] = y[i].Trim();
                         }
                         dt.Rows.Add(dr);
                     }
                 }
-            }
-
-            catch (Exception ex)
-            {
+            }catch (Exception ex){
                 throw ex;
             }
-
-            finally
-            {
+            finally{
                 fileReader.Close();
                 fileReader.Dispose();
             }
             return dt;
-
         }
-
     }
 }

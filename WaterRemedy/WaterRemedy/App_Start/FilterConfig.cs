@@ -9,7 +9,7 @@ namespace WaterRemedy
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             filters.Add(new HandleErrorAttribute());
-            filters.Add(new Authentication("MA32", "Jedi"));
+            //filters.Add(new Authentication("MA32", "Jedi"));
         }
     }
 }

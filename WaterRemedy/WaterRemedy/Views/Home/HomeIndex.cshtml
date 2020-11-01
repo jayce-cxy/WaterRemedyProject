@@ -17,11 +17,11 @@
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Courgette' rel='stylesheet'>
     <link href="~/StyleFolder/bootstrap.css" rel="stylesheet" />
-    <link href="~/fonts/LayoutIconFonts/icofont.min.css" rel="stylesheet" />
+    @*<link href="~/fonts/LayoutIconFonts/icofont.min.css" rel="stylesheet" />*@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href="~/StyleFolder/animate.css" rel="stylesheet" />
     <link href="~/StyleFolder/venobox.css" rel="stylesheet" />
-    <link href="~/vendor/icofont/icofont.min.css" rel="stylesheet">
+    @*<link href="~/vendor/icofont/icofont.min.css" rel="stylesheet">*@
     <script src="~/js/echarts.min.js"></script>
     @*<link href="~/css/mdb.css" rel="stylesheet" />*@
     <link href="~/StyleFolder/style.css" rel="stylesheet" />
@@ -31,7 +31,7 @@
         <div class="HeaderContainer">
 
             <div class="logo float-left">
-                <h1 class="text-light"><img src="~/img/TTOL.jpg" style="max-height:50px"/><a href="/Home/HomeIndex"><span>Water Remedy</span></a></h1>
+                <h1 class="text-light"><img src="~/img/lllg.png" style="max-height:50px" /><a href="/Home/HomeIndex"><span>Water Remedy</span></a></h1>
                 <!-- Uncomment below if you prefer to use an image logo -->
                 <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
             </div>
@@ -44,16 +44,16 @@
                     <li>
                         <a href="/Home/AboutWater">About Us</a>
                     </li>
-                    <li class="drop-down">
-                        <a href="/Home/DIYDetergent">Clean Water</a>
-                        <ul>
-                            <li><a href="/Home/DIYDetergent#hello">Check my products</a></li>
-                        </ul>
-                    </li>
+                    @*<li class="drop-down">
+                            <a href="/Home/DIYDetergent">Clean Water</a>
+                            <ul>
+                                <li><a href="/Home/DIYDetergent#hello">Check my products</a></li>
+                            </ul>
+                        </li>*@
                     <li class="drop-down">
                         <a href="/Home/RoofWater">Water Saver</a>
                         <ul>
-                            <li><a href="/Home/RoofWater#rwater">How Much Can Save</a></li>
+                            <li><a href="/Home/RoofWater#rwater">How Much Can You Save</a></li>
                             @*<li><a href="/Home/RoofWater#rwater">Have A Water Tank</a></li>*@
                         </ul>
                     </li>
@@ -72,76 +72,80 @@
             <div>
                 <div id="outdoorbutton">
                     @*<h2 style="font-family:Courgette">protect water catchment by small changes</h2>*@
-                    <p id="mainCon" style="font-family:Raleway">Are You Using Roof Wisely?</p>
-                    <button type="button" data-aos="fade-right" data-aos-duration="500" class="btn btn-dark" onclick="window.location.href='/Home/RoofWater'">Check</button>
+                    <p id="mainCon" style="font-family:Raleway">Are You Using Rainwater Wisely?</p>
+                    <button type="button" data-aos="fade-right" data-aos-duration="500" class="btn btn-dark" onclick="window.location.href='/Home/RoofWater'">How to use</button>
+                    <br>
+                    <br>
+                    <p id="heroSpan2">Protect Melbourne's Water Catchments By Small Changes</p>
                 </div>
             </div>
-            <div id="outdoor" class="instruction" style="margin-top:100px">
-                <br>
-                <span id="heroSpan2">Protect Melbourne's Water Catchments By Small Changes</span>
-                <br>
-                <span id="heroSpan">Your Next Generation Deserves A Better Environment</span>
+            @*<div id="outdoor" class="instruction" style="margin-top:100px">
+                    <br>
+                    <span id="heroSpan2">Protect Melbourne's Water Catchments By Small Changes</span>
+                    <br>
+                    <span id="heroSpan">Your Next Generation Deserves A Better Environment</span>
 
-            </div>
+                </div>*@
         </div>
 
     </div>
 
+    <section>
+        <div class="container">
+            @*<h2 style="text-align:center; color:black; font-size:40px; font-weight:bold">
+                - WATER FACTS -
+            </h2>*@
+            <p style="text-align:center; font-size:20px; color:black">In the recent 5 years, the population of Melbourne has increased by 14.56%.</p>
+            <p style="text-align:center; font-size:20px; color:black">Meanwhile, water storage in Melbourne has decreased by 15%.</p>
+            <p style="text-align:center; font-size:25px; font-weight:600; color:#363636">" Therefore, Melbourne's water storage may be in crisis by 2030. "</p>
+            <div class="col-lg-12 col-md-12 filter-app">
+                <div id="bar" style="width:auto; height:500px"></div>
+            </div>
 
+        </div>
+    </section>
 
     <section>
         <div class="container" id="threeArtic">
-            <h2 style="text-align:center; color:#363636; font-size:30px; font-weight:bold">
-                What Pollute Water Catchments?
+            <h2 style="text-align:center; color:black; font-size:40px; font-weight:bold">
+                - What Will Pollute Water Catchments? -
             </h2>
-            
-            
+
             <div class="row">
                 <div class="c1 col-lg-3 col-md-3 filter-app">
                     <div class="img">
                         <div class="words">Global Warming</div>
-                        <img src="~/img/Glowarm.png" class="img-fluid" id="climate" />
+                        <img src="~/img/earth-warm.png" class="img-fluid" id="climate" />
                     </div>
                 </div>
                 <div class="c1 col-lg-3 col-md-3 filter-app">
                     <div class="img">
                         <div class="words">Bushfire</div>
-                        <img src="~/img/bbff.jpg" class="img-fluid" id="bushfire" />
+                        <img src="~/img/au-bbushfire.png" class="img-fluid" id="bushfire" />
                     </div>
                 </div>
                 <div class="c1 col-lg-3 col-md-3 filter-app">
                     <div class="img">
                         <div class="words">Human Activites</div>
-                        <img src="~/img/pop_mel.jpg" class="img-fluid" id="population" />
+                        <img src="~/img/au-pop.png" class="img-fluid" id="population" />
                     </div>
                 </div>
                 <div class="c1 col-lg-3 col-md-3 filter-app">
                     <div class="img">
                         <div class="words">Detergent</div>
-                        <img src="~/img/washdetergent.jpg" class="img-fluid" id="cleaner" />
+                        <img src="~/img/harm-detergent.png" class="img-fluid" id="cleaner" />
                     </div>
                 </div>
             </div>
-
-        </div>
-    </section>
-
-    <section>
-        <div class="container">
-            <h2 style="text-align:center; color:#363636; font-size:30px; font-weight:bold">
-                Population, Usage VS Water Storage
-            </h2>
-            <p style="text-align:center; font-size:19px">Melbourne has faced limited water resources, Increasing water usage and chemical pollution because of the following factors</p>
-            <div class="col-lg-12 col-md-12 filter-app">
-                <div id="bar" style="width:inherit; height:500px"></div>
-            </div>
             <div class="container">
-                <div id="homepagebtn" style="text-align:center; margin-top: 20px">
+                <div id="homepagebtn" style="text-align:center; margin-top: 50px">
                     <button type="button" data-aos="fade-right" data-aos-duration="1000" class="btn btn-dark" onclick="window.location.href='/Home/CatchmentInDanger'">Learn More</button>
                 </div>
             </div>
         </div>
     </section>
+
+
 
 
     @*<div class="container DIY" style="margin-top:50px; margin-bottom:100px; text-align:center">
@@ -155,13 +159,44 @@
             </div>
         </div>*@
 
-    <div class="container" style="text-align:center">
-        <h3 style="color:#363636; font-size:45px; font-weight:bold; margin-top:20px; margin-bottom:20px">What we offer  ?</h3>
+    <div class="container" style="text-align:center; margin-top:50px">
+            <h2 style="text-align:center; color:black; font-size:40px; font-weight:bold">
+                - Your Next Generation Deserves A Better Environment -
+            </h2>
+            <h3 style="color:black; font-size:40px; font-weight:bold; margin-top:50px; margin-bottom:20px">What we offer to change   ?</h3>
+            <div class="row" style="text-align:center">
+                <div class="col-lg-2 col-md-2 filter-app"></div>
+                <div class="col-lg-4 col-md-4 filter-app" style="background-color: rgba(235, 186, 77, 0.18)">
+                    <div style="margin-top:50px; margin-bottom:50px">
+                        <span style="font-family:Raleway; color:black">IN DOOR</span>
+                        <br>
+                        <span style="font-family:Raleway; color:black; font-weight:bold">Check out Home Detergents</span>
+                        <br>
+                        <span style="font-family:Raleway; color:black; font-weight:bold">Stop & Replace</span>
+                        <br>
+                        <button type="button" class="Navbtn" data-aos="fade-right" data-aos-duration="1000" onclick="window.location.href='/Home/DIYDetergent'">LEARN MORE ></button>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 filter-app" style="background-color:rgba(170, 231, 192, 0.53)">
+                    <div style="margin-top:50px; margin-bottom:50px">
+                        <span style="font-family:Raleway; color:black">OUT DOOR</span>
+                        <br>
+                        <span style="font-family:Raleway; color:black; font-weight:bold">Check out Rainfall from Your Roof</span>
+                        <br>
+                        <span style="font-family:Raleway; color:black; font-weight:bold">Collect & Reuse</span>
+                        <br>
+                        <button type="button" class="Navbtn" data-aos="fade-right" data-aos-duration="1000" onclick="window.location.href='/Home/RoofWater'">LEARN MORE ></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    @*<div class="container" style="text-align:center; margin-bottom:50px; margin-top:50px">
+        <h3 style="color:#363636; font-size:45px; font-weight:bold; margin-top:20px; margin-bottom:20px">What you can do next   ?</h3>
         <div class="row" style="text-align:center">
-            <div class="col-lg-2 col-md-2 filter-app"></div>
-            <div class="col-lg-4 col-md-4 filter-app" style="background-color: rgba(235, 186, 77, 0.18)">
+            <div class="col-lg-12 col-md-12 filter-app" style="background-color:rgba(235, 186, 77, 0.18)">
                 <div style="margin-top:50px; margin-bottom:50px">
-                    <span style="font-family:Raleway; color:black">IN DOOR</span>
+                    <span style="font-family:Raleway; color:black">INDOOR</span>
                     <br>
                     <span style="font-family:Raleway; color:black; font-weight:bold">Check out Home Detergents</span>
                     <br>
@@ -170,38 +205,32 @@
                     <button type="button" class="Navbtn" data-aos="fade-right" data-aos-duration="1000" onclick="window.location.href='/Home/DIYDetergent'">LEARN MORE ></button>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-4 filter-app" style="background-color:rgba(170, 231, 192, 0.53)">
-                <div style="margin-top:50px; margin-bottom:50px">
-                    <span style="font-family:Raleway; color:black">OUT DOOR</span>
-                    <br>
-                    <span style="font-family:Raleway; color:black; font-weight:bold">Check out Rainfall from Your Roof</span>
-                    <br>
-                    <span style="font-family:Raleway; color:black; font-weight:bold">Collect & Reuse</span>
-                    <br>
-                    <button type="button" class="Navbtn" data-aos="fade-right" data-aos-duration="1000" onclick="window.location.href='/Home/RoofWater'">LEARN MORE ></button>
-                </div>
-            </div>
         </div>
-    </div>
+    </div>*@
 
-    <div class="l_c_h">
-        <div class="c_h">
-            <div class="left_c">
-                <div class="left center_icons">
-                    <!--center_icons-->
-                    Live help!
-                </div><!--end center_icons-->
-                <div class="right right_c left_icons">
-                    @*<a href="#" class="mini" style="font-size:23px;">+</a>*@
-                    <img src="~/img/chat-icon3.png" style="width:auto; height:35px" />
+    @*<div class="l_c_h">
+            <div class="c_h">
+                <div class="left_c">
+                    <div class="left center_icons">
+                        Live help!
+                    </div>
+                    <div class="right right_c left_icons">
+                        <img src="~/img/chat-icon3.png" style="width:auto; height:35px" />
+                    </div>
                 </div>
+                <div class="clear"></div>
             </div>
-            <div class="clear"></div>
-        </div>
-        <div class="chat_container" style="display: none;">
-            <iframe src='https://webchat.botframework.com/embed/myqnaserver-bot?s=e1ts79DPVWo.zIh5ekvimyEqEIVKnaPRLDS7fXMX7r-7HdjQgFv_CBc' style='min-width: 100px; width: 270px; min-height: 500px; border:0'></iframe>
-        </div>
-    </div>
+            <div class="chat_container" style="display: none;">
+                <iframe src='https://webchat.botframework.com/embed/myqnaserver-bot?s=e1ts79DPVWo.zIh5ekvimyEqEIVKnaPRLDS7fXMX7r-7HdjQgFv_CBc' style='min-width: 100px; width: 350px; min-height: 500px; border:0'></iframe>
+            </div>
+        </div>*@
+
+    <script SameSite="None; Secure" src="https://static.landbot.io/landbot-widget/landbot-widget-1.0.0.js"></script>
+    <script>
+        var myLandbot = new LandbotLivechat({
+            index: 'https://chats.landbot.io/v2/H-732989-4YFSIQ5565VKNWEA/index.html',
+        });
+    </script>
 
     <div style="margin-top:50px"></div>
 
@@ -209,7 +238,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-4 filter-app" style="text-align:center">
-                    <img src="~/img/TTOL.jpg" style="width:9vh; height:10vh" />
+                    <img src="~/img/lllg.png" style="width:9vh; height:10vh" />
                 </div>
                 <div class="col-lg-4 col-md-4 filter-app">
                     <h5>WHO WE ARE</h5>
