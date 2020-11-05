@@ -35,7 +35,6 @@
 
             <div class="logo float-left">
                 <h1 class="text-light"><img src="~/img/lllg.png" style="max-height:50px" /><a href="/Home/HomeIndex"><span>Water Remedy</span></a></h1>
-                <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
             </div>
 
             <nav class="nav-menu float-right d-none d-lg-block">
@@ -46,26 +45,19 @@
                     <li>
                         <a href="/Home/AboutWater">About Us</a>
                     </li>
-                    @*<li class="drop-down">
-                            <a href="/Home/DIYDetergent">Clean Water</a>
-                            <ul>
-                                <li><a href="/Home/DIYDetergent#hello">Check my products</a></li>
-                            </ul>
-                        </li>*@
                     <li class="drop-down">
                         <a href="/Home/RoofWater">Water Saver</a>
                         <ul>
                             <li><a href="/Home/RoofWater#rwater">How Much Can You Save</a></li>
-                            @*<li><a href="/Home/WaterTank">Have A Water Tank</a></li>*@
                         </ul>
                     </li>
                     <li>
                         <a href="/Home/CatchmentInDanger">Water Facts</a>
                     </li>
                 </ul>
-            </nav><!-- .nav-menu -->
+            </nav>
         </div>
-    </header><!-- End #header -->
+    </header>
     <section>
         <div class="container-diy">
             <div class="row">
@@ -94,18 +86,7 @@
         <li class="breadcrumb-item active">Water Saver</li>
     </ol>
 
-    @*<div class="container-diy" style="text-align:center">
-            <button class="btn btn-ligh" style="border:0px solid black; font-weight:bold; color:black; width:300px; background-color:rgba(128, 219, 213, 1)">Step 1: Measure Your Roof</button>
-            <button class="btn btn-ligh" style="border:0px solid black; font-weight:bold; color:black; width:300px; background-color:rgba(236, 125, 155, 1)">Step 2: Planning</button>
-            <button class="btn btn-ligh" style="border:0px solid black; font-weight:bold; color:black; width:300px; background-color:rgba(186, 218, 85, 1)">Summary</button>
-            <button class="btn btn-ligh" style="border:0px solid black; font-weight:bold; color:black; width:300px; background-color:rgba(242, 216, 160, 1)">Instaliation</button>
-        </div>*@
 
-
-
-
-    @*<div id="howmuch" style="margin-top:50px"></div>*@
-    <!-- stepper -->
     <div class="container" style="margin-top:100px">
         <div class="row">
             <div class="process">
@@ -141,15 +122,10 @@
             <h2 style="text-align:center; color:black; font-size:40px; font-weight:600">
                 STEP 1: How much you can save from rainfall?
             </h2>
-            <!-- Button trigger modal -->
             <div style="text-align:center; margin-top:50px">
-                @*<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-                        Launch demo modal
-                    </button>*@
                 <a id="roofModal" data-toggle="modal" data-target="#exampleModalCenter" style="background-color:#4D4D4D; color:#fff; font-size:25px">Click me: The Steps to Measure Your Roof.</a>
             </div>
 
-            <!-- Modal -->
             <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
@@ -169,7 +145,7 @@
                                 Step 2: Zoom in until you can see the shape of your roof clearly
                                 <br />
                                 <br />
-                                Step 3: On the upper right corner of the map@*<img src="~/img/line.png">*@ '十', click on the polyline sign to start.
+                                Step 3: On the upper right corner of the map '十', click on the polyline sign to start.
                                 <br />
                                 <br />
                                 Step 4: You can now see the cursor on the map turns to a black cross<img src="~/img/cross.png" style="width:20px; height:20px">. Click on each corner to draw the shape of your roof.
@@ -186,7 +162,7 @@
             </div>
 
             <div class="mapContainer">
-                <div @*class="container"*@>
+                <div>
                     <input id="pac-input" class="controls" type="text" placeholder="Enter a address..." />
                 </div>
                 <div class="row" style="margin-top:50px">
@@ -212,8 +188,6 @@
                                     <button class="btn btn-ligh" style="border:0px solid black; font-weight:bold; color:black; width:250px; background-color:#bfbfbf" href="#showbar" id="cal">Calculate</button>
                                     <br>
                                     <button class="btn btn-ligh" style="border:0px solid black; font-weight:bold; color:black; width:250px; background-color:#bfbfbf" id="delete-button">Reset</button>
-                                    @*<button class="btn btn-ligh" style="border:0px solid black; font-weight:bold; color:#fff; width:250px; background-color:rgba(47, 46, 46, 1)" id="step1Next" onclick="calNext()">Next Step ></button>*@
-                                    @*<button class="btn btn-ligh" style="border:0px solid black; font-weight:bold; color:black; width:250px; background-color:rgba(235, 186, 77, 1)" id="find">Find Stores</button>*@
                                 </div>
                             </div>
                         </div>
@@ -322,7 +296,6 @@
                     </div>
                 </div>
                 @* pop1 *@
-                @*<a style="font-size:18px; font-weight:600; text-decoration:underline" data-toggle="modal" data-target="#exampleModalCenter1">how components looks like?</a>*@
             </div>
             <div class="components-container" style="color:black; margin-bottom: 20px">
                 <h4 style="color:black; font-size:20px; font-weight:600">3. What is your budget range? </h4>
@@ -330,13 +303,11 @@
             @* AUD1 *@
             <div id="AUD1" class="components-container" style="color:black; margin-bottom:25px; font-size:18px">
 
-                <!-- Default inline 1-->
                 <div class="custom-control custom-radio">
                     <input type="radio" class="custom-control-input" id="defaultInline1" name="inlineDefaultRadiosExample1" onclick="showRang1()">
                     <label class="custom-control-label" for="defaultInline1">2000 - 2500 AUD</label>
                 </div>
                 <br>
-                <!-- Default inline 2-->
                 <div class="custom-control custom-radio">
                     <input type="radio" class="custom-control-input" id="defaultInline2" name="inlineDefaultRadiosExample1" onclick="showRang2()">
                     <label class="custom-control-label" for="defaultInline2">2500 -3000 AUD</label>
@@ -349,13 +320,11 @@
             </div>
             @* AUD2 *@
             <div id="AUD2" class="components-container" style="color:black; font-size:18px">
-                <!-- Default inline 3-->
                 <div class="custom-control custom-radio">
                     <input type="radio" class="custom-control-input" id="defaultInline3" name="inlineDefaultRadiosExample1" onclick="showRang3()">
                     <label class="custom-control-label" for="defaultInline3">3000-3500 AUD</label>
                 </div>
                 <br>
-                <!-- Default inline 4-->
                 <div class="custom-control custom-radio">
                     <input type="radio" class="custom-control-input" id="defaultInline15" name="inlineDefaultRadiosExample1" onclick="showRang5()">
                     <label class="custom-control-label" for="defaultInline15">More than 3500 AUD</label>
@@ -447,29 +416,12 @@
                                 <p style="color:black; font-weight:300; font-size:25px">A total volume of 6000L is expected to ensure sufficient space for monthly water storage.</p>
                                 <p style="color:black; font-weight:300; font-size:20px"><span style="font-weight:300; font-size:25px">Therefore, your plan will include: </span><br><span id="choosePlan"></span></p>
                             </div>
-                            @*<img src="~/img/smile-face.png" style="width:15vh" />*@
                         </div>
-                        @*<div class="row">
-                                <div class="col-lg-6 col-md-6 filter-app">
-
-
-                                </div>
-                                <div class="col-lg-6 col-md-6 filter-app">
-                                    <div class="row">
-                                        <div class="col-lg-6 col-md-6 filter-app">
-                                            <img id="pic1" src="~/img/PET1.jpg" style="width:inherit" />
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 filter-app">
-                                            <img id="pic2" src="~/img/PET2.jpg" style="width:inherit" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>*@
 
 
 
-                        <div id="3" @*class="summary-container"*@ style="margin-top:10px">
-                            <div @*class="summary-container"*@ style="color:black">-------------------------------------------------------------------------------</div>
+                        <div id="3" style="margin-top:10px">
+                            <div style="color:black">-------------------------------------------------------------------------------</div>
                             <p id="accessories" style="color:black; font-weight:300; font-size:25px">You need the following accessories:</p>
                             <div id="needMaterials" style="color:black; font-size:20px">
                             </div>
@@ -512,12 +464,11 @@
 
 
                             <div class="row" style="margin-bottom:30px; text-align:center">
-                                @*<div class="col-lg-6 col-md-6 filter-app"><button class="btn btn-ligh" style="border:0px solid black; font-weight:bold; color:black; width:250px; background-color:rgba(235, 186, 77, 1)" id="delete-button2">Clear Map</button></div>*@
                                 <div class="col-lg-12 col-md-12 filter-app"><button class="btn btn-ligh" style="border:0px solid black; font-weight:bold; color:black; width:250px; background-color:rgba(235, 186, 77, 1)" id="find2">Find Stores</button></div>
                             </div>
                             <div id="map3" style="height: 500px; width: auto"></div>
                             <div style="text-align:center; margin-bottom:20px">
-                                <input id="pac-input2" class="controls" type="text" onchange="onAdderssChange()" @*placeholder="Enter a address..."*@ />
+                                <input id="pac-input2" class="controls" type="text" onchange="onAdderssChange()" />
                             </div>
                         </div>
                         <div class="col-lg-1 col-md-1 filter-app"></div>
@@ -534,7 +485,7 @@
     <div id="step5">
         <div class="container" style="text-align:center; margin-top:50px">
             <h2 style="color:black; font-size:40px; font-weight:600">STEP 5: Installation</h2>
-            <iframe id="instructionVideo" @*width="760" height="515"*@ src="https://www.youtube.com/embed/2Bq71mPvK0k?autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe id="instructionVideo" src="https://www.youtube.com/embed/2Bq71mPvK0k?autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <div style="text-align:center">
             <button class="btn btn-ligh" style="border:0px solid black; font-weight:bold; color:#fff; width:250px; background-color:rgba(47, 46, 46, 1)" id="p4" href="#mao" onclick="s5Previous()">< previous step</button>
@@ -542,7 +493,6 @@
         <div class="container" style="text-align:center; margin-bottom:50px; margin-top:50px">
             <h3 style="color:#363636; font-size:45px; font-weight:bold; margin-top:20px; margin-bottom:20px">What can you do next   ?</h3>
             <div class="row" style="text-align:center">
-                @*<div class="col-lg-4 col-md-4 filter-app"></div>*@
                 <div class="col-lg-12 col-md-12 filter-app" style="background-color:rgba(235, 186, 77, 0.18)">
                     <div style="margin-top:50px; margin-bottom:50px">
                         <span style="font-family:Raleway; color:black">INDOOR</span>
@@ -554,18 +504,9 @@
                         <button type="button" class="Navbtn" data-aos="fade-right" data-aos-duration="1000" onclick="window.location.href='/Home/DIYDetergent'">LEARN MORE ></button>
                     </div>
                 </div>
-                @*<div class="col-lg-4 col-md-4 filter-app"></div>*@
             </div>
         </div>
     </div>
-
-    @* Step 1 *@
-
-
-    @* Step 2 *@
-
-
-
 
 
     @* popup window *@
@@ -580,7 +521,6 @@
                 </div>
                 <div class="modal-body">
                     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                        @*<p style="color:black; font-size:20px; font-weight:600">What are other necessary components</p>*@
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <img src="~/img/T1.png" alt="First slide">
@@ -630,11 +570,9 @@
                 </div>
                 <div class="modal-body">
                     <p style="color:black; font-weight:500; font-size:15px">
-                        @*<span style="font-weight:bold">Plan A:</span> two 3000L polyethylene tanks; starting from $1976 in total; lifespan of 10 years;*@
                         Polyethylene tanks are lighter in weight with much lower cost than steel tanks are.
                     </p>
                     <p style="color:black; font-weight:500; font-size:15px">
-                        @*<span style="font-weight:bold">Plan B:</span> two 3000L steel tanks; starting from around $3200 in total; lifespan of 20 years;*@
                         Steel tanks have higher price, but are more stronger than polyethylene tanks. Generally a steel tank's lifespan is twice of a polyethylene tank's lifespan.
                     </p>
                 </div>
@@ -694,11 +632,6 @@
         </div>
     </div>
 
-
-
-
-
-
     @*<div class="l_c_h">
             <div class="c_h">
                 <div class="left_c">
@@ -753,12 +686,10 @@
         </div>
     </footer>
 
-    @*<a href="#" class="back-to-top"><i class="icofont-simple-up">Top</i></a>*@
 
 
     <script src="~/Scripts/jquery-3.3.1.js"></script>
     <script src="~/JavaScript/bootstrap.js"></script>
-    @*<script src="~/JavaScript/bootstrap.bundle.js"></script>*@
     <script src="~/JavaScript/jquery.easing.min.js"></script>
     <script src="~/JavaScript/isotope.pkgd.js"></script>
     <script src="~/JavaScript/venobox.js"></script>
@@ -934,30 +865,13 @@
 
         cal.addEventListener("click", calculate);
 
-        //$('#step1Next').click(function () {
-        //    $('html, body').animate({
-        //        scrollTop: $($.attr(this, 'href')).offset().top
-        //    }, 500);
-        //    return false;
-        //});
-        //$('#cal').click(function () {
-        //    $('html, body').animate({
-        //        scrollTop: $($.attr(this, 'href')).offset().top
-        //    }, 500);
-        //    return false;
-        //});
         $('#p1').click(function () {
             $('html, body').animate({
                 scrollTop: $($.attr(this, 'href')).offset().top
             }, 500);
             return false;
         });
-        //$('#n1').click(function () {
-        //    $('html, body').animate({
-        //        scrollTop: $($.attr(this, 'href')).offset().top
-        //    }, 500);
-        //    return false;
-        //});
+        
         $('#p2').click(function () {
             $('html, body').animate({
                 scrollTop: $($.attr(this, 'href')).offset().top
@@ -988,7 +902,6 @@
             }, 500);
             return false;
         });
-        //findStore.addEventListener("click", searchLocation);
 
         reset.addEventListener("click", resetGraph);
         function resetGraph() {
@@ -1002,7 +915,6 @@
         findStore2.addEventListener("click", resetGraph2);
         findStore2.addEventListener("click", searchLocation2);
 
-        //reset2.addEventListener("click", resetGraph2);
         function resetGraph2() {
             monthStorageArray = [];
             resetMap2();
@@ -1013,11 +925,6 @@
 
         $(function(){
             $(".c_h").click(function(e) {
-                //if ($(".chat_container").is(":visible")) {
-                //    $(".c_h .right_c .mini").text("+")
-                //} else {
-                //    $(".c_h .right_c .mini").text("-")
-                //}
                 $(".chat_container").slideToggle("slow");
                 return false
         });
@@ -1115,36 +1022,6 @@
             alert("选择的个数为：" + arr.length);
         };
 
-                                        //$('#menu1').click(function () {
-                                        //    $('html, body').animate({
-                                        //        scrollTop: $($.attr(this, 'href')).offset().top
-                                        //    }, 500);
-                                        //    return false;
-                                        //});
-                                        //$('#menu2').click(function () {
-                                        //    $('html, body').animate({
-                                        //        scrollTop: $($.attr(this, 'href')).offset().top
-                                        //    }, 500);
-                                        //    return false;
-                                        //});
-                                        //$('#menu3').click(function () {
-                                        //    $('html, body').animate({
-                                        //        scrollTop: $($.attr(this, 'href')).offset().top
-                                        //    }, 500);
-                                        //    return false;
-                                        //});
-                                        //$('#menu4').click(function () {
-                                        //    $('html, body').animate({
-                                        //        scrollTop: $($.attr(this, 'href')).offset().top
-                                        //    }, 500);
-                                        //    return false;
-                                        //});
-                                        //$('#menu5').click(function () {
-                                        //    $('html, body').animate({
-                                        //        scrollTop: $($.attr(this, 'href')).offset().top
-                                        //    }, 500);
-                                        //    return false;
-                                        //});
     </script>
 
     <style>
